@@ -171,26 +171,18 @@
     }
     /* ── minecraft steve ── */
     #steve-wrap {
-      position: relative;
+      position: fixed;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       cursor: grab;
       user-select: none;
-      flex-shrink: 0;
       touch-action: none;
+      z-index: 888;
+      transition: left .05s linear, top .05s linear;
     }
-    #steve-wrap:not(.dragging) #steve-svg {
-      animation: steve-float 4s ease-in-out infinite;
-    }
-    @keyframes steve-float {
-      0%   { transform: translateY(0) rotate(-2deg); }
-      30%  { transform: translateY(-14px) rotate(3deg); }
-      60%  { transform: translateY(-8px) rotate(-1deg); }
-      100% { transform: translateY(0) rotate(-2deg); }
-    }
-    #steve-wrap.dragging { cursor: grabbing; }
+    #steve-wrap.dragging { cursor: grabbing; transition: none; }
 
     .steve-bubble {
       background: #1a1a1a;
@@ -773,45 +765,51 @@
 </head>
 <body>
 
-<!-- MANIFESTO -->
-<div id="manifesto">
-  <div class="manifesto-inner">
-    <div class="manifesto-eyebrow">our manifesto</div>
-
-    <div class="manifesto-line">
-      <span class="ml-num">01</span>
-      <span class="ml-text">every student deserves a <em>stage.</em></span>
-    </div>
-    <div class="manifesto-line">
-      <span class="ml-num">02</span>
-      <span class="ml-text"><span class="yellow">geography is not destiny.</span></span>
-    </div>
-    <div class="manifesto-line">
-      <span class="ml-num">03</span>
-      <span class="ml-text">the best ideas come from people who haven't been told <em>it's impossible.</em></span>
-    </div>
-    <div class="manifesto-line">
-      <span class="ml-num">04</span>
-      <span class="ml-text">no-code is <span class="green">real code.</span> a pitch is a real build. an idea is a real start.</span>
-    </div>
-    <div class="manifesto-line">
-      <span class="ml-num">05</span>
-      <span class="ml-text">we don't gatekeep. we <em>open gates.</em></span>
-    </div>
-    <div class="manifesto-line">
-      <span class="ml-num">06</span>
-      <span class="ml-text"><span class="yellow">impact doesn't wait</span> for a degree.</span>
-    </div>
-    <div class="manifesto-line">
-      <span class="ml-num">07</span>
-      <span class="ml-text">a kid in a rural school in india has the same right to build as anyone in silicon valley. <em>full stop.</em></span>
-    </div>
-
-    <p class="manifesto-closing">
-      aethra exists because we got tired of waiting for someone else to do this.
-      we're <b>students building for students</b> — and we're just getting started.
-    </p>
+<!-- STEVE — fixed, floats around whole page -->
+<div id="steve-wrap">
+  <div class="steve-bubble">
+    hi!! i'm steve 👋
+    <span class="drag-hint">drag me!</span>
   </div>
+  <svg id="steve-svg" viewBox="0 0 16 32" width="26" height="52" xmlns="http://www.w3.org/2000/svg">
+    <rect x="4" y="0" width="8" height="2" fill="#593d1b"/>
+    <rect x="4" y="2" width="2" height="2" fill="#593d1b"/>
+    <rect x="10" y="2" width="2" height="2" fill="#593d1b"/>
+    <rect x="4" y="2" width="8" height="6" fill="#c68642"/>
+    <rect x="4" y="0" width="8" height="2" fill="#593d1b"/>
+    <rect x="4" y="2" width="2" height="2" fill="#593d1b"/>
+    <rect x="10" y="2" width="2" height="2" fill="#593d1b"/>
+    <rect x="5" y="3" width="2" height="2" fill="#ffffff"/>
+    <rect x="6" y="4" width="1" height="1" fill="#3b6ab0"/>
+    <rect x="9" y="3" width="2" height="2" fill="#ffffff"/>
+    <rect x="9" y="4" width="1" height="1" fill="#3b6ab0"/>
+    <rect x="7" y="5" width="1" height="1" fill="#b56832"/>
+    <rect x="6" y="6" width="1" height="1" fill="#8b3200"/>
+    <rect x="7" y="7" width="2" height="1" fill="#8b3200"/>
+    <rect x="9" y="6" width="1" height="1" fill="#8b3200"/>
+    <rect x="4" y="8"  width="8" height="12" fill="#4d8ad4"/>
+    <rect x="5" y="9"  width="6" height="1"  fill="#3570ba"/>
+    <rect x="5" y="13" width="6" height="1"  fill="#3570ba"/>
+    <rect x="4" y="18" width="8" height="2"  fill="#aa8822"/>
+    <rect x="7" y="17" width="2" height="3"  fill="#d4aa00"/>
+    <rect x="7" y="18" width="2" height="1"  fill="#ffcc00"/>
+    <rect x="0" y="8"  width="4" height="12" fill="#c68642"/>
+    <rect x="0" y="8"  width="4" height="1"  fill="#a56828"/>
+    <rect x="3" y="8"  width="1" height="12" fill="#b57232"/>
+    <rect x="12" y="8"  width="4" height="12" fill="#c68642"/>
+    <rect x="12" y="8"  width="4" height="1"  fill="#a56828"/>
+    <rect x="12" y="8"  width="1" height="12" fill="#b57232"/>
+    <rect x="4" y="20" width="4" height="9"  fill="#283593"/>
+    <rect x="4" y="20" width="1" height="9"  fill="#1e2880"/>
+    <rect x="4" y="29" width="4" height="3"  fill="#3e1c00"/>
+    <rect x="4" y="31" width="4" height="1"  fill="#2a1200"/>
+    <rect x="8" y="20" width="4" height="9"  fill="#1a237e"/>
+    <rect x="11" y="20" width="1" height="9" fill="#131a5e"/>
+    <rect x="8" y="29" width="4" height="3"  fill="#2d1400"/>
+    <rect x="8" y="31" width="4" height="1"  fill="#1a0c00"/>
+    <rect x="7" y="20" width="2" height="9"  fill="#0d1357"/>
+  </svg>
+  <div class="steve-shadow"></div>
 </div>
 
 <!-- TOP NAV -->
@@ -844,89 +842,9 @@
 <!-- HERO -->
 <div id="hero">
   <canvas id="star-canvas"></canvas>
-  <div class="live-badge">
+  <div class="live-badge" style="z-index:1;position:relative;">
     <span class="live-dot"></span>
     moonshot 2026 — live now
-  </div>
-
-  <div id="steve-wrap">
-    <div class="steve-bubble">
-      hi!! i'm steve 👋
-      <span class="drag-hint">drag me!</span>
-    </div>
-
-    <!-- Minecraft Steve — pixel-perfect SVG, 16×32 grid scaled 5x -->
-    <svg id="steve-svg" viewBox="0 0 16 32" width="36" height="72" xmlns="http://www.w3.org/2000/svg">
-      <!-- ═══ HEAD (8×8, x=4..12, y=0..8) ═══ -->
-      <!-- hair top -->
-      <rect x="4" y="0" width="8" height="2" fill="#593d1b"/>
-      <!-- hair row 2 — sides only -->
-      <rect x="4" y="2" width="2" height="2" fill="#593d1b"/>
-      <rect x="10" y="2" width="2" height="2" fill="#593d1b"/>
-      <!-- face base -->
-      <rect x="4" y="2" width="8" height="6" fill="#c68642"/>
-      <!-- re-draw hair on top of face base -->
-      <rect x="4" y="0" width="8" height="2" fill="#593d1b"/>
-      <rect x="4" y="2" width="2" height="2" fill="#593d1b"/>
-      <rect x="10" y="2" width="2" height="2" fill="#593d1b"/>
-      <!-- left eye white -->
-      <rect x="5" y="3" width="2" height="2" fill="#ffffff"/>
-      <!-- left pupil -->
-      <rect x="6" y="4" width="1" height="1" fill="#3b6ab0"/>
-      <!-- right eye white -->
-      <rect x="9" y="3" width="2" height="2" fill="#ffffff"/>
-      <!-- right pupil -->
-      <rect x="9" y="4" width="1" height="1" fill="#3b6ab0"/>
-      <!-- nose shadow -->
-      <rect x="7" y="5" width="1" height="1" fill="#b56832"/>
-      <!-- mouth -->
-      <rect x="6" y="6" width="1" height="1" fill="#8b3200"/>
-      <rect x="7" y="7" width="2" height="1" fill="#8b3200"/>
-      <rect x="9" y="6" width="1" height="1" fill="#8b3200"/>
-
-      <!-- ═══ BODY (8×12, x=4..12, y=8..20) ═══ -->
-      <rect x="4" y="8"  width="8" height="12" fill="#4d8ad4"/>
-      <!-- shirt crease top -->
-      <rect x="5" y="9"  width="6" height="1"  fill="#3570ba"/>
-      <!-- shirt middle crease -->
-      <rect x="5" y="13" width="6" height="1"  fill="#3570ba"/>
-      <!-- belt -->
-      <rect x="4" y="18" width="8" height="2"  fill="#aa8822"/>
-      <!-- belt buckle -->
-      <rect x="7" y="17" width="2" height="3"  fill="#d4aa00"/>
-      <rect x="7" y="18" width="2" height="1"  fill="#ffcc00"/>
-
-      <!-- ═══ LEFT ARM (4×12, x=0..4, y=8..20) ═══ -->
-      <rect x="0" y="8"  width="4" height="12" fill="#c68642"/>
-      <!-- arm top shadow -->
-      <rect x="0" y="8"  width="4" height="1"  fill="#a56828"/>
-      <!-- arm shading side -->
-      <rect x="3" y="8"  width="1" height="12" fill="#b57232"/>
-
-      <!-- ═══ RIGHT ARM (4×12, x=12..16, y=8..20) ═══ -->
-      <rect x="12" y="8"  width="4" height="12" fill="#c68642"/>
-      <rect x="12" y="8"  width="4" height="1"  fill="#a56828"/>
-      <rect x="12" y="8"  width="1" height="12" fill="#b57232"/>
-
-      <!-- ═══ LEFT LEG (4×12, x=4..8, y=20..32) ═══ -->
-      <rect x="4" y="20" width="4" height="9"  fill="#283593"/>
-      <rect x="4" y="20" width="1" height="9"  fill="#1e2880"/>
-      <!-- left boot -->
-      <rect x="4" y="29" width="4" height="3"  fill="#3e1c00"/>
-      <rect x="4" y="31" width="4" height="1"  fill="#2a1200"/>
-
-      <!-- ═══ RIGHT LEG (4×12, x=8..12, y=20..32) ═══ -->
-      <rect x="8" y="20" width="4" height="9"  fill="#1a237e"/>
-      <rect x="11" y="20" width="1" height="9" fill="#131a5e"/>
-      <!-- right boot -->
-      <rect x="8" y="29" width="4" height="3"  fill="#2d1400"/>
-      <rect x="8" y="31" width="4" height="1"  fill="#1a0c00"/>
-
-      <!-- leg divider -->
-      <rect x="7" y="20" width="2" height="9"  fill="#0d1357"/>
-    </svg>
-
-    <div class="steve-shadow"></div>
   </div>
 
   <div class="hero-card">
@@ -978,6 +896,26 @@
   <div class="stat-cell">
     <span class="sn">11</span>
     <span class="sl">prize categories</span>
+  </div>
+</div>
+
+<!-- MANIFESTO -->
+<div id="manifesto">
+  <div class="sec">
+    <div class="sec-tag">manifesto</div>
+    <div class="about-grid">
+      <div>
+        <div class="about-big">
+          we're not<br>waiting for<br><span class="ac">permission.</span>
+        </div>
+      </div>
+      <div class="about-right">
+        <p>every student deserves a stage. <b>geography is not destiny.</b> the best ideas come from people who haven't been told it's impossible yet.</p>
+        <p>no-code is real code. a pitch is a real build. an idea is a real start. we don't gatekeep. <b>we open gates.</b></p>
+        <p>a kid in a rural school in india has the same right to build as anyone in silicon valley. impact doesn't wait for a degree. <b>full stop.</b></p>
+        <p>aethra exists because we got tired of waiting for someone else to do this. we are students building for students — and we are just getting started.</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -1333,64 +1271,96 @@ secs.forEach((id, i) => {
   requestAnimationFrame(draw);
 })();
 
-/* ── draggable steve ── */
-const steve = document.getElementById('steve-wrap');
-let dragging = false, ox = 0, oy = 0, bx = 0, by = 0;
+/* ── steve: auto-float around whole page + draggable ── */
+(function () {
+  const s = document.getElementById('steve-wrap');
+  const W = () => window.innerWidth  - 60;
+  const H = () => window.innerHeight - 100;
 
-steve.addEventListener('mousedown', e => {
-  dragging = true;
-  steve.classList.add('dragging');
-  const r = steve.getBoundingClientRect();
-  ox = e.clientX - r.left;
-  oy = e.clientY - r.top;
-  e.preventDefault();
-});
+  // start somewhere random
+  let cx = Math.random() * W();
+  let cy = Math.random() * H();
+  let tx = cx, ty = cy;
+  let vx = 0, vy = 0;
+  let dragging = false, ox = 0, oy = 0;
+  let bobT = 0;
 
-window.addEventListener('mousemove', e => {
-  if (!dragging) return;
-  bx = e.clientX - ox;
-  by = e.clientY - oy;
-  steve.style.position = 'fixed';
-  steve.style.left = bx + 'px';
-  steve.style.top  = by + 'px';
-  steve.style.zIndex = 9999;
-  steve.style.margin = '0';
-});
+  // pick a new random target every 3–6 s
+  function newTarget() {
+    tx = 40 + Math.random() * (W() - 40);
+    ty = 40 + Math.random() * (H() - 40);
+    setTimeout(newTarget, 3000 + Math.random() * 3000);
+  }
+  newTarget();
 
-window.addEventListener('mouseup', () => {
-  if (!dragging) return;
-  dragging = false;
-  steve.classList.remove('dragging');
-  steve.style.transition = 'top .45s cubic-bezier(.34,1.56,.64,1)';
-  steve.style.top = (by + 12) + 'px';
-  setTimeout(() => { steve.style.transition = ''; }, 460);
-});
+  function loop() {
+    if (!dragging) {
+      // soft spring toward target
+      vx += (tx - cx) * 0.012;
+      vy += (ty - cy) * 0.012;
+      vx *= 0.88; vy *= 0.88;
+      cx += vx; cy += vy;
+      // gentle bob on top of movement
+      bobT += 0.04;
+      const bob = Math.sin(bobT) * 4;
+      s.style.left = cx + 'px';
+      s.style.top  = (cy + bob) + 'px';
+    }
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
 
-steve.addEventListener('touchstart', e => {
-  const t = e.touches[0];
-  dragging = true;
-  steve.classList.add('dragging');
-  const r = steve.getBoundingClientRect();
-  ox = t.clientX - r.left;
-  oy = t.clientY - r.top;
-}, { passive: true });
+  // drag — mouse
+  s.addEventListener('mousedown', e => {
+    dragging = true;
+    s.classList.add('dragging');
+    const r = s.getBoundingClientRect();
+    ox = e.clientX - r.left;
+    oy = e.clientY - r.top;
+    e.preventDefault();
+  });
+  window.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    cx = e.clientX - ox;
+    cy = e.clientY - oy;
+    s.style.left = cx + 'px';
+    s.style.top  = cy + 'px';
+    vx = 0; vy = 0;
+  });
+  window.addEventListener('mouseup', () => {
+    if (!dragging) return;
+    dragging = false;
+    s.classList.remove('dragging');
+    // resume floating from where dropped
+    tx = cx; ty = cy;
+    setTimeout(newTarget, 800);
+  });
 
-window.addEventListener('touchmove', e => {
-  if (!dragging) return;
-  const t = e.touches[0];
-  bx = t.clientX - ox;
-  by = t.clientY - oy;
-  steve.style.position = 'fixed';
-  steve.style.left = bx + 'px';
-  steve.style.top  = by + 'px';
-  steve.style.zIndex = 9999;
-  steve.style.margin = '0';
-}, { passive: true });
-
-window.addEventListener('touchend', () => {
-  dragging = false;
-  steve.classList.remove('dragging');
-});
+  // drag — touch
+  s.addEventListener('touchstart', e => {
+    const t = e.touches[0];
+    dragging = true;
+    s.classList.add('dragging');
+    const r = s.getBoundingClientRect();
+    ox = t.clientX - r.left;
+    oy = t.clientY - r.top;
+  }, { passive: true });
+  window.addEventListener('touchmove', e => {
+    if (!dragging) return;
+    const t = e.touches[0];
+    cx = t.clientX - ox;
+    cy = t.clientY - oy;
+    s.style.left = cx + 'px';
+    s.style.top  = cy + 'px';
+    vx = 0; vy = 0;
+  }, { passive: true });
+  window.addEventListener('touchend', () => {
+    dragging = false;
+    s.classList.remove('dragging');
+    tx = cx; ty = cy;
+    setTimeout(newTarget, 800);
+  });
+})();
 </script>
 </body>
 </html>
