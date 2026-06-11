@@ -175,27 +175,29 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       cursor: grab;
       user-select: none;
       flex-shrink: 0;
       touch-action: none;
     }
     #steve-wrap:not(.dragging) #steve-svg {
-      animation: steve-float 2.6s ease-in-out infinite;
+      animation: steve-float 4s ease-in-out infinite;
     }
     @keyframes steve-float {
-      0%,100% { transform: translateY(0); }
-      50%      { transform: translateY(-10px); }
+      0%   { transform: translateY(0) rotate(-2deg); }
+      30%  { transform: translateY(-14px) rotate(3deg); }
+      60%  { transform: translateY(-8px) rotate(-1deg); }
+      100% { transform: translateY(0) rotate(-2deg); }
     }
     #steve-wrap.dragging { cursor: grabbing; }
 
     .steve-bubble {
       background: #1a1a1a;
       border: 2px solid #555;
-      padding: 8px 14px;
+      padding: 5px 10px;
       font-family: 'Press Start 2P', monospace;
-      font-size: 8px;
+      font-size: 6px;
       color: #fff;
       line-height: 1.8;
       text-align: center;
@@ -229,14 +231,79 @@
     }
     #steve-svg { image-rendering: pixelated; display: block; }
     .steve-shadow {
-      width: 48px; height: 6px;
-      background: radial-gradient(ellipse, rgba(255,255,255,.15) 0%, transparent 70%);
+      width: 24px; height: 4px;
+      background: radial-gradient(ellipse, rgba(255,255,255,.2) 0%, transparent 70%);
       border-radius: 50%;
-      animation: steve-shadow 2.6s ease-in-out infinite;
+      animation: steve-shadow 4s ease-in-out infinite;
     }
     @keyframes steve-shadow {
       0%,100% { transform: scaleX(1); opacity:.5; }
-      50%      { transform: scaleX(.55); opacity:.15; }
+      50%      { transform: scaleX(.45); opacity:.1; }
+    }
+
+    /* ── hero starfield ── */
+    #star-canvas {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+    #hero > *:not(#star-canvas) { position: relative; z-index: 1; }
+
+    /* ── manifesto ── */
+    #manifesto {
+      border-top: 1px solid var(--border);
+      padding: 0;
+    }
+    .manifesto-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 100px 52px;
+    }
+    .manifesto-eyebrow {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: var(--muted);
+      margin-bottom: 64px;
+    }
+    .manifesto-eyebrow::before { content: '// '; color: var(--dim); }
+    .manifesto-line {
+      font-family: 'Press Start 2P', monospace;
+      font-size: clamp(11px, 1.8vw, 17px);
+      color: var(--text);
+      line-height: 2.2;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    .manifesto-line:first-of-type { border-top: 1px solid var(--border); }
+    .ml-num { font-size: 9px; color: var(--dim); padding-top: 6px; }
+    .ml-text { }
+    .ml-text em {
+      font-style: normal;
+      background: linear-gradient(90deg, var(--e), var(--f));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .ml-text .yellow { color: var(--c); -webkit-text-fill-color: var(--c); background: none; }
+    .ml-text .green  { color: var(--d); -webkit-text-fill-color: var(--d); background: none; }
+    .manifesto-closing {
+      margin-top: 64px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 2;
+      max-width: 560px;
+    }
+    .manifesto-closing b { color: var(--text); font-weight: 400; }
+    @media (max-width: 768px) {
+      .manifesto-inner { padding: 72px 24px; }
+      .manifesto-line { grid-template-columns: 1fr; gap: 8px; font-size: 10px; }
+      .ml-num { display: none; }
     }
 
     /* pixel logo */
@@ -706,6 +773,47 @@
 </head>
 <body>
 
+<!-- MANIFESTO -->
+<div id="manifesto">
+  <div class="manifesto-inner">
+    <div class="manifesto-eyebrow">our manifesto</div>
+
+    <div class="manifesto-line">
+      <span class="ml-num">01</span>
+      <span class="ml-text">every student deserves a <em>stage.</em></span>
+    </div>
+    <div class="manifesto-line">
+      <span class="ml-num">02</span>
+      <span class="ml-text"><span class="yellow">geography is not destiny.</span></span>
+    </div>
+    <div class="manifesto-line">
+      <span class="ml-num">03</span>
+      <span class="ml-text">the best ideas come from people who haven't been told <em>it's impossible.</em></span>
+    </div>
+    <div class="manifesto-line">
+      <span class="ml-num">04</span>
+      <span class="ml-text">no-code is <span class="green">real code.</span> a pitch is a real build. an idea is a real start.</span>
+    </div>
+    <div class="manifesto-line">
+      <span class="ml-num">05</span>
+      <span class="ml-text">we don't gatekeep. we <em>open gates.</em></span>
+    </div>
+    <div class="manifesto-line">
+      <span class="ml-num">06</span>
+      <span class="ml-text"><span class="yellow">impact doesn't wait</span> for a degree.</span>
+    </div>
+    <div class="manifesto-line">
+      <span class="ml-num">07</span>
+      <span class="ml-text">a kid in a rural school in india has the same right to build as anyone in silicon valley. <em>full stop.</em></span>
+    </div>
+
+    <p class="manifesto-closing">
+      aethra exists because we got tired of waiting for someone else to do this.
+      we're <b>students building for students</b> — and we're just getting started.
+    </p>
+  </div>
+</div>
+
 <!-- TOP NAV -->
 <header id="topnav">
   <a href="#hero" class="topnav-brand">
@@ -729,11 +837,13 @@
   <div class="sdot" data-s="learn"></div>
   <div class="sdot" data-s="team"></div>
   <div class="sdot" data-s="roadmap"></div>
+  <div class="sdot" data-s="manifesto"></div>
   <div class="sdot" data-s="about"></div>
 </nav>
 
 <!-- HERO -->
 <div id="hero">
+  <canvas id="star-canvas"></canvas>
   <div class="live-badge">
     <span class="live-dot"></span>
     moonshot 2026 — live now
@@ -746,7 +856,7 @@
     </div>
 
     <!-- Minecraft Steve — pixel-perfect SVG, 16×32 grid scaled 5x -->
-    <svg id="steve-svg" viewBox="0 0 16 32" width="80" height="160" xmlns="http://www.w3.org/2000/svg">
+    <svg id="steve-svg" viewBox="0 0 16 32" width="36" height="72" xmlns="http://www.w3.org/2000/svg">
       <!-- ═══ HEAD (8×8, x=4..12, y=0..8) ═══ -->
       <!-- hair top -->
       <rect x="4" y="0" width="8" height="2" fill="#593d1b"/>
@@ -845,6 +955,7 @@
     <a href="#events">events</a>
     <a href="#learn">learn</a>
     <a href="#team">team</a>
+    <a href="#manifesto">manifesto</a>
     <a href="https://discord.gg/89RvqhYPez" target="_blank" rel="noopener">discord</a>
     <a href="mailto:aethraglobal@gmail.com">sponsor</a>
   </nav>
@@ -1168,7 +1279,7 @@ new IntersectionObserver(e => {
 }, { threshold: 0.3 }).observe(document.getElementById('hero'));
 
 /* ── dot nav ── */
-const secs = ['hero', 'moonshot', 'events', 'prizes', 'learn', 'team', 'roadmap', 'about'];
+const secs = ['hero', 'moonshot', 'events', 'prizes', 'learn', 'team', 'roadmap', 'manifesto', 'about'];
 const dots = document.querySelectorAll('.sdot');
 dots.forEach((d, i) => d.addEventListener('click', () =>
   document.getElementById(secs[i]).scrollIntoView({ behavior: 'smooth' })
@@ -1181,6 +1292,46 @@ secs.forEach((id, i) => {
       dots.forEach((d, j) => d.classList.toggle('on', i === j));
   }, { threshold: 0.35 }).observe(el);
 });
+
+/* ── starfield ── */
+(function () {
+  const c = document.getElementById('star-canvas');
+  if (!c) return;
+  const ctx = c.getContext('2d');
+  const hero = document.getElementById('hero');
+
+  function resize() {
+    c.width  = hero.offsetWidth;
+    c.height = hero.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const stars = Array.from({ length: 120 }, () => ({
+    x: Math.random(),
+    y: Math.random(),
+    r: Math.random() * 1.2 + 0.2,
+    speed: Math.random() * 0.00012 + 0.00004,
+    opacity: Math.random() * 0.7 + 0.15,
+    twinkle: Math.random() * Math.PI * 2,
+  }));
+
+  function draw(t) {
+    ctx.clearRect(0, 0, c.width, c.height);
+    stars.forEach(s => {
+      const tw = 0.5 + 0.5 * Math.sin(t * 0.001 + s.twinkle);
+      ctx.beginPath();
+      ctx.arc(s.x * c.width, s.y * c.height, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255,255,255,${s.opacity * tw})`;
+      ctx.fill();
+      /* drift slowly upward, wrap */
+      s.y -= s.speed;
+      if (s.y < 0) { s.y = 1; s.x = Math.random(); }
+    });
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+})();
 
 /* ── draggable steve ── */
 const steve = document.getElementById('steve-wrap');
