@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>aethra — moonshot hackathon 2026</title>
+  <title>aethra — research and innovation ecosystem</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -29,9 +29,9 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'DM Mono', monospace;
-      font-size: 13px;
-      line-height: 1.6;
+      font-family: 'Spectral', Georgia, serif;
+      font-size: 15px;
+      line-height: 1.7;
       overflow-x: hidden;
     }
 
@@ -75,6 +75,7 @@
       align-items: center;
     }
     .topnav-links a {
+      font-family: 'DM Mono', monospace;
       font-size: 11px;
       color: var(--muted);
       text-decoration: none;
@@ -330,6 +331,7 @@
     .tagline .hi { color: var(--c); }
 
     .hero-meta {
+      font-family: 'DM Mono', monospace;
       font-size: 12px;
       color: var(--muted);
       letter-spacing: 0.5px;
@@ -378,6 +380,7 @@
       margin-bottom: 12px;
     }
     .sl {
+      font-family: 'DM Mono', monospace;
       font-size: 10px;
       color: var(--muted);
       letter-spacing: 1.5px;
@@ -606,6 +609,7 @@
     .learn-card:hover { border-color: rgba(26,18,7,.1); transform: translateY(-2px); }
     .learn-card:hover::before { opacity: 1; }
     .learn-type {
+      font-family: 'DM Mono', monospace;
       font-size: 9px;
       text-transform: uppercase;
       letter-spacing: 2.5px;
@@ -913,9 +917,9 @@
     <span>aethra</span>
   </a>
   <nav class="topnav-links">
+    <a href="#programs">programs</a>
     <a href="#moonshot">moonshot</a>
-    <a href="#events">events</a>
-    <a href="#learn">learn</a>
+    <a href="#problems">open problems</a>
     <a href="#registry">registry</a>
     <a href="#about">about</a>
     <a href="https://discord.gg/89RvqhYPez" target="_blank" rel="noopener" class="topnav-cta">discord</a>
@@ -924,14 +928,15 @@
 
 <nav id="sidenav">
   <div class="sdot on" data-s="hero"></div>
+  <div class="sdot" data-s="programs"></div>
   <div class="sdot" data-s="moonshot"></div>
   <div class="sdot" data-s="events"></div>
-  <div class="sdot" data-s="prizes"></div>
-  <div class="sdot" data-s="learn"></div>
   <div class="sdot" data-s="registry"></div>
   <div class="sdot" data-s="team"></div>
   <div class="sdot" data-s="roadmap"></div>
-  <div class="sdot" data-s="manifesto"></div>
+  <div class="sdot" data-s="problems"></div>
+  <div class="sdot" data-s="initiatives"></div>
+  <div class="sdot" data-s="essays"></div>
   <div class="sdot" data-s="about"></div>
 </nav>
 
@@ -940,12 +945,12 @@
   <canvas id="star-canvas"></canvas>
   <div class="live-badge" style="z-index:1;position:relative;">
     <span class="live-dot"></span>
-    moonshot 2026 — live now
+    moonshot 2026 — applications open
   </div>
 
   <div class="hero-card">
     <span class="hero-card-num" id="counter">0+</span>
-    <span class="hero-card-label">participants across 6 events</span>
+    <span class="hero-card-label">students across 10 countries</span>
   </div>
 
   <div style="display:flex;align-items:center;gap:20px;justify-content:center;flex-wrap:wrap;">
@@ -956,22 +961,22 @@
   </div>
 
   <p class="tagline">
-    idea to impact, no matter the means
-    <span class="hi">— 7 events and counting</span>
+    building the research and innovation infrastructure
+    <span class="hi">we wish we had in high school.</span>
   </p>
 
   <p class="hero-meta">
-    <b>$30,000+</b> in prizes &nbsp;·&nbsp; <b>virtual</b> &nbsp;·&nbsp; <b>ages 13-18</b> &nbsp;·&nbsp; <b>no/low/all-code</b>
+    <b>research</b> &nbsp;·&nbsp; <b>mentorship</b> &nbsp;·&nbsp; <b>creation</b> &nbsp;·&nbsp; <b>ages 13–18</b> &nbsp;·&nbsp; <b>10 countries</b>
   </p>
 
   <nav class="pill-nav">
+    <a href="#programs">programs</a>
     <a href="#moonshot">moonshot</a>
     <a href="#events">events</a>
-    <a href="#learn">learn</a>
-    <a href="#team">team</a>
-    <a href="#manifesto">manifesto</a>
+    <a href="#registry">registry</a>
+    <a href="#essays">essays</a>
     <a href="https://discord.gg/89RvqhYPez" target="_blank" rel="noopener">discord</a>
-    <a href="mailto:aethraglobal@gmail.com">sponsor</a>
+    <a href="mailto:aethraglobal@gmail.com">partner</a>
   </nav>
 </div>
 
@@ -979,19 +984,19 @@
 <div id="stats">
   <div class="stat-cell">
     <span class="sn">1,764+</span>
-    <span class="sl">total participants</span>
+    <span class="sl">students reached</span>
+  </div>
+  <div class="stat-cell">
+    <span class="sn">10</span>
+    <span class="sl">countries</span>
+  </div>
+  <div class="stat-cell">
+    <span class="sn">250+</span>
+    <span class="sl">community members</span>
   </div>
   <div class="stat-cell">
     <span class="sn">7</span>
     <span class="sl">events run</span>
-  </div>
-  <div class="stat-cell">
-    <span class="sn">$30K+</span>
-    <span class="sl">prizes (moonshot)</span>
-  </div>
-  <div class="stat-cell">
-    <span class="sn">11</span>
-    <span class="sl">prize categories</span>
   </div>
 </div>
 
@@ -1002,14 +1007,14 @@
     <div class="about-grid">
       <div>
         <div class="about-big">
-          we're not<br>waiting for<br><span class="ac">permission.</span>
+          curiosity is<br>the only<br><span class="ac">prerequisite.</span>
         </div>
       </div>
       <div class="about-right">
-        <p>every student deserves a stage. <b>geography is not destiny.</b> the best ideas come from people who haven't been told it's impossible yet.</p>
-        <p>no-code is real code. a pitch is a real build. an idea is a real start. we don't gatekeep. <b>we open gates.</b></p>
-        <p>a kid in a rural school in india has the same right to build as anyone in silicon valley. impact doesn't wait for a degree. <b>full stop.</b></p>
-        <p>aethra exists because we got tired of waiting for someone else to do this. we are students building for students — and we are just getting started.</p>
+        <p>most students are taught to solve known problems. the curriculum is a map of already-explored territory. the interesting questions — the ones worth spending a life on — are almost never assigned.</p>
+        <p>research, real research, remains inaccessible to most talented students. not because they lack ability, but because <b>the infrastructure to support them doesn't exist at their age.</b> no mentors. no labs. no communities of peers who care about the same questions.</p>
+        <p>aethra exists to build that infrastructure. fellowships, open problems, proof workshops, publication support, and a global community of students who take ideas seriously. <b>geography is not destiny. curiosity is enough to start.</b></p>
+        <p>we are students building the institution we wish had existed when we were asking our first real questions. we are just getting started.</p>
       </div>
     </div>
   </div>
@@ -1021,13 +1026,12 @@
     <div class="sec-tag">current event</div>
     <div class="moonshot-card">
       <div>
-        <div class="ms-eyebrow">aethra global hackathon 2026</div>
+        <div class="ms-eyebrow">aethra global innovation challenge 2026</div>
         <div class="ms-name">moonshot<br>hackathon</div>
         <p class="ms-desc">
-          our biggest event yet. 11 prize categories, $30,000+ in sponsored prizes and credits.
-          iteration machine credits worth $299 each go to the top 100 participants.
-          moonshot is also the first aethra event where top builders get connected to vetted opportunities — research programs, fellowships, and real next steps — not just a certificate and a close tab.
-          build something that matters.
+          our seventh event and most ambitious yet. 11 prize categories, $30,000+ in sponsored prizes and credits across AI, climate, education, and open-ended innovation tracks.
+          moonshot is the first aethra event where top builders are connected directly to vetted research programs, fellowships, and mentors — not just a certificate. the goal is to make what comes after the hackathon as valuable as the hackathon itself.
+          build something that matters. we'll help you figure out what to do next.
         </p>
         <a href="https://moonshot-aethra.devpost.com" target="_blank" rel="noopener" class="ms-link">view on devpost →</a>
 
@@ -1164,38 +1168,38 @@
   </div>
 </div>
 
-<!-- LEARN -->
-<div id="learn">
+<!-- PROGRAMS -->
+<div id="programs">
   <div class="sec">
-    <div class="sec-tag">guides and courses</div>
+    <div class="sec-tag">programs</div>
     <div class="learn-grid">
 
       <div class="learn-card learn-soon">
-        <div class="learn-type">guide — coming soon</div>
-        <div class="learn-title">how to win a hackathon</div>
-        <div class="learn-desc">the complete playbook from idea to demo day. written by aethra organizers who have run 7 events and seen what actually wins.</div>
-        <div class="learn-arrow learn-tag">notify me</div>
+        <div class="learn-type">aethra research — building</div>
+        <div class="learn-title">research fellowships &amp; mentorship</div>
+        <div class="learn-desc">structured research programs pairing students with mentors, publication support, preprint reviews, monthly open problems, and research essays. for students who want to do original work — not just summarise what others have done.</div>
+        <div class="learn-arrow learn-tag">join waitlist</div>
       </div>
 
       <div class="learn-card learn-soon">
-        <div class="learn-type">guide — coming soon</div>
-        <div class="learn-title">first-time builder starter kit</div>
-        <div class="learn-desc">never shipped anything before? this is your starting point. no experience needed, no code required. just start here.</div>
-        <div class="learn-arrow learn-tag">notify me</div>
+        <div class="learn-type">aethra labs — building</div>
+        <div class="learn-title">ai tools, climate tech &amp; student projects</div>
+        <div class="learn-desc">student-led projects in artificial intelligence, scientific software, climate technologies, and education tools. we build things we wish existed, document what we learn, and share everything openly.</div>
+        <div class="learn-arrow learn-tag">join waitlist</div>
       </div>
 
       <div class="learn-card learn-soon">
-        <div class="learn-type">course — coming soon</div>
-        <div class="learn-title">build your first product in 48 hrs</div>
-        <div class="learn-desc">the no-code to shipped-product pipeline. tools, templates, and a step-by-step walkthrough used by aethra participants.</div>
-        <div class="learn-arrow learn-tag">notify me</div>
+        <div class="learn-type">aethra community — active</div>
+        <div class="learn-title">hackathons, research circles &amp; mentor network</div>
+        <div class="learn-desc">global hackathons, workshops, research circles, student showcases, and founder talks. a 250+ member community across 10 countries — the connective tissue between curiosity and creation.</div>
+        <div class="learn-arrow learn-tag">join discord</div>
       </div>
 
       <div class="learn-card learn-soon">
-        <div class="learn-type">writing — coming soon</div>
-        <div class="learn-title">pitching for non-founders</div>
-        <div class="learn-desc">how to present your idea clearly and confidently. what judges actually look for and how to practice in under an hour.</div>
-        <div class="learn-arrow learn-tag">notify me</div>
+        <div class="learn-type">math initiative — building</div>
+        <div class="learn-title">mathematical reasoning &amp; proof writing</div>
+        <div class="learn-desc">lean workshops, formal reasoning, theorem proving, mathematical writing, and open-source mathematics. for students who want to think rigorously — not just compute. proof is the grammar of real understanding.</div>
+        <div class="learn-arrow learn-tag">join waitlist</div>
       </div>
 
     </div>
@@ -1377,13 +1381,21 @@
       <div class="team-card">
         <div class="team-avatar">✦</div>
         <div class="team-name">arnav dhiman</div>
-        <div class="team-role">founder &amp; ceo</div>
+        <div class="team-role">founder</div>
+        <p style="font-size:13px;color:var(--muted);margin-top:14px;line-height:1.8;">
+          founded aethra to build the research and innovation infrastructure ambitious students rarely have access to.
+          aethra has run seven global events, reached 1,700+ students across 10 countries, and is now expanding into research fellowships, open problems, and mentorship programs.
+          the goal is an institution — not an extracurricular.
+        </p>
       </div>
 
       <div class="team-card">
         <div class="team-avatar">◈</div>
         <div class="team-name">aaryan mulaye</div>
         <div class="team-role">co-founder &amp; president</div>
+        <p style="font-size:13px;color:var(--muted);margin-top:14px;line-height:1.8;">
+          leads community and operations across aethra's global programs — from hackathon coordination to building the mentor and research networks that make the work sustainable.
+        </p>
       </div>
 
     </div>
@@ -1398,25 +1410,138 @@
 
       <div class="phase-card p1">
         <div class="phase-num">phase 1</div>
-        <div class="phase-title">more virtual<br>hackathons</div>
+        <div class="phase-title">research<br>infrastructure</div>
         <ul class="phase-items">
-          <li><span>2 more global virtual hackathons in 2026, open to all students 13 to 18</span></li>
-          <li><span>bigger prize pools, more sponsor categories, and more tracks for every skill level</span></li>
-          <li><span>building on what we learned from <b>7 events</b> and <b>1,700+ participants</b></span></li>
+          <li><span>launch <b>aethra research fellowships</b> — pairing students with mentors for semester-length research projects</span></li>
+          <li><span>publish the first <b>monthly open problems</b> across AI, mathematics, optimization, and climate science</span></li>
+          <li><span>build the <b>mathematical reasoning initiative</b> — proof writing, lean workshops, and formal reasoning for high schoolers</span></li>
+          <li><span>continue global hackathons with direct opportunity-matching for top builders</span></li>
         </ul>
         <span class="phase-status">in progress</span>
       </div>
 
       <div class="phase-card p2">
         <div class="phase-num">phase 2</div>
-        <div class="phase-title">20 schools.<br>India. free.</div>
+        <div class="phase-title">access.<br>Everywhere.</div>
         <ul class="phase-items">
-          <li><span>partner with <b>20 government and rural schools</b> across India to bring hackathons on-site</span></li>
-          <li><span>give students who have never touched a computer their <b>first exposure to building</b></span></li>
-          <li><span>completely free for every school and every student, no exceptions</span></li>
-          <li><span>because the best ideas often come from the people with the least access</span></li>
+          <li><span>partner with <b>20 government and rural schools</b> across India to bring research exposure and building on-site</span></li>
+          <li><span>give students their <b>first encounter with original thinking</b> — not just textbook problems</span></li>
+          <li><span>build a <b>global mentor network</b> connecting university researchers directly with secondary school students</span></li>
+          <li><span>completely free for every school and every student, no exceptions — because <b>geography is not destiny</b></span></li>
         </ul>
         <span class="phase-status">coming soon</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- OPEN PROBLEMS -->
+<div id="problems">
+  <div class="sec">
+    <div class="sec-tag">open problems</div>
+    <div class="learn-grid">
+
+      <div class="learn-card learn-soon">
+        <div class="learn-type">artificial intelligence — monthly</div>
+        <div class="learn-title">reasoning, alignment &amp; emergence</div>
+        <div class="learn-desc">problems at the frontier of what language models can and cannot do. what does it mean to reason? where do current architectures break? what would a genuinely robust system require?</div>
+        <div class="learn-arrow learn-tag">coming soon</div>
+      </div>
+
+      <div class="learn-card learn-soon">
+        <div class="learn-type">mathematics — monthly</div>
+        <div class="learn-title">combinatorics, number theory &amp; open conjectures</div>
+        <div class="learn-desc">accessible but unsolved problems in discrete mathematics and number theory. not olympiad problems with known answers — actual open questions where a student's contribution could matter.</div>
+        <div class="learn-arrow learn-tag">coming soon</div>
+      </div>
+
+      <div class="learn-card learn-soon">
+        <div class="learn-type">climate science — monthly</div>
+        <div class="learn-title">measurement, modelling &amp; intervention</div>
+        <div class="learn-desc">problems in climate data, emissions tracking, and the science of interventions. what can student researchers actually measure, model, or question from where they are?</div>
+        <div class="learn-arrow learn-tag">coming soon</div>
+      </div>
+
+      <div class="learn-card learn-soon">
+        <div class="learn-type">computational biology — monthly</div>
+        <div class="learn-title">protein structure, gene expression &amp; simulation</div>
+        <div class="learn-desc">open questions in computational biology accessible to students with programming backgrounds. the intersection of biology and computation is one of the richest frontiers in science right now.</div>
+        <div class="learn-arrow learn-tag">coming soon</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- INITIATIVES -->
+<div id="initiatives">
+  <div class="sec">
+    <div class="sec-tag">initiatives</div>
+    <div class="roadmap-grid">
+
+      <div class="phase-card p1">
+        <div class="phase-num">mathematical reasoning</div>
+        <div class="phase-title">thinking<br>rigorously.</div>
+        <ul class="phase-items">
+          <li><span><b>proof writing workshops</b> — from informal argument to formal mathematical proof</span></li>
+          <li><span><b>lean theorem prover</b> — introduction to formal verification and computer-checked mathematics</span></li>
+          <li><span><b>mathematical writing</b> — how to communicate a proof clearly, concisely, and honestly</span></li>
+          <li><span><b>open-source mathematics</b> — contributing to formalization projects accessible to high schoolers</span></li>
+          <li><span>because computation without proof is engineering; proof without intuition is symbol manipulation. we want both.</span></li>
+        </ul>
+        <span class="phase-status">building</span>
+      </div>
+
+      <div class="phase-card p2">
+        <div class="phase-num">research transparency</div>
+        <div class="phase-title">science<br>done right.</div>
+        <ul class="phase-items">
+          <li><span><b>replication studies</b> — reproducing published findings as a research skill, not a punishment</span></li>
+          <li><span><b>failed experiments</b> — documenting what didn't work and why, because that is also research</span></li>
+          <li><span><b>benchmarking</b> — rigorous comparison of methods without cherry-picking results</span></li>
+          <li><span><b>research logs</b> — the habit of writing down what you did, what you assumed, and what surprised you</span></li>
+          <li><span>science is only as trustworthy as its practices. we teach the practices, not just the results.</span></li>
+        </ul>
+        <span class="phase-status">building</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ESSAYS & IDEAS -->
+<div id="essays">
+  <div class="sec">
+    <div class="sec-tag">essays &amp; ideas</div>
+    <div class="learn-grid">
+
+      <div class="learn-card learn-soon">
+        <div class="learn-type">essay — coming soon</div>
+        <div class="learn-title">why theorem proving matters</div>
+        <div class="learn-desc">formal verification is not an academic exercise. it is the only way to know, with certainty, that a piece of reasoning is correct. this essay argues that every serious student of mathematics or computer science should spend time with a proof assistant.</div>
+        <div class="learn-arrow learn-tag">coming soon</div>
+      </div>
+
+      <div class="learn-card learn-soon">
+        <div class="learn-type">essay — coming soon</div>
+        <div class="learn-title">the limits of LLM reasoning</div>
+        <div class="learn-desc">language models can produce fluent text about almost anything. that is not the same as reasoning. this essay examines where current systems fail, why the failures are structural, and what they imply for building genuinely intelligent systems.</div>
+        <div class="learn-arrow learn-tag">coming soon</div>
+      </div>
+
+      <div class="learn-card learn-soon">
+        <div class="learn-type">essay — coming soon</div>
+        <div class="learn-title">mathematical foundations of intelligence</div>
+        <div class="learn-desc">what mathematics would a complete theory of intelligence require? from information theory to topology to category theory — a map of the mathematical landscape underlying the hardest open problems in AI.</div>
+        <div class="learn-arrow learn-tag">coming soon</div>
+      </div>
+
+      <div class="learn-card learn-soon">
+        <div class="learn-type">essay — coming soon</div>
+        <div class="learn-title">building research communities from scratch</div>
+        <div class="learn-desc">what makes a research community rather than just a group of researchers? on the conditions — epistemic, social, and institutional — that allow genuine intellectual collaboration to emerge among students.</div>
+        <div class="learn-arrow learn-tag">coming soon</div>
       </div>
 
     </div>
@@ -1430,24 +1555,21 @@
     <div class="about-grid">
       <div>
         <div class="about-big">
-          built by<br>students,<br>for <span class="ac">students.</span>
+          the institution<br>we wish<br>had <span class="ac">existed.</span>
         </div>
       </div>
       <div class="about-right">
         <p>
-          aethra is a <b>fully student-run hackathon organization</b> for teens ages 13 to 18.
-          we run events where any student, regardless of skill level, gets to build something real.
+          aethra is a <b>global research and innovation ecosystem</b> for students ages 13 to 18, connecting young researchers, builders, and mentors across 10 countries. we are building the intellectual infrastructure that ambitious students wish had existed when they were asking their first real questions.
         </p>
         <p>
-          in 2025 we ran <b>6 events</b> with <b>1,704 participants</b> and $12,520+ in prizes.
-          now in 2026, moonshot is our biggest yet: $30,000+ in prizes across 11 categories.
-          no-code builders stand alongside engineers here.
+          we started with hackathons — seven events, 1,764 students, judges and sponsors from Google, Apple, Tesla, and IEEE. that foundation taught us what students actually need: not just a stage, but a <b>path from curiosity to contribution.</b> research mentorship, open problems, publication support, proof workshops, and an honest map of the opportunities worth pursuing.
         </p>
         <p>
-          we started as a hackathon community — six events, 1,500+ participants — built on the belief that student talent shouldn't depend on luck or connections to find real opportunities. we're now building the next layer: a vetted, free registry of research programs, fellowships, and competitions, with honest notes on what's worth your time and what to avoid. we have nothing to sell and no paid tier. that's what makes it useful.
+          everything aethra offers is free. we have no paid tier, no sponsored rankings, and nothing to sell. that's not a policy — <b>it's the whole point.</b> trustworthy infrastructure can't charge for access to itself.
         </p>
         <p>
-          we believe the best ideas come from people who haven't been told it's impossible yet.
+          we believe original thinking is the most important skill a student can develop, and that the conditions for it — good mentors, hard problems, and a community of peers — should not depend on where you were born.
         </p>
         <div class="about-cta">
           <a href="https://discord.gg/89RvqhYPez" target="_blank" rel="noopener" class="abtn abtn-solid">discord</a>
@@ -1462,7 +1584,7 @@
 
 <footer>
   <span class="footer-brand">aethra</span>
-  <span>2025-2026 · <a href="#">privacy</a> · made by students</span>
+  <span>2025-2026 · <a href="#">privacy</a> · student-run · 10 countries</span>
 </footer>
 
 <script>
@@ -1483,7 +1605,7 @@ new IntersectionObserver(e => {
 }, { threshold: 0.3 }).observe(document.getElementById('hero'));
 
 /* ── dot nav ── */
-const secs = ['hero', 'moonshot', 'events', 'prizes', 'learn', 'registry', 'team', 'roadmap', 'manifesto', 'about'];
+const secs = ['hero', 'programs', 'moonshot', 'events', 'registry', 'team', 'roadmap', 'problems', 'initiatives', 'essays', 'about'];
 const dots = document.querySelectorAll('.sdot');
 dots.forEach((d, i) => d.addEventListener('click', () =>
   document.getElementById(secs[i]).scrollIntoView({ behavior: 'smooth' })
