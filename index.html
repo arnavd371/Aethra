@@ -859,6 +859,39 @@
       flex-shrink: 0;
     }
     .reg-flag-item b { color: var(--text); font-weight: 400; }
+
+    /* ── waitlist ── */
+    .wl-form { margin-top: 28px; }
+    .wl-fields { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+    .wl-input {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 12px 16px;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color .2s;
+      width: 100%;
+      max-width: 360px;
+      appearance: none;
+    }
+    .wl-input::placeholder { color: var(--dim); }
+    .wl-input:focus { border-color: var(--muted); }
+    .wl-btn {
+      cursor: pointer;
+      border: none;
+      font-family: 'Press Start 2P', monospace !important;
+      font-size: 9px !important;
+      margin-top: 6px;
+    }
+    .wl-btn:disabled { opacity: .5; cursor: default; }
+    .wl-msg { font-size: 14px; color: var(--muted); margin-top: 20px; line-height: 1.8; display: none; }
+    .wl-msg.visible { display: block; }
+    .wl-msg-err { color: var(--a); }
+    .wl-msg-err a { color: var(--a); }
+    .wl-count { font-size: 11px; color: var(--dim); margin-top: 16px; font-family: 'DM Mono', monospace; }
   </style>
 </head>
 <body>
@@ -922,7 +955,7 @@
     <a href="#events">events</a>
     <a href="#registry">registry</a>
     <a href="#about">about</a>
-    <a href="https://discord.gg/89RvqhYPez" target="_blank" rel="noopener" class="topnav-cta">discord</a>
+    <a href="#waitlist" class="topnav-cta">join waitlist</a>
   </nav>
 </header>
 
@@ -935,6 +968,7 @@
   <div class="sdot" data-s="team"></div>
   <div class="sdot" data-s="roadmap"></div>
   <div class="sdot" data-s="about"></div>
+  <div class="sdot" data-s="waitlist"></div>
 </nav>
 
 <!-- HERO -->
@@ -1458,6 +1492,42 @@
   </div>
 </div>
 
+<!-- WAITLIST -->
+<div id="waitlist">
+  <div class="sec">
+    <div class="sec-tag">waitlist</div>
+    <div class="about-grid">
+      <div>
+        <div class="about-big">
+          get notified<br>when we're<br><span class="ac">ready.</span>
+        </div>
+      </div>
+      <div class="about-right">
+        <p>
+          aethra's research fellowships, mentorship programs, and opportunity matching are in development.
+          join the waitlist and we will reach out when applications open.
+        </p>
+        <p>
+          no spam. one email when it matters.
+        </p>
+        <form id="waitlist-form" class="wl-form" novalidate>
+          <div class="wl-fields">
+            <input type="text"  name="name"  placeholder="your name"  class="wl-input" autocomplete="name" />
+            <input type="email" name="email" placeholder="your email" class="wl-input" autocomplete="email" required />
+          </div>
+          <button type="submit" class="abtn abtn-solid wl-btn">join waitlist</button>
+        </form>
+        <p id="wl-success" class="wl-msg">
+          you are on the list. we will reach out when programs open. check your inbox for a confirmation.
+        </p>
+        <p id="wl-error" class="wl-msg wl-msg-err">
+          something went wrong. email us directly at <a href="mailto:aethraglobal@gmail.com">aethraglobal@gmail.com</a> to join.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <footer>
   <span class="footer-brand">aethra</span>
   <span>2025-2026 · <a href="#">privacy</a> · student-run · 10 countries</span>
@@ -1481,7 +1551,7 @@ new IntersectionObserver(e => {
 }, { threshold: 0.3 }).observe(document.getElementById('hero'));
 
 /* ── dot nav ── */
-const secs = ['hero', 'programs', 'moonshot', 'events', 'registry', 'team', 'roadmap', 'about'];
+const secs = ['hero', 'programs', 'moonshot', 'events', 'registry', 'team', 'roadmap', 'about', 'waitlist'];
 const dots = document.querySelectorAll('.sdot');
 dots.forEach((d, i) => d.addEventListener('click', () =>
   document.getElementById(secs[i]).scrollIntoView({ behavior: 'smooth' })
@@ -1533,6 +1603,43 @@ secs.forEach((id, i) => {
     requestAnimationFrame(draw);
   }
   requestAnimationFrame(draw);
+})();
+
+/* ── waitlist form ── */
+(function () {
+  const SCRIPT_URL = 'PASTE_YOUR_APPS_SCRIPT_URL_HERE';
+  const form    = document.getElementById('waitlist-form');
+  const success = document.getElementById('wl-success');
+  const error   = document.getElementById('wl-error');
+  if (!form) return;
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const btn   = form.querySelector('button');
+    const email = form.querySelector('[name="email"]').value.trim();
+    const name  = form.querySelector('[name="name"]').value.trim();
+
+    if (!email) { form.querySelector('[name="email"]').focus(); return; }
+
+    btn.textContent = 'sending...';
+    btn.disabled    = true;
+    error.classList.remove('visible');
+
+    try {
+      await fetch(SCRIPT_URL, {
+        method:  'POST',
+        mode:    'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body:    new URLSearchParams({ name, email }).toString()
+      });
+      form.style.display = 'none';
+      success.classList.add('visible');
+    } catch (err) {
+      btn.textContent = 'join waitlist';
+      btn.disabled    = false;
+      error.classList.add('visible');
+    }
+  });
 })();
 
 /* ── steve: auto-float around whole page + draggable ── */
