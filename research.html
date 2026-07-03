@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aethra research — fellowships, mentorship, open problems</title>
+  <meta name="description" content="Aethra Research: fellowships, mentorship, publication support, preprint reviews, monthly open problems, and research essays for students ages 13–18." />
+  <meta property="og:title" content="aethra research" />
+  <meta property="og:description" content="Structured research programs for students who want to do original work. Pilot cohort launching soon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .program-block {
+      padding: 52px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .program-block:last-of-type { border-bottom: none; }
+    .program-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 24px;
+    }
+    .program-name {
+      font-family: 'Press Start 2P', monospace;
+      font-size: clamp(11px, 1.6vw, 14px);
+      color: var(--text);
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+    .program-status {
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 5px 12px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+    .status-pilot  { background: rgba(0,119,204,.08); color: var(--e); border: 1px solid rgba(0,119,204,.2); }
+    .status-soon   { background: rgba(57,255,110,.05); color: #4ade80; border: 1px solid rgba(57,255,110,.15); }
+    .status-active { background: rgba(26,138,60,.06); color: var(--d); border: 1px solid rgba(26,138,60,.2); }
+    .program-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.9;
+      max-width: 680px;
+      margin-bottom: 20px;
+    }
+    .program-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-top: 28px;
+    }
+    .pd-cell { background: var(--card); padding: 20px 22px; }
+    .pd-label { font-family: 'DM Mono', monospace; font-size: 8px; text-transform: uppercase; letter-spacing: 2px; color: var(--dim); margin-bottom: 8px; }
+    .pd-val { font-size: 13px; color: var(--text); }
+    @media (max-width: 768px) {
+      .program-header { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- STEVE -->
+<div id="steve-wrap">
+  <div class="steve-bubble">do research!<span class="drag-hint">drag me!</span></div>
+  <svg id="steve-svg" viewBox="0 0 16 32" width="26" height="52" xmlns="http://www.w3.org/2000/svg">
+    <rect x="4" y="0" width="8" height="2" fill="#593d1b"/>
+    <rect x="4" y="2" width="2" height="2" fill="#593d1b"/>
+    <rect x="10" y="2" width="2" height="2" fill="#593d1b"/>
+    <rect x="4" y="2" width="8" height="6" fill="#c68642"/>
+    <rect x="5" y="3" width="2" height="2" fill="#ffffff"/>
+    <rect x="6" y="4" width="1" height="1" fill="#3b6ab0"/>
+    <rect x="9" y="3" width="2" height="2" fill="#ffffff"/>
+    <rect x="9" y="4" width="1" height="1" fill="#3b6ab0"/>
+    <rect x="7" y="5" width="1" height="1" fill="#b56832"/>
+    <rect x="6" y="6" width="1" height="1" fill="#8b3200"/>
+    <rect x="7" y="7" width="2" height="1" fill="#8b3200"/>
+    <rect x="9" y="6" width="1" height="1" fill="#8b3200"/>
+    <rect x="4" y="8"  width="8" height="12" fill="#4d8ad4"/>
+    <rect x="5" y="9"  width="6" height="1"  fill="#3570ba"/>
+    <rect x="5" y="13" width="6" height="1"  fill="#3570ba"/>
+    <rect x="4" y="18" width="8" height="2"  fill="#aa8822"/>
+    <rect x="7" y="17" width="2" height="3"  fill="#d4aa00"/>
+    <rect x="7" y="18" width="2" height="1"  fill="#ffcc00"/>
+    <rect x="0" y="8"  width="4" height="12" fill="#c68642"/>
+    <rect x="0" y="8"  width="4" height="1"  fill="#a56828"/>
+    <rect x="3" y="8"  width="1" height="12" fill="#b57232"/>
+    <rect x="12" y="8"  width="4" height="12" fill="#c68642"/>
+    <rect x="12" y="8"  width="4" height="1"  fill="#a56828"/>
+    <rect x="12" y="8"  width="1" height="12" fill="#b57232"/>
+    <rect x="4" y="20" width="4" height="9"  fill="#283593"/>
+    <rect x="4" y="20" width="1" height="9"  fill="#1e2880"/>
+    <rect x="4" y="29" width="4" height="3"  fill="#3e1c00"/>
+    <rect x="4" y="31" width="4" height="1"  fill="#2a1200"/>
+    <rect x="8" y="20" width="4" height="9"  fill="#1a237e"/>
+    <rect x="11" y="20" width="1" height="9" fill="#131a5e"/>
+    <rect x="8" y="29" width="4" height="3"  fill="#2d1400"/>
+    <rect x="8" y="31" width="4" height="1"  fill="#1a0c00"/>
+    <rect x="7" y="20" width="2" height="9"  fill="#0d1357"/>
+  </svg>
+  <div class="steve-shadow"></div>
+</div>
+
+<!-- TOP NAV -->
+<header id="topnav">
+  <a href="index.html" class="topnav-brand">
+    <img src="logo.svg" alt="Aethra logo" />
+    <span>aethra</span>
+  </a>
+  <nav class="topnav-links">
+    <a href="research.html" class="active">research</a>
+    <a href="labs.html">labs</a>
+    <a href="community.html">community</a>
+    <a href="story.html">our story</a>
+    <a href="index.html#waitlist" class="topnav-cta">get involved</a>
+  </nav>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-eyebrow">aethra research</div>
+  <div class="page-title">the pipeline from<br>curiosity to contribution.</div>
+  <p class="page-intro">
+    most ambitious students hit a wall that has nothing to do with talent: no mentors, no peers working on similar problems,
+    no pathway from an interesting idea to something rigorous and lasting.
+    aethra research is the infrastructure for closing that gap.
+    fellowships, mentorship, publication support, preprint reviews, monthly open problems, and research essays.
+    everything here is in development. we are building it carefully, not quickly.
+  </p>
+</div>
+
+<!-- PROGRAMS -->
+<div>
+  <div class="sec">
+    <div class="sec-tag">programs</div>
+
+    <!-- Fellowship -->
+    <div class="program-block">
+      <div class="program-header">
+        <div>
+          <div class="program-name">research fellowships</div>
+        </div>
+        <span class="program-status status-pilot">pilot — launching [TODO: date]</span>
+      </div>
+      <p class="program-desc">
+        semester-length research projects pairing students with mentors from universities and industry.
+        fellows work on a defined research question within one of aethra's tracks, meet weekly with their mentor,
+        and produce a written output — a preprint, a technical report, or a documented open-source contribution.
+      </p>
+      <p class="program-desc">
+        the fellowship is not a tutoring program. mentors guide; fellows do the work.
+        the goal is for students to encounter what original research actually feels like:
+        extended uncertainty, iteration, and the particular satisfaction of having genuinely added something.
+      </p>
+      <div class="program-details">
+        <div class="pd-cell"><div class="pd-label">length</div><div class="pd-val">one semester (~14 weeks)</div></div>
+        <div class="pd-cell"><div class="pd-label">commitment</div><div class="pd-val">6–8 hrs / week</div></div>
+        <div class="pd-cell"><div class="pd-label">output</div><div class="pd-val">preprint or technical report</div></div>
+        <div class="pd-cell"><div class="pd-label">cost</div><div class="pd-val">free</div></div>
+        <div class="pd-cell"><div class="pd-label">eligibility</div><div class="pd-val">ages 13–18, any country</div></div>
+        <div class="pd-cell"><div class="pd-label">applications</div><div class="pd-val">[TODO: date] — join waitlist</div></div>
+      </div>
+    </div>
+
+    <!-- Mentorship -->
+    <div class="program-block">
+      <div class="program-header">
+        <div>
+          <div class="program-name">research mentorship</div>
+        </div>
+        <span class="program-status status-soon">building mentor network</span>
+      </div>
+      <p class="program-desc">
+        mentors are matched to students or teams based on research track, specific problem area, and working style.
+        matching is done by hand — we do not use an algorithm because the quality of the mentor-student relationship
+        determines almost everything about whether the work succeeds.
+      </p>
+      <p class="program-desc">
+        mentors come from universities, industry, and prior aethra events. if you are a researcher, practitioner,
+        or graduate student interested in mentoring, reach out at <a href="mailto:aethraglobal@gmail.com" style="color:var(--e);">aethraglobal@gmail.com</a>.
+      </p>
+      <p style="font-size:12px;color:var(--dim);font-family:'DM Mono',monospace;">[TODO: add mentor bios and profiles once confirmed]</p>
+    </div>
+
+    <!-- Publication Support -->
+    <div class="program-block">
+      <div class="program-header">
+        <div>
+          <div class="program-name">publication support</div>
+        </div>
+        <span class="program-status status-soon">in development</span>
+      </div>
+      <p class="program-desc">
+        help getting serious student work into real venues: arXiv preprints, student research journals,
+        and eventually peer-reviewed conferences where the work is strong enough.
+        this is support, not a guarantee. we will not push weak work into unsuitable venues to pad a profile.
+        we will help strong work find the right home and get there in good shape.
+      </p>
+    </div>
+
+    <!-- Preprint Reviews -->
+    <div class="program-block">
+      <div class="program-header">
+        <div>
+          <div class="program-name">preprint reviews</div>
+        </div>
+        <span class="program-status status-soon">in development</span>
+      </div>
+      <p class="program-desc">
+        a lightweight peer-review layer for students who have a draft and want rigorous feedback before wider submission.
+        reviewers are mentors and advanced students who have agreed to give detailed written feedback within two weeks.
+        not a journal. not a prize. just honest critique from people who have read the literature.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- OPEN PROBLEMS -->
+<div id="open-problems">
+  <div class="sec">
+    <div class="sec-tag">open problems</div>
+    <p style="font-size:14px;color:var(--muted);line-height:1.9;max-width:660px;margin-bottom:40px;">
+      each month, aethra releases a batch of open research questions across five tracks.
+      each problem comes with a statement, suggested reading, a difficulty note, and a way to form a team.
+      problems are chosen because they are genuinely unsolved and approachable with undergraduate-level (or less) background.
+      the first batch releases <b style="color:var(--text);">[TODO: date]</b>.
+    </p>
+
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:36px;margin-bottom:32px;">
+      <div style="font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:var(--dim);margin-bottom:12px;">sample problem — mathematics</div>
+      <div class="prob-title" style="font-family:'Press Start 2P',monospace;font-size:9px;color:var(--text);line-height:1.9;margin-bottom:12px;">
+        when does gradient descent find a global minimum in non-convex settings?
+      </div>
+      <p style="font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:16px;">
+        gradient descent on non-convex loss functions is widely used in machine learning, yet the theoretical conditions under which it converges to a global minimum (rather than a local one) remain only partially understood. characterize a family of non-convex functions for which convergence guarantees can be stated, and identify the structural properties that make such guarantees possible.
+      </p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+        <span style="font-size:9px;text-transform:uppercase;letter-spacing:1px;padding:4px 10px;border-radius:3px;border:1px solid var(--border);color:var(--muted);">difficulty: advanced</span>
+        <span style="font-size:9px;text-transform:uppercase;letter-spacing:1px;padding:4px 10px;border-radius:3px;border:1px solid var(--border);color:var(--muted);">track: optimization</span>
+        <span style="font-size:11px;color:var(--dim);font-family:'DM Mono',monospace;">suggested: Du et al. 2019, Kawaguchi 2016</span>
+      </div>
+    </div>
+
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:36px;margin-bottom:32px;">
+      <div style="font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:var(--dim);margin-bottom:12px;">sample problem — AI alignment</div>
+      <div class="prob-title" style="font-family:'Press Start 2P',monospace;font-size:9px;color:var(--text);line-height:1.9;margin-bottom:12px;">
+        can helpfulness be formally specified in a way that is complete and verifiable?
+      </div>
+      <p style="font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:16px;">
+        current approaches to AI alignment rely on reward models trained on human preference data. these are approximate proxies for helpfulness, not formal specifications. investigate whether a formal definition of "helpfulness" can be constructed that is both complete (captures all cases we care about) and verifiable (can be checked mechanically), and what obstacles arise when attempting to do so.
+      </p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+        <span style="font-size:9px;text-transform:uppercase;letter-spacing:1px;padding:4px 10px;border-radius:3px;border:1px solid var(--border);color:var(--muted);">difficulty: exploratory</span>
+        <span style="font-size:9px;text-transform:uppercase;letter-spacing:1px;padding:4px 10px;border-radius:3px;border:1px solid var(--border);color:var(--muted);">track: ai alignment</span>
+        <span style="font-size:11px;color:var(--dim);font-family:'DM Mono',monospace;">suggested: Christiano et al. 2017, Soares &amp; Fallenstein 2014</span>
+      </div>
+    </div>
+
+    <p style="font-size:12px;color:var(--dim);font-family:'DM Mono',monospace;line-height:1.8;">
+      the problems above are illustrative. the first official batch — covering AI alignment, optimization, mathematics, climate, and computational biology — releases [TODO: date].
+      join the <a href="index.html#waitlist" style="color:var(--e);">waitlist</a> or the <a href="https://discord.gg/89RvqhYPez" target="_blank" rel="noopener" style="color:var(--e);">discord</a> to be notified.
+    </p>
+  </div>
+</div>
+
+<!-- RESEARCH ESSAYS -->
+<div id="essays">
+  <div class="sec">
+    <div class="sec-tag">research essays</div>
+    <p style="font-size:14px;color:var(--muted);line-height:1.9;max-width:660px;margin-bottom:40px;">
+      short essays on research methodology, mathematical foundations, and ideas worth thinking carefully about.
+      written by the aethra team and, eventually, by fellows. two essays are in progress; they will be published here when ready.
+    </p>
+
+    <div class="essay-grid">
+      <div class="essay-card" style="pointer-events:none;opacity:.7;">
+        <div class="essay-meta">mathematics · coming soon</div>
+        <div class="essay-title">why theorem proving matters: a primer on formal mathematical reasoning</div>
+        <p class="essay-abstract">
+          most students first encounter a proof in a university lecture, without the vocabulary to understand why it works as a form of argument. this essay introduces the structure of mathematical proofs, the difference between informal and formal reasoning, and why learning to construct arguments from first principles is one of the most transferable things a student can do.
+        </p>
+      </div>
+
+      <div class="essay-card" style="pointer-events:none;opacity:.7;">
+        <div class="essay-meta">ai research · coming soon</div>
+        <div class="essay-title">what LLMs cannot do: reasoning limits and what they reveal</div>
+        <p class="essay-abstract">
+          large language models are impressive at pattern completion and surface-level inference, but struggle with systematic reasoning that requires tracking state, applying rules consistently, or producing proofs. this essay examines those failure modes carefully, what they reveal about the architecture, and what open problems they suggest for students interested in ai research.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div>
+  <div class="sec">
+    <div class="sec-tag">get involved</div>
+    <div class="about-grid">
+      <div>
+        <div class="about-big">join the<br>pilot<br><span class="ac">cohort.</span></div>
+      </div>
+      <div class="about-right">
+        <p>
+          the fellowship pilot is not open yet. join the waitlist and we will email you directly when applications open.
+          no spam. one email when it matters.
+        </p>
+        <p>
+          if you are a researcher, graduate student, or practitioner interested in mentoring,
+          email us at <a href="mailto:aethraglobal@gmail.com" style="color:var(--e);">aethraglobal@gmail.com</a>.
+        </p>
+        <div class="about-cta">
+          <a href="index.html#waitlist" class="abtn abtn-solid">join waitlist</a>
+          <a href="https://discord.gg/89RvqhYPez" target="_blank" rel="noopener" class="abtn abtn-ghost">discord</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-brand">aethra</span>
+  <span>
+    <a href="index.html">home</a> ·
+    <a href="labs.html">labs</a> ·
+    <a href="community.html">community</a> ·
+    <a href="story.html">our story</a> ·
+    student-run · 10 countries
+  </span>
+</footer>
+
+<script>
+(function () {
+  const s = document.getElementById('steve-wrap');
+  const W = () => window.innerWidth - 60, H = () => window.innerHeight - 100;
+  let cx = Math.random()*W(), cy = Math.random()*H(), tx = cx, ty = cy, vx = 0, vy = 0;
+  let dragging = false, ox = 0, oy = 0, bobT = 0;
+  function newTarget() { tx = 40+Math.random()*(W()-40); ty = 40+Math.random()*(H()-40); setTimeout(newTarget, 3000+Math.random()*3000); }
+  newTarget();
+  function loop() {
+    if (!dragging) { vx += (tx-cx)*0.012; vy += (ty-cy)*0.012; vx *= 0.88; vy *= 0.88; cx += vx; cy += vy; bobT += 0.04; s.style.left = cx+'px'; s.style.top = (cy+Math.sin(bobT)*4)+'px'; }
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+  s.addEventListener('mousedown', e => { dragging=true; s.classList.add('dragging'); const r=s.getBoundingClientRect(); ox=e.clientX-r.left; oy=e.clientY-r.top; e.preventDefault(); });
+  window.addEventListener('mousemove', e => { if(!dragging)return; cx=e.clientX-ox; cy=e.clientY-oy; s.style.left=cx+'px'; s.style.top=cy+'px'; vx=0; vy=0; });
+  window.addEventListener('mouseup', () => { if(!dragging)return; dragging=false; s.classList.remove('dragging'); tx=cx; ty=cy; setTimeout(newTarget,800); });
+  s.addEventListener('touchstart', e => { const t=e.touches[0]; dragging=true; s.classList.add('dragging'); const r=s.getBoundingClientRect(); ox=t.clientX-r.left; oy=t.clientY-r.top; }, {passive:true});
+  window.addEventListener('touchmove', e => { if(!dragging)return; const t=e.touches[0]; cx=t.clientX-ox; cy=t.clientY-oy; s.style.left=cx+'px'; s.style.top=cy+'px'; vx=0; vy=0; }, {passive:true});
+  window.addEventListener('touchend', () => { dragging=false; s.classList.remove('dragging'); tx=cx; ty=cy; setTimeout(newTarget,800); });
+})();
+</script>
+</body>
+</html>
