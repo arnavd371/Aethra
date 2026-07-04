@@ -341,7 +341,7 @@ new IntersectionObserver(e => {
     if (!t0) t0 = ts;
     const p = Math.min((ts - t0) / dur, 1);
     counterEl.textContent = Math.floor((1 - Math.pow(1 - p, 4)) * target).toLocaleString() + '+';
-    p < 1 ? requestAnimationFrame(tick) : (counterEl.textContent = '1,704+');
+    p < 1 ? requestAnimationFrame(tick) : (counterEl.textContent = '2,334+');
   })(performance.now());
 }, { threshold: 0.3 }).observe(document.getElementById('hero'));
 
