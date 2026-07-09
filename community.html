@@ -10,8 +10,111 @@
   <link rel="icon" href="aethralogo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600;700&family=Press+Start+2P&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--paper:#F4F1EA;--paper-raised:#FBF9F4;--ink:#15130F;--ink-soft:#4A473F;
+      --text:#15130F;--muted:#4A473F;--dim:#6d6a60;--border:rgba(21,19,15,.2);--d:#1a8a3c}
+    html{scroll-behavior:smooth}
+    body{font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;background:var(--paper);color:var(--ink);
+      font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--paper)}
+    ::-webkit-scrollbar-thumb{background:var(--ink);border-radius:2px}
+
+    #topbar{height:8px;background:var(--ink)}
+    #topnav{max-width:896px;margin:0 auto;padding:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .topnav-links{display:flex;align-items:center;gap:22px;flex-wrap:wrap;font-size:.85rem}
+    .topnav-links a{color:var(--ink-soft);text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(21,19,15,.3)}
+    .topnav-links a:hover,.topnav-links a.active{color:var(--ink);text-decoration-color:var(--ink)}
+    .topnav-cta{background:var(--ink);color:var(--paper)!important;padding:8px 16px;font-weight:700;text-decoration:none!important}
+
+    .page-hero{max-width:896px;margin:0 auto;padding:32px 24px 8px}
+    .page-eyebrow{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:16px}
+    .page-title{font-family:'Fraunces',Georgia,serif;font-size:clamp(2.2rem,6vw,3.4rem);font-weight:600;line-height:1.1;letter-spacing:-.02em;margin-bottom:20px}
+    .page-intro{font-size:.95rem;color:var(--ink-soft);line-height:1.75;max-width:40rem}
+
+    #stats{max-width:896px;margin:32px auto 0;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--border)}
+    #stats{border:none}
+    #stats .stat-cell{background:var(--paper-raised);border:1px solid var(--ink);padding:18px;box-shadow:4px 4px 0 0 var(--ink);margin:0 4px 4px 0}
+    #stats{gap:12px;background:transparent}
+    .sn{display:block;font-family:'Fraunces',Georgia,serif;font-size:1.7rem;font-weight:700;letter-spacing:-.02em}
+    .sl{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+
+    .sec{max-width:896px;margin:0 auto;padding:56px 24px 8px}
+    .sec-tag{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:24px}
+
+    .moonshot-card{background:var(--paper-raised);border:1px solid var(--ink);box-shadow:6px 6px 0 0 var(--ink);
+      padding:32px;display:grid;grid-template-columns:1fr 200px;gap:32px}
+    @media(max-width:700px){.moonshot-card{grid-template-columns:1fr}}
+    .ms-eyebrow{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+    .ms-name{font-family:'Fraunces',Georgia,serif;font-size:2.2rem;font-weight:700;line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px}
+    .ms-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.75;margin-bottom:20px}
+    .ms-link{font-size:.85rem;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+    .ms-sponsors{margin-top:24px}
+    .ms-sponsors-label{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:10px}
+    .ms-chips{display:flex;gap:8px;flex-wrap:wrap}
+    .ms-chip{font-size:11px;letter-spacing:.04em;text-transform:uppercase;border:1px solid var(--border);padding:4px 8px}
+    .ms-stats{display:flex;flex-direction:column;gap:20px;border-left:1px solid var(--border);padding-left:24px}
+    @media(max-width:700px){.ms-stats{border-left:none;padding-left:0;flex-direction:row;flex-wrap:wrap;gap:24px}}
+    .ms-stat-num{font-family:'Fraunces',Georgia,serif;font-size:1.8rem;font-weight:700;letter-spacing:-.02em;display:block}
+    .ms-stat-label{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+
+    .prize-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:24px}
+    .pg-cell{background:var(--paper-raised);padding:20px}
+    .pg-label{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+    .pg-num{font-family:'Fraunces',Georgia,serif;font-size:1.6rem;font-weight:700;letter-spacing:-.02em}
+    .pg-sub{font-size:.75rem;color:var(--ink-soft);margin-top:4px}
+    .prize-rows{border-top:1px solid var(--border);margin-bottom:28px}
+    .pr-row{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--border);font-size:.82rem}
+    .pr-place{font-weight:700}
+    .pr-val{color:var(--ink-soft);text-align:right}
+    .sponsors-label{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:10px}
+    .sponsor-tags{display:flex;gap:8px;flex-wrap:wrap}
+    .stag{font-size:11px;letter-spacing:.04em;text-transform:uppercase;border:1px solid var(--border);padding:4px 8px}
+
+    .event-item{display:grid;grid-template-columns:36px 1fr 110px 110px 90px;gap:16px;align-items:center;
+      padding:16px 0;border-bottom:1px solid var(--border)}
+    .event-item:first-of-type{border-top:1px solid var(--border)}
+    @media(max-width:700px){.event-item{grid-template-columns:36px 1fr;row-gap:6px}
+      .ei-count,.ei-prize,.ei-link{grid-column:2}}
+    .ei-num{font-size:.75rem;color:var(--ink-soft)}
+    .ei-name{font-weight:700;font-size:.95rem}
+    .ei-sub{font-size:.75rem;color:var(--ink-soft)}
+    .ei-count,.ei-prize{font-weight:700;font-size:.9rem}
+    .ei-count small,.ei-prize small{display:block;font-weight:400;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+    .ei-link a{font-size:.8rem;text-decoration:underline;text-underline-offset:3px;color:var(--ink-soft)}
+    .ei-link a:hover{color:var(--ink)}
+
+    .about-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;padding-bottom:56px}
+    @media(max-width:700px){.about-grid{grid-template-columns:1fr}}
+    .about-big{font-family:'Fraunces',Georgia,serif;font-size:2.6rem;font-weight:700;line-height:1.15;letter-spacing:-.02em}
+    .ac{color:var(--ink-soft);font-style:italic;font-weight:400}
+    .about-right p{font-size:.9rem;color:var(--ink-soft);line-height:1.75;margin-bottom:16px}
+    .about-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+    .abtn{font-size:.85rem;font-weight:700;padding:10px 20px;border:1px solid var(--ink)}
+    .abtn-solid{background:var(--ink);color:var(--paper)}
+    .abtn-solid:hover{box-shadow:4px 4px 0 0 rgba(21,19,15,.35)}
+    .abtn-ghost{background:var(--paper-raised)}
+    .abtn-ghost:hover{box-shadow:4px 4px 0 0 var(--ink)}
+
+    footer{max-width:896px;margin:0 auto;padding:32px 24px 48px;border-top:1px solid var(--border);
+      display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+      font-size:.78rem;color:var(--ink-soft)}
+    footer a{text-decoration:underline;text-underline-offset:3px}
+    footer a:hover{color:var(--ink)}
+
+    #steve-wrap{position:fixed;display:flex;flex-direction:column;align-items:center;gap:6px;
+      cursor:grab;user-select:none;touch-action:none;z-index:888;left:88vw;top:70vh}
+    #steve-wrap.dragging{cursor:grabbing}
+    .steve-bubble{background:var(--ink);padding:5px 10px;font-family:'Press Start 2P',monospace;
+      font-size:6px;color:var(--paper);line-height:1.8;text-align:center;position:relative;white-space:nowrap}
+    .steve-bubble::after{content:'';position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);
+      border-left:5px solid transparent;border-right:5px solid transparent;border-top:8px solid var(--ink)}
+    .steve-bubble .drag-hint{color:#aaa;display:block;margin-top:2px}
+    #steve-svg{image-rendering:pixelated;display:block}
+    .steve-shadow{width:22px;height:3px;background:radial-gradient(ellipse,rgba(0,0,0,.15) 0%,transparent 70%);border-radius:50%}
+  </style>
 </head>
 <body>
 
@@ -110,24 +213,24 @@
       <div>
         <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px;">
           <div class="ms-eyebrow" style="margin-bottom:0;">aethra global innovation challenge 2026</div>
-          <span style="font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;padding:4px 10px;border-radius:3px;background:rgba(26,138,60,.06);color:var(--d);border:1px solid rgba(26,138,60,.2);">ended</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;padding:4px 10px;border-radius:3px;background:rgba(26,138,60,.06);color:var(--d);border:1px solid rgba(26,138,60,.2);">ended</span>
         </div>
         <div class="ms-name">moonshot<br>hackathon</div>
-        <div style="font-family:'Spectral',serif;font-size:13px;color:var(--muted);font-style:italic;margin-bottom:4px;line-height:1.7;">Moonshot: A 0 to 1 Hackathon.</div>
-        <div style="font-family:'Spectral',serif;font-size:13px;color:var(--muted);font-style:italic;margin-bottom:16px;line-height:1.7;">"The best way to predict the future is to invent it."</div>
+        <div style="font-family:'Fraunces',Georgia,serif;font-size:13px;color:var(--muted);font-style:italic;margin-bottom:4px;line-height:1.7;">Moonshot: A 0 to 1 Hackathon.</div>
+        <div style="font-family:'Fraunces',Georgia,serif;font-size:13px;color:var(--muted);font-style:italic;margin-bottom:16px;line-height:1.7;">"The best way to predict the future is to invent it."</div>
         <p class="ms-desc">
           our seventh event and most ambitious yet. 11 prize categories across beginner friendly machine learning/AI and open-ended innovation tracks.
           moonshot was the first aethra event where top builders got directly connected to vetted research programs, fellowships, and mentors.
           the goal was to make what comes after the hackathon as valuable as the hackathon itself.
         </p>
         <div style="margin-bottom:20px;">
-          <div style="font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:var(--dim);margin-bottom:8px;">categories</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:2px;color:var(--dim);margin-bottom:8px;">categories</div>
           <div style="display:flex;gap:8px;flex-wrap:wrap;">
             <span style="font-size:10px;border:1px solid var(--border);padding:4px 10px;border-radius:3px;color:var(--muted);">beginner friendly ML/AI</span>
             <span style="font-size:10px;border:1px solid var(--border);padding:4px 10px;border-radius:3px;color:var(--muted);">open ended</span>
           </div>
         </div>
-        <p style="font-family:'Spectral',serif;font-size:13px;color:var(--muted);font-style:italic;line-height:1.8;margin-bottom:20px;">
+        <p style="font-family:'Fraunces',Georgia,serif;font-size:13px;color:var(--muted);font-style:italic;line-height:1.8;margin-bottom:20px;">
           "Civilizations are not transformed by those who optimize what already exists. They are transformed by those willing to imagine what does not."
         </p>
         <a href="https://moonshot-aethra.devpost.com" target="_blank" rel="noopener" class="ms-link">view on devpost →</a>
