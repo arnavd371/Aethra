@@ -118,46 +118,6 @@
 </head>
 <body>
 
-<!-- STEVE -->
-<div id="steve-wrap">
-  <div class="steve-bubble">join discord!<span class="drag-hint">drag me!</span></div>
-  <svg id="steve-svg" viewBox="0 0 16 32" width="26" height="52" xmlns="http://www.w3.org/2000/svg">
-    <rect x="4" y="0" width="8" height="2" fill="#593d1b"/>
-    <rect x="4" y="2" width="2" height="2" fill="#593d1b"/>
-    <rect x="10" y="2" width="2" height="2" fill="#593d1b"/>
-    <rect x="4" y="2" width="8" height="6" fill="#c68642"/>
-    <rect x="5" y="3" width="2" height="2" fill="#ffffff"/>
-    <rect x="6" y="4" width="1" height="1" fill="#3b6ab0"/>
-    <rect x="9" y="3" width="2" height="2" fill="#ffffff"/>
-    <rect x="9" y="4" width="1" height="1" fill="#3b6ab0"/>
-    <rect x="7" y="5" width="1" height="1" fill="#b56832"/>
-    <rect x="6" y="6" width="1" height="1" fill="#8b3200"/>
-    <rect x="7" y="7" width="2" height="1" fill="#8b3200"/>
-    <rect x="9" y="6" width="1" height="1" fill="#8b3200"/>
-    <rect x="4" y="8"  width="8" height="12" fill="#4d8ad4"/>
-    <rect x="5" y="9"  width="6" height="1"  fill="#3570ba"/>
-    <rect x="5" y="13" width="6" height="1"  fill="#3570ba"/>
-    <rect x="4" y="18" width="8" height="2"  fill="#aa8822"/>
-    <rect x="7" y="17" width="2" height="3"  fill="#d4aa00"/>
-    <rect x="7" y="18" width="2" height="1"  fill="#ffcc00"/>
-    <rect x="0" y="8"  width="4" height="12" fill="#c68642"/>
-    <rect x="0" y="8"  width="4" height="1"  fill="#a56828"/>
-    <rect x="3" y="8"  width="1" height="12" fill="#b57232"/>
-    <rect x="12" y="8"  width="4" height="12" fill="#c68642"/>
-    <rect x="12" y="8"  width="4" height="1"  fill="#a56828"/>
-    <rect x="12" y="8"  width="1" height="12" fill="#b57232"/>
-    <rect x="4" y="20" width="4" height="9"  fill="#283593"/>
-    <rect x="4" y="20" width="1" height="9"  fill="#1e2880"/>
-    <rect x="4" y="29" width="4" height="3"  fill="#3e1c00"/>
-    <rect x="4" y="31" width="4" height="1"  fill="#2a1200"/>
-    <rect x="8" y="20" width="4" height="9"  fill="#1a237e"/>
-    <rect x="11" y="20" width="1" height="9" fill="#131a5e"/>
-    <rect x="8" y="29" width="4" height="3"  fill="#2d1400"/>
-    <rect x="8" y="31" width="4" height="1"  fill="#1a0c00"/>
-    <rect x="7" y="20" width="2" height="9"  fill="#0d1357"/>
-  </svg>
-  <div class="steve-shadow"></div>
-</div>
 
 <!-- TOP BAR -->
 <div id="topbar"></div>
@@ -409,31 +369,5 @@
   </span>
 </footer>
 
-<script>
-(function () {
-  const s = document.getElementById('steve-wrap');
-  const W = () => window.innerWidth - 60;
-  const H = () => window.innerHeight - 100;
-  let cx = Math.random() * W(), cy = Math.random() * H();
-  let tx = cx, ty = cy, vx = 0, vy = 0;
-  let dragging = false, ox = 0, oy = 0, bobT = 0;
-  function newTarget() { tx = 40 + Math.random() * (W()-40); ty = 40 + Math.random() * (H()-40); setTimeout(newTarget, 3000 + Math.random()*3000); }
-  newTarget();
-  function loop() {
-    if (!dragging) {
-      vx += (tx-cx)*0.012; vy += (ty-cy)*0.012; vx *= 0.88; vy *= 0.88; cx += vx; cy += vy;
-      bobT += 0.04; s.style.left = cx+'px'; s.style.top = (cy+Math.sin(bobT)*4)+'px';
-    }
-    requestAnimationFrame(loop);
-  }
-  requestAnimationFrame(loop);
-  s.addEventListener('mousedown', e => { dragging=true; s.classList.add('dragging'); const r=s.getBoundingClientRect(); ox=e.clientX-r.left; oy=e.clientY-r.top; e.preventDefault(); });
-  window.addEventListener('mousemove', e => { if(!dragging)return; cx=e.clientX-ox; cy=e.clientY-oy; s.style.left=cx+'px'; s.style.top=cy+'px'; vx=0; vy=0; });
-  window.addEventListener('mouseup', () => { if(!dragging)return; dragging=false; s.classList.remove('dragging'); tx=cx; ty=cy; setTimeout(newTarget,800); });
-  s.addEventListener('touchstart', e => { const t=e.touches[0]; dragging=true; s.classList.add('dragging'); const r=s.getBoundingClientRect(); ox=t.clientX-r.left; oy=t.clientY-r.top; }, {passive:true});
-  window.addEventListener('touchmove', e => { if(!dragging)return; const t=e.touches[0]; cx=t.clientX-ox; cy=t.clientY-oy; s.style.left=cx+'px'; s.style.top=cy+'px'; vx=0; vy=0; }, {passive:true});
-  window.addEventListener('touchend', () => { dragging=false; s.classList.remove('dragging'); tx=cx; ty=cy; setTimeout(newTarget,800); });
-})();
-</script>
 </body>
 </html>
