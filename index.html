@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>aethra: research and innovation ecosystem</title>
-  <meta name="description" content="Aethra is a global research and innovation ecosystem for students ages 13–18. Hackathons, research fellowships, mentorship, and open problems across 30 countries." />
-  <meta property="og:title" content="aethra: research and innovation ecosystem" />
+  <title>aethra: research & innovation network</title>
+  <meta name="description" content="Aethra is a research and innovation network for students ages 13-18. Research fellowships, labs, community, and hackathons across 30 countries." />
+  <meta property="og:title" content="aethra: research & innovation network" />
   <meta property="og:description" content="Building the research infrastructure we wish we had in high school." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="aethralogo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600;700&family=Press+Start+2P&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- STEVE -->
+<!-- ── Steve mascot ── -->
 <div id="steve-wrap">
   <div class="steve-bubble">hi!! i'm steve 👋<span class="drag-hint">drag me!</span></div>
   <svg id="steve-svg" viewBox="0 0 16 32" width="26" height="52" xmlns="http://www.w3.org/2000/svg">
@@ -57,512 +57,456 @@
   <div class="steve-shadow"></div>
 </div>
 
-<!-- TOP BAR -->
-<div id="topbar"></div>
-
-<!-- TOP NAV -->
-<header id="topnav">
-  <a href="index.html" class="topnav-brand">
-    <img src="aethralogo.png" alt="Aethra" style="width:36px;height:36px;" />
-  </a>
-  <nav class="topnav-links">
-    <a href="community.html">community</a>
-    <a href="story.html">our story</a>
-    <a href="#waitlist" class="topnav-cta">get involved</a>
-  </nav>
-</header>
-
-<nav id="sidenav">
-  <div class="sdot on" data-s="hero"></div>
-  <div class="sdot" data-s="manifesto"></div>
-  <div class="sdot" data-s="research"></div>
-  <div class="sdot" data-s="labs"></div>
-  <div class="sdot" data-s="community"></div>
-  <div class="sdot" data-s="team"></div>
-  <div class="sdot" data-s="waitlist"></div>
+<!-- ── Nav ── -->
+<nav id="topnav">
+  <a href="index.html" class="nav-brand">aethra</a>
+  <a href="#manifesto" class="nav-link">manifesto</a>
+  <a href="#research" class="nav-link">research</a>
+  <a href="#labs" class="nav-link">labs</a>
+  <a href="#community" class="nav-link">community</a>
+  <a href="#waitlist" class="nav-cta">join</a>
 </nav>
 
-<!-- HERO -->
-<div id="hero">
+<!-- ══════════ HERO ══════════ -->
+<section id="hero">
   <canvas id="star-canvas"></canvas>
+  <div class="container">
+    <div class="reveal">
+      <div class="hero-type">Research &middot; Labs &middot; Community &middot; Ages 13&ndash;18</div>
+      <h1>building the research<br>infrastructure we wish we<br>had in high school.</h1>
+      <p class="hero-subtitle">Aethra is a research and innovation network for students. Three pillars: research programs and fellowships, a labs track for builders, and a community that started with hackathons and is becoming something bigger.</p>
 
-  <a href="community.html" class="live-badge" style="z-index:1;position:relative;">
-    moonshot 2026 ended · 636 participants · next event TBD
-  </a>
-
-  <div class="hero-card">
-    <span class="hero-card-num" id="counter">0+</span>
-    <span class="hero-card-label">participants across 30 countries</span>
-  </div>
-
-  <img src="aethralogo.png" alt="Aethra" style="width:140px;height:140px;object-fit:contain;animation:buddy-float 3s ease-in-out infinite;" />
-
-  <p class="tagline">
-    building the research and innovation infrastructure
-    <span class="hi">we wish we had in high school.</span>
-  </p>
-
-  <p class="hero-meta">
-    <b>research</b> &nbsp;·&nbsp; <b>labs</b> &nbsp;·&nbsp; <b>community</b> &nbsp;·&nbsp; <b>ages 13–18</b>
-  </p>
-
-  <nav class="pill-nav">
-    <a href="community.html">community</a>
-    <a href="story.html">our story</a>
-    <a href="https://discord.gg/89RvqhYPez" target="_blank" rel="noopener">discord</a>
-    <a href="mailto:aethra.club@gmail.com">partner</a>
-  </nav>
-</div>
-
-<!-- STATS STRIP -->
-<div id="stats">
-  <div class="stat-cell">
-    <span class="sn">2,340+</span>
-    <span class="sl">total participants</span>
-  </div>
-  <div class="stat-cell">
-    <span class="sn">7</span>
-    <span class="sl">events run</span>
-  </div>
-  <div class="stat-cell">
-    <span class="sn">$45,752+</span>
-    <span class="sl">in prizes distributed</span>
-  </div>
-  <div class="stat-cell">
-    <span class="sn">30</span>
-    <span class="sl">countries</span>
-  </div>
-</div>
-
-<!-- MANIFESTO -->
-<div id="manifesto">
-  <div class="manifesto-inner">
-    <div class="manifesto-eyebrow">what we believe</div>
-    <div class="manifesto-line">
-      <span class="ml-num">01</span>
-      <span class="ml-text">curiosity is the only <em>prerequisite</em> for discovery.</span>
-    </div>
-    <div class="manifesto-line">
-      <span class="ml-num">02</span>
-      <span class="ml-text">the most interesting questions are <em>never assigned.</em></span>
-    </div>
-    <div class="manifesto-line">
-      <span class="ml-num">03</span>
-      <span class="ml-text">infrastructure determines <span class="green">who gets to think rigorously.</span></span>
-    </div>
-    <div class="manifesto-line">
-      <span class="ml-num">04</span>
-      <span class="ml-text"><span class="yellow">geography is not destiny.</span> neither is your school, your income, or your country.</span>
-    </div>
-    <div class="manifesto-line">
-      <span class="ml-num">05</span>
-      <span class="ml-text">we build the institution that <em>should have existed.</em></span>
-    </div>
-    <p class="manifesto-closing">most students are taught to solve problems that already have known answers. the infrastructure to pursue the hard ones, mentors, peers, pathways from curiosity to contribution, does not exist before university. <b>aethra exists to build it.</b></p>
-  </div>
-</div>
-
-<!-- AETHRA RESEARCH -->
-<div id="research" style="border-top:1px solid var(--border);">
-  <div class="sec" style="border-top:none;">
-    <div class="sec-tag">pillar one</div>
-    <div class="about-grid">
-      <div>
-        <div class="about-big">aethra<br><span class="ac">research.</span></div>
-      </div>
-      <div class="about-right">
-        <p>the infrastructure for student researchers to do real work. mentorship, publication support, and open problems published monthly for students to form teams and produce papers or projects.</p>
-      </div>
-    </div>
-
-    <div class="program-list">
-      <div class="program-row">
-        <div class="program-name">research fellowships</div>
-        <div class="program-desc">structured, mentored fellowships for student researchers. pilot launching before ED/EA application season.</div>
-        <span class="program-tag coming">coming soon</span>
-      </div>
-      <div class="program-row">
-        <div class="program-name">research mentorship</div>
-        <div class="program-desc">1:1 matching with researchers, professors, and domain experts who guide students through original work.</div>
-        <span class="program-tag coming">coming soon</span>
-      </div>
-      <div class="program-row">
-        <div class="program-name">publication support</div>
-        <div class="program-desc">editing, feedback, and pathways to peer-reviewed venues. measurable outcomes: published papers, fellowship acceptances, launched projects.</div>
-        <span class="program-tag coming">coming soon</span>
-      </div>
-      <div class="program-row">
-        <div class="program-name">preprint reviews</div>
-        <div class="program-desc">students engage with live research by reviewing and discussing preprints alongside mentors.</div>
-        <span class="program-tag coming">coming soon</span>
-      </div>
-      <div class="program-row">
-        <div class="program-name">aethra research essays</div>
-        <div class="program-desc">a published collection of student essays on open research questions, peer-edited and publicly accessible.</div>
-        <span class="program-tag coming">coming soon</span>
-      </div>
-      <div class="program-row">
-        <div class="program-name">open problems</div>
-        <div class="program-desc">published monthly. students form teams, mentors guide them, results become papers or projects.</div>
-        <span class="program-tag active">monthly</span>
-      </div>
-    </div>
-
-    <div style="margin-top:40px;">
-      <div class="sec-tag" style="margin-bottom:20px;">open problem domains</div>
-      <div class="ms-chips">
-        <span class="ms-chip">AI alignment</span>
-        <span class="ms-chip">optimization</span>
-        <span class="ms-chip">mathematics</span>
-        <span class="ms-chip">climate</span>
-        <span class="ms-chip">computational biology</span>
-      </div>
-    </div>
-
-    <div class="about-cta" style="margin-top:48px;">
-      <a href="mailto:aethra.club@gmail.com" class="abtn abtn-solid">express interest</a>
-      <a href="mailto:aethra.club@gmail.com" class="abtn abtn-ghost">mentor with us</a>
-    </div>
-  </div>
-</div>
-
-<!-- AETHRA LABS -->
-<div id="labs" style="border-top:1px solid var(--border);">
-  <div class="sec" style="border-top:none;">
-    <div class="sec-tag">pillar two</div>
-    <div class="about-grid">
-      <div>
-        <div class="about-big">aethra<br><span style="color:var(--d)">labs.</span></div>
-      </div>
-      <div class="about-right">
-        <p>students build things that matter. real tools, not toy projects. the lab is the space where builders with technical skills work on problems with real-world consequence.</p>
-      </div>
-    </div>
-
-    <div class="pillar-grid" style="margin-top:48px;">
-      <div class="pillar-card p-research" style="cursor:default;">
-        <div class="pillar-type">ai tools</div>
-        <div class="pillar-name">machine learning and AI applications</div>
-        <p class="pillar-desc">tools that solve real problems in education, science, and access, not demos built to impress a judge.</p>
-        <span class="pillar-status">in development</span>
-      </div>
-      <div class="pillar-card p-labs" style="cursor:default;">
-        <div class="pillar-type">climate tools</div>
-        <div class="pillar-name">software for environmental problems</div>
-        <p class="pillar-desc">data pipelines, modeling tools, and analysis software built by students who care about what happens next.</p>
-        <span class="pillar-status">in development</span>
-      </div>
-      <div class="pillar-card p-community" style="cursor:default;">
-        <div class="pillar-type">education tools</div>
-        <div class="pillar-name">tools that close access gaps</div>
-        <p class="pillar-desc">software that expands what students can learn, where they are, with what they have.</p>
-        <span class="pillar-status">in development</span>
-      </div>
-    </div>
-
-    <div style="margin-top:24px;" class="pillar-grid">
-      <div class="pillar-card" style="cursor:default;border-top:2px solid var(--e);">
-        <div class="pillar-type" style="color:var(--e)">scientific software</div>
-        <div class="pillar-name">tools for researchers</div>
-        <p class="pillar-desc">computational tools built in collaboration with mentors doing active research, publishable alongside papers.</p>
-        <span class="pillar-status" style="background:rgba(59,79,160,.08);color:var(--e);border:1px solid rgba(59,79,160,.2);">in development</span>
-      </div>
-    </div>
-
-    <div class="about-cta" style="margin-top:48px;">
-      <a href="mailto:aethra.club@gmail.com" class="abtn abtn-solid">build with us</a>
-    </div>
-  </div>
-</div>
-
-<!-- AETHRA COMMUNITY -->
-<div id="community" style="border-top:1px solid var(--border);">
-  <div class="sec" style="border-top:none;">
-    <div class="sec-tag">pillar three</div>
-    <div class="about-grid">
-      <div>
-        <div class="about-big">aethra<br><span style="color:var(--b)">community.</span></div>
-      </div>
-      <div class="about-right">
-        <p>where students who are already asking the hard questions find each other. hackathons, discord, events, and workshops are the entry points. research and labs are where it goes from there.</p>
-        <p style="margin-top:16px;">hackathons are one part of the ecosystem now. not the whole thing.</p>
-      </div>
-    </div>
-
-    <div class="proof-stats-strip" style="margin-top:48px;">
-      <div class="stat-cell">
-        <span class="sn">7</span>
-        <span class="sl">hackathons run</span>
-      </div>
-      <div class="stat-cell">
-        <span class="sn">2,340+</span>
-        <span class="sl">participants</span>
-      </div>
-      <div class="stat-cell">
-        <span class="sn">$45,752+</span>
-        <span class="sl">in prizes</span>
-      </div>
-      <div class="stat-cell">
-        <span class="sn">30</span>
-        <span class="sl">countries</span>
-      </div>
-    </div>
-
-    <div class="program-list" style="margin-top:40px;">
-      <div class="program-row">
-        <div class="program-name">hackathons</div>
-        <div class="program-desc">global, online, themed events where students build over a weekend. 7 run so far. most recent: moonshot 2026, 636 participants, $33,232+ in prizes.</div>
-        <span class="program-tag active">ongoing</span>
-      </div>
-      <div class="program-row">
-        <div class="program-name">discord</div>
-        <div class="program-desc">the home base. where participants stay after events and new members arrive between them.</div>
-        <span class="program-tag active">active</span>
-      </div>
-      <div class="program-row">
-        <div class="program-name">events</div>
-        <div class="program-desc">talks, AMAs, paper reading clubs, and working sessions with researchers and builders.</div>
-        <span class="program-tag coming">coming soon</span>
-      </div>
-      <div class="program-row">
-        <div class="program-name">workshops</div>
-        <div class="program-desc">structured skill-building sessions: proof writing, ML fundamentals, research methodology.</div>
-        <span class="program-tag coming">coming soon</span>
-      </div>
-    </div>
-
-    <div class="about-cta" style="margin-top:48px;">
-      <a href="https://discord.gg/89RvqhYPez" target="_blank" rel="noopener" class="abtn abtn-solid">join discord</a>
-      <a href="community.html" class="abtn abtn-ghost">see all events</a>
-    </div>
-  </div>
-</div>
-
-<!-- TEAM -->
-<div id="team">
-  <div class="sec">
-    <div class="sec-tag">team</div>
-    <div class="team-grid">
-      <div class="team-card">
-        <div class="team-avatar">✦</div>
-        <div class="team-name">arnav dhiman</div>
-        <div class="team-role">founder & executive director</div>
-        <p style="font-size:13px;color:var(--muted);margin-top:14px;line-height:1.8;">
-          founded aethra in 2025. seven global events, 2,340+ participants across 30 countries, now building the research and mentorship infrastructure that should have existed for students from the start.
-          the goal is an institution, not an extracurricular.
-        </p>
-        <div style="margin-top:16px;">
-          <a href="story.html" style="font-family:'DM Mono',monospace;font-size:10px;color:var(--e);text-decoration:none;letter-spacing:0.5px;">read the full story →</a>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num"><span id="counter">2,340</span>+</span>
+          <span class="hero-stat-label">participants</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">7</span>
+          <span class="hero-stat-label">events</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">$45,752+</span>
+          <span class="hero-stat-label">in prizes</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">30</span>
+          <span class="hero-stat-label">countries</span>
         </div>
       </div>
-      <div class="team-card">
-        <div class="team-avatar">◈</div>
-        <div class="team-name">aaryan mulaye</div>
-        <div class="team-role">ex co-founder, no longer part of aethra</div>
+
+      <div class="hero-cta">
+        <a href="#waitlist" class="btn btn-primary">join the waitlist</a>
+        <a href="https://discord.gg/89RvqhYPez" target="_blank" rel="noopener" class="btn btn-ghost">discord</a>
+        <a href="story.html" class="btn btn-ghost">our story</a>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- WAITLIST -->
-<div id="waitlist">
-  <div class="sec">
-    <div class="sec-tag">waitlist</div>
-    <div class="about-grid">
-      <div>
-        <div class="about-big">get notified<br>when we're<br><span class="ac">ready.</span></div>
+<!-- ══════════ MANIFESTO ══════════ -->
+<section id="manifesto">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">what we believe</div>
+      <div class="sec-title">the manifesto</div>
+      <p>Most students are taught to solve problems that already have known answers. The infrastructure to pursue the hard ones, mentors, peers, pathways from curiosity to rigorous work, does not exist before university. Aethra exists to build it.</p>
+
+      <div class="manifesto-lines">
+        <div class="m-line">
+          <span class="m-num">01</span>
+          <span class="m-text">curiosity is the only <em>prerequisite</em> for discovery.</span>
+        </div>
+        <div class="m-line">
+          <span class="m-num">02</span>
+          <span class="m-text">the most interesting questions are <em>never assigned.</em></span>
+        </div>
+        <div class="m-line">
+          <span class="m-num">03</span>
+          <span class="m-text">infrastructure determines <span class="hl-green">who gets to think rigorously.</span></span>
+        </div>
+        <div class="m-line">
+          <span class="m-num">04</span>
+          <span class="m-text"><span class="hl-orange">geography is not destiny.</span> neither is your school, your income, or your country.</span>
+        </div>
+        <div class="m-line">
+          <span class="m-num">05</span>
+          <span class="m-text">we build the institution that <em>should have existed.</em></span>
+        </div>
       </div>
-      <div class="about-right">
-        <p>
-          aethra's research fellowships, mentorship programs, and open problem tracks are in development.
-          join the waitlist and we will reach out when applications open.
-        </p>
-        <p>no spam. one email when it matters.</p>
-        <form id="waitlist-form" class="wl-form" novalidate>
-          <div class="wl-fields">
-            <input type="text"  name="name"  placeholder="your name"  class="wl-input" autocomplete="name" />
-            <input type="email" name="email" placeholder="your email" class="wl-input" autocomplete="email" required />
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ AETHRA RESEARCH ══════════ -->
+<section id="research">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Pillar One</div>
+      <div class="sec-title">Aethra Research</div>
+      <p>The infrastructure for student researchers to do real work. Mentorship, publication support, and open problems published monthly for students to form teams and produce papers or projects. We measure success by what students ship: published papers, fellowship acceptances, launched projects.</p>
+
+      <div class="callout">
+        <p>Research fellowships are in development with a target to launch before ED/EA application season. If you are a researcher, professor, or domain expert interested in mentoring, we want to hear from you.</p>
+      </div>
+
+      <div class="prog-list">
+        <div class="prog-row">
+          <div>
+            <div class="prog-name">Research Fellowships</div>
+            <p class="prog-desc">Structured, mentored fellowships for student researchers. Pilot targeting launch before ED/EA application season.</p>
           </div>
-          <button type="submit" class="abtn abtn-solid wl-btn">join waitlist</button>
-        </form>
-        <p id="wl-success" class="wl-msg">you are on the list. we will reach out when programs open. check your inbox for a confirmation.</p>
-        <p id="wl-error" class="wl-msg wl-msg-err">something went wrong. email us directly at <a href="mailto:aethra.club@gmail.com">aethra.club@gmail.com</a> to join.</p>
-        <div class="about-cta" style="margin-top:32px;">
-          <a href="https://discord.gg/89RvqhYPez" target="_blank" rel="noopener" class="abtn abtn-solid">discord</a>
-          <a href="https://www.instagram.com/aethra.club5/" target="_blank" rel="noopener" class="abtn abtn-ghost">instagram</a>
-          <a href="https://in.linkedin.com/company/linkedinaethra" target="_blank" rel="noopener" class="abtn abtn-ghost">linkedin</a>
-          <a href="mailto:aethra.club@gmail.com" class="abtn abtn-ghost">sponsor us</a>
+          <span class="prog-tag soon">coming soon</span>
+        </div>
+        <div class="prog-row">
+          <div>
+            <div class="prog-name">Research Mentorship</div>
+            <p class="prog-desc">1:1 matching with researchers, professors, and domain experts who guide students through original work.</p>
+          </div>
+          <span class="prog-tag soon">coming soon</span>
+        </div>
+        <div class="prog-row">
+          <div>
+            <div class="prog-name">Publication Support</div>
+            <p class="prog-desc">Editing, feedback, and pathways to peer-reviewed venues. Multi-layer achievement: published papers, fellowship acceptances, mentor success stories.</p>
+          </div>
+          <span class="prog-tag soon">coming soon</span>
+        </div>
+        <div class="prog-row">
+          <div>
+            <div class="prog-name">Preprint Reviews</div>
+            <p class="prog-desc">Students engage with live research by reviewing and discussing preprints alongside mentors. Reading the field, not just the textbook.</p>
+          </div>
+          <span class="prog-tag soon">coming soon</span>
+        </div>
+        <div class="prog-row">
+          <div>
+            <div class="prog-name">Aethra Research Essays</div>
+            <p class="prog-desc">A published collection of student essays on open research questions. Peer-edited and publicly accessible.</p>
+          </div>
+          <span class="prog-tag soon">coming soon</span>
+        </div>
+        <div class="prog-row">
+          <div>
+            <div class="prog-name">Open Problems</div>
+            <p class="prog-desc">Published every month. Students form teams, mentors guide them, and results become papers or projects.</p>
+          </div>
+          <span class="prog-tag active">monthly</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <div class="sec-label" style="margin-bottom: .75rem;">Open problem domains</div>
+        <div class="chips">
+          <span class="chip">AI Alignment</span>
+          <span class="chip">Optimization</span>
+          <span class="chip">Mathematics</span>
+          <span class="chip">Climate</span>
+          <span class="chip">Computational Biology</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem; display: flex; gap: .75rem; flex-wrap: wrap;">
+        <a href="mailto:aethra.club@gmail.com" class="btn btn-primary">express interest</a>
+        <a href="mailto:aethra.club@gmail.com" class="btn btn-ghost">mentor with us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ AETHRA LABS ══════════ -->
+<section id="labs">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Pillar Two</div>
+      <div class="sec-title">Aethra Labs</div>
+      <p>Students build things that matter. Real tools, not toy projects. The labs track is for builders with technical skills working on problems with real-world consequence.</p>
+
+      <div class="cards-grid" style="margin-top: 2rem;">
+        <div class="p-card">
+          <div class="p-card-accent accent"></div>
+          <div class="p-card-label">AI Tools</div>
+          <h3>Machine learning applications</h3>
+          <p>Tools that solve real problems in education, science, and access. Not demos built to impress a judge.</p>
+          <span class="p-card-status status-dev">in development</span>
+        </div>
+        <div class="p-card">
+          <div class="p-card-accent green"></div>
+          <div class="p-card-label">Climate Tools</div>
+          <h3>Software for environmental problems</h3>
+          <p>Data pipelines, modeling tools, and analysis software built by students who care about what happens next.</p>
+          <span class="p-card-status status-dev">in development</span>
+        </div>
+        <div class="p-card">
+          <div class="p-card-accent orange"></div>
+          <div class="p-card-label">Education Tools</div>
+          <h3>Tools that close access gaps</h3>
+          <p>Software that expands what students can learn, where they are, with what they have.</p>
+          <span class="p-card-status status-dev">in development</span>
+        </div>
+        <div class="p-card">
+          <div class="p-card-accent purple"></div>
+          <div class="p-card-label">Scientific Software</div>
+          <h3>Tools for researchers</h3>
+          <p>Computational tools built in collaboration with mentors doing active research, publishable alongside papers.</p>
+          <span class="p-card-status status-dev">in development</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <a href="mailto:aethra.club@gmail.com" class="btn btn-primary">build with us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ AETHRA COMMUNITY ══════════ -->
+<section id="community">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Pillar Three</div>
+      <div class="sec-title">Aethra Community</div>
+      <p>Where students who are already asking the hard questions find each other. Hackathons, Discord, events, and workshops are the entry points. Research and Labs are where it goes from there.</p>
+      <p style="margin-top: .75rem;">Hackathons are one part of the ecosystem now. Not the whole thing.</p>
+
+      <div class="stats-strip">
+        <div class="stat-cell">
+          <span class="stat-num">7</span>
+          <span class="stat-label">hackathons</span>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-num">2,340+</span>
+          <span class="stat-label">participants</span>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-num">$45,752+</span>
+          <span class="stat-label">in prizes</span>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-num">30</span>
+          <span class="stat-label">countries</span>
+        </div>
+      </div>
+
+      <div class="prog-list">
+        <div class="prog-row">
+          <div>
+            <div class="prog-name">Hackathons</div>
+            <p class="prog-desc">Global, online, themed events where students build over a weekend. 7 run so far. Most recent: Moonshot 2026, 636 participants, $33,232+ in prizes across 11 categories.</p>
+          </div>
+          <span class="prog-tag active">ongoing</span>
+        </div>
+        <div class="prog-row">
+          <div>
+            <div class="prog-name">Discord</div>
+            <p class="prog-desc">The home base. Where participants stay after events and new members arrive between them. Active daily.</p>
+          </div>
+          <span class="prog-tag active">active</span>
+        </div>
+        <div class="prog-row">
+          <div>
+            <div class="prog-name">Events</div>
+            <p class="prog-desc">Talks, AMAs, paper reading clubs, and working sessions with researchers and builders.</p>
+          </div>
+          <span class="prog-tag soon">coming soon</span>
+        </div>
+        <div class="prog-row">
+          <div>
+            <div class="prog-name">Workshops</div>
+            <p class="prog-desc">Structured skill-building sessions: proof writing, ML fundamentals, research methodology.</p>
+          </div>
+          <span class="prog-tag soon">coming soon</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem; display: flex; gap: .75rem; flex-wrap: wrap;">
+        <a href="https://discord.gg/89RvqhYPez" target="_blank" rel="noopener" class="btn btn-primary">join discord</a>
+        <a href="community.html" class="btn btn-ghost">see all events</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TEAM ══════════ -->
+<section id="team">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Team</div>
+      <div class="sec-title">the people building this</div>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">✦</div>
+          <div class="team-name">Arnav Dhiman</div>
+          <div class="team-role">Founder &amp; Executive Director</div>
+          <p>Founded Aethra in 2025. Seven global events, 2,340+ participants across 30 countries. Now building the research and mentorship infrastructure that should have existed for students from the start. The goal is an institution, not an extracurricular.</p>
+          <br>
+          <a href="story.html">read the full story &rarr;</a>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- ══════════ WAITLIST ══════════ -->
+<section id="waitlist">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Get Involved</div>
+      <div class="sec-title">join the waitlist</div>
+      <p>Research fellowships, mentorship programs, and open problem tracks are in development. Join the waitlist and we will reach out when applications open. No spam. One email when it matters.</p>
+
+      <form id="waitlist-form" class="wl-form" novalidate>
+        <input type="text"  name="name"  placeholder="your name"  class="wl-input" autocomplete="name" />
+        <input type="email" name="email" placeholder="your email" class="wl-input" autocomplete="email" required />
+        <button type="submit" class="wl-submit">join waitlist &rarr;</button>
+      </form>
+      <p id="wl-success" class="wl-msg">you are on the list. we will reach out when programs open.</p>
+      <p id="wl-error" class="wl-msg wl-err">something went wrong. email us directly at <a href="mailto:aethra.club@gmail.com">aethra.club@gmail.com</a>.</p>
+
+      <div class="social-links">
+        <a href="https://discord.gg/89RvqhYPez" target="_blank" rel="noopener" class="social-link">Discord</a>
+        <a href="https://www.instagram.com/aethra.club5/" target="_blank" rel="noopener" class="social-link">Instagram</a>
+        <a href="https://in.linkedin.com/company/linkedinaethra" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+        <a href="mailto:aethra.club@gmail.com" class="social-link">sponsor us</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer>
-  <img src="aethralogo.png" alt="Aethra" style="height:22px;object-fit:contain;opacity:.7;" />
-  <span>
-    <a href="community.html">community</a> ·
-    <a href="story.html">our story</a> ·
-    student-run · 30 countries
-  </span>
+  <div class="container">
+    <p>aethra &middot; student-run &middot; 30 countries &middot; <a href="mailto:aethra.club@gmail.com">aethra.club@gmail.com</a></p>
+    <div class="footer-links">
+      <a href="community.html">community</a>
+      <a href="story.html">our story</a>
+      <a href="https://discord.gg/89RvqhYPez" target="_blank" rel="noopener">discord</a>
+    </div>
+  </div>
 </footer>
 
 <script>
-/* counter */
-const counterEl = document.getElementById('counter');
-let counterDone = false;
-new IntersectionObserver(e => {
-  if (!e[0].isIntersecting || counterDone) return;
-  counterDone = true;
-  const target = 2340, dur = 1800;
-  let t0;
-  (function tick(ts) {
-    if (!t0) t0 = ts;
-    const p = Math.min((ts - t0) / dur, 1);
-    counterEl.textContent = Math.floor((1 - Math.pow(1 - p, 4)) * target).toLocaleString() + '+';
-    p < 1 ? requestAnimationFrame(tick) : (counterEl.textContent = '2,340+');
-  })(performance.now());
-}, { threshold: 0.3 }).observe(document.getElementById('hero'));
+/* ── scroll reveal ── */
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-/* dot nav */
-const secs = ['hero','manifesto','research','labs','community','team','waitlist'];
-const dots = document.querySelectorAll('.sdot');
-dots.forEach((d, i) => d.addEventListener('click', () => {
-  const el = document.getElementById(secs[i]);
-  if (el) el.scrollIntoView({ behavior: 'smooth' });
-}));
-secs.forEach((id, i) => {
-  const el = document.getElementById(id);
+/* ── counter ── */
+(function() {
+  const el = document.getElementById('counter');
   if (!el) return;
-  new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting) dots.forEach((d, j) => d.classList.toggle('on', i === j));
-  }, { threshold: 0.35 }).observe(el);
-});
+  const target = 2340, dur = 1800;
+  let t0, done = false;
+  const io = new IntersectionObserver(e => {
+    if (!e[0].isIntersecting || done) return;
+    done = true; io.disconnect();
+    function step(ts) {
+      if (!t0) t0 = ts;
+      const p = Math.min((ts - t0) / dur, 1);
+      el.textContent = Math.round(p * p * target).toLocaleString();
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+  io.observe(el);
+})();
 
-/* starfield */
-(function () {
-  const c = document.getElementById('star-canvas');
-  if (!c) return;
-  const ctx = c.getContext('2d');
-  const hero = document.getElementById('hero');
-  function resize() { c.width = hero.offsetWidth; c.height = hero.offsetHeight; }
-  resize();
-  window.addEventListener('resize', resize);
-  const stars = Array.from({ length: 120 }, () => ({
-    x: Math.random(), y: Math.random(),
-    r: Math.random() * 1.2 + 0.2,
-    speed: Math.random() * 0.00012 + 0.00004,
-    opacity: Math.random() * 0.7 + 0.15,
-    twinkle: Math.random() * Math.PI * 2,
-  }));
-  function draw(t) {
-    ctx.clearRect(0, 0, c.width, c.height);
+/* ── starfield ── */
+(function() {
+  const canvas = document.getElementById('star-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let stars = [], W, H;
+  function resize() {
+    W = canvas.width = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+    stars = Array.from({length: 80}, () => ({
+      x: Math.random() * W, y: Math.random() * H,
+      r: Math.random() * 1.2 + .3, o: Math.random() * .4 + .1,
+      s: (Math.random() - .5) * .12
+    }));
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
     stars.forEach(s => {
-      const tw = 0.5 + 0.5 * Math.sin(t * 0.001 + s.twinkle);
+      s.o += s.s * .01;
+      if (s.o <= .05 || s.o >= .55) s.s *= -1;
       ctx.beginPath();
-      ctx.arc(s.x * c.width, s.y * c.height, s.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(26,18,7,${s.opacity * tw})`;
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(26,26,24,${s.o})`;
       ctx.fill();
-      s.y -= s.speed;
-      if (s.y < 0) { s.y = 1; s.x = Math.random(); }
     });
     requestAnimationFrame(draw);
   }
-  requestAnimationFrame(draw);
+  resize(); draw();
+  window.addEventListener('resize', resize);
 })();
 
-/* waitlist */
-(function () {
-  const SCRIPT_URL = 'PASTE_YOUR_APPS_SCRIPT_URL_HERE';
-  const form    = document.getElementById('waitlist-form');
-  const success = document.getElementById('wl-success');
-  const error   = document.getElementById('wl-error');
-  if (!form) return;
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
-    const btn   = form.querySelector('button');
-    const email = form.querySelector('[name="email"]').value.trim();
-    const name  = form.querySelector('[name="name"]').value.trim();
-    if (!email) { form.querySelector('[name="email"]').focus(); return; }
-    btn.textContent = 'sending...';
-    btn.disabled = true;
-    error.classList.remove('visible');
-    try {
-      await fetch(SCRIPT_URL, {
-        method: 'POST', mode: 'no-cors',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({ name, email }).toString()
-      });
-      form.style.display = 'none';
-      success.classList.add('visible');
-    } catch (err) {
-      btn.textContent = 'join waitlist';
-      btn.disabled = false;
-      error.classList.add('visible');
-    }
-  });
-})();
+/* ── waitlist form ── */
+document.getElementById('waitlist-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const name  = this.name.value.trim();
+  const email = this.email.value.trim();
+  if (!email) return;
+  const ok  = document.getElementById('wl-success');
+  const err = document.getElementById('wl-error');
+  ok.classList.remove('visible'); err.classList.remove('visible');
+  try {
+    const res = await fetch('https://formspree.io/f/xeojgkdl', {
+      method: 'POST', headers: {'Accept':'application/json','Content-Type':'application/json'},
+      body: JSON.stringify({ name, email })
+    });
+    if (res.ok) { ok.classList.add('visible'); this.reset(); }
+    else err.classList.add('visible');
+  } catch { err.classList.add('visible'); }
+});
 
-/* steve */
-(function () {
-  const s = document.getElementById('steve-wrap');
-  const W = () => window.innerWidth  - 60;
-  const H = () => window.innerHeight - 100;
-  let cx = Math.random() * W(), cy = Math.random() * H();
-  let tx = cx, ty = cy, vx = 0, vy = 0;
-  let dragging = false, ox = 0, oy = 0, bobT = 0;
-  function newTarget() {
-    tx = 40 + Math.random() * (W() - 40);
-    ty = 40 + Math.random() * (H() - 40);
-    setTimeout(newTarget, 3000 + Math.random() * 3000);
-  }
-  newTarget();
-  function loop() {
+/* ── Steve mascot ── */
+(function() {
+  const wrap = document.getElementById('steve-wrap');
+  if (!wrap) return;
+  let x = window.innerWidth - 80, y = window.innerHeight * 0.6;
+  let vx = 0, vy = 0, ax = 0, ay = 0;
+  let dragging = false, ox, oy, mx, my;
+  let targetX = x, targetY = y;
+  function setPos() { wrap.style.left = x + 'px'; wrap.style.top = y + 'px'; }
+  setPos();
+  const onDown = e => {
+    dragging = true; wrap.classList.add('dragging');
+    const pt = e.touches ? e.touches[0] : e;
+    ox = pt.clientX - x; oy = pt.clientY - y;
+    mx = pt.clientX; my = pt.clientY; vx = 0; vy = 0;
+  };
+  const onMove = e => {
+    if (!dragging) return;
+    const pt = e.touches ? e.touches[0] : e;
+    const px = mx, py = my;
+    mx = pt.clientX; my = pt.clientY;
+    vx = mx - px; vy = my - py;
+    x = mx - ox; y = my - oy; setPos();
+  };
+  const onUp = () => { dragging = false; wrap.classList.remove('dragging'); };
+  wrap.addEventListener('mousedown', onDown);
+  wrap.addEventListener('touchstart', onDown, {passive:true});
+  window.addEventListener('mousemove', onMove);
+  window.addEventListener('touchmove', onMove, {passive:true});
+  window.addEventListener('mouseup', onUp);
+  window.addEventListener('touchend', onUp);
+  (function physics() {
     if (!dragging) {
-      vx += (tx - cx) * 0.012; vy += (ty - cy) * 0.012;
-      vx *= 0.88; vy *= 0.88;
-      cx += vx; cy += vy;
-      bobT += 0.04;
-      s.style.left = cx + 'px';
-      s.style.top  = (cy + Math.sin(bobT) * 4) + 'px';
+      vx *= .88; vy *= .88;
+      x += vx; y += vy;
+      const W = window.innerWidth, H = window.innerHeight;
+      const W2 = wrap.offsetWidth || 40, H2 = wrap.offsetHeight || 80;
+      if (x < 0) { x = 0; vx *= -.6; }
+      if (x > W - W2) { x = W - W2; vx *= -.6; }
+      if (y < 56) { y = 56; vy *= -.6; }
+      if (y > H - H2) { y = H - H2; vy *= -.6; }
+      setPos();
     }
-    requestAnimationFrame(loop);
-  }
-  requestAnimationFrame(loop);
-  s.addEventListener('mousedown', e => {
-    dragging = true; s.classList.add('dragging');
-    const r = s.getBoundingClientRect();
-    ox = e.clientX - r.left; oy = e.clientY - r.top;
-    e.preventDefault();
-  });
-  window.addEventListener('mousemove', e => {
-    if (!dragging) return;
-    cx = e.clientX - ox; cy = e.clientY - oy;
-    s.style.left = cx + 'px'; s.style.top = cy + 'px';
-    vx = 0; vy = 0;
-  });
-  window.addEventListener('mouseup', () => {
-    if (!dragging) return;
-    dragging = false; s.classList.remove('dragging');
-    tx = cx; ty = cy;
-    setTimeout(newTarget, 800);
-  });
-  s.addEventListener('touchstart', e => {
-    const t = e.touches[0]; dragging = true; s.classList.add('dragging');
-    const r = s.getBoundingClientRect();
-    ox = t.clientX - r.left; oy = t.clientY - r.top;
-  }, { passive: true });
-  window.addEventListener('touchmove', e => {
-    if (!dragging) return;
-    const t = e.touches[0];
-    cx = t.clientX - ox; cy = t.clientY - oy;
-    s.style.left = cx + 'px'; s.style.top = cy + 'px';
-    vx = 0; vy = 0;
-  }, { passive: true });
-  window.addEventListener('touchend', () => {
-    dragging = false; s.classList.remove('dragging');
-    tx = cx; ty = cy; setTimeout(newTarget, 800);
-  });
+    requestAnimationFrame(physics);
+  })();
 })();
 </script>
 </body>
