@@ -7,10 +7,12 @@
   <meta name="description" content="Aethra is building the ecosystem for the next generation of researchers and builders." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<div class="topbar" aria-hidden="true"></div>
 
 <!-- Steve mascot -->
 <div id="steve-wrap">
@@ -32,25 +34,28 @@
   <div class="steve-shadow"></div>
 </div>
 
-<!-- Header -->
-<header class="reveal">
-  <span class="brand">Aethra</span>
-  <nav>
-    <a href="#about">Home</a>
-    <a href="#research">Research</a>
-    <a href="#labs">Labs</a>
-    <a href="#community">Community</a>
-    <a href="#join">Join Us</a>
-  </nav>
-</header>
+<!-- Masthead -->
+<div class="masthead">
+  <header class="reveal">
+    <span class="brand">Aethra</span>
+    <nav>
+      <a href="#about">Home</a>
+      <a href="#research">Research</a>
+      <a href="#labs">Labs</a>
+      <a href="#community">Community</a>
+      <a href="#join">Join Us</a>
+    </nav>
+  </header>
 
-<!-- Hero paragraph -->
-<p class="hero-p reveal" id="about">
-  Aethra is building the ecosystem for the next generation of researchers and builders.
-  We are a global network of students, researchers, and engineers working on the hardest
-  problems in AI, climate, mathematics, and beyond. Through fellowships, open-source tools,
-  hackathons, and community, we are creating the infrastructure that serious science needs.
-</p>
+  <p class="hero-p reveal" id="about">
+    Aethra is building the ecosystem for the next generation of researchers and builders.
+    We are a global network of students, researchers, and engineers working on the hardest
+    problems in AI, climate, mathematics, and beyond. Through fellowships, open-source tools,
+    hackathons, and community, we are creating the infrastructure that serious science needs.
+  </p>
+</div>
+
+<div class="feed">
 
 <!-- Research section -->
 <h2 class="section-head reveal" id="research">Research</h2>
@@ -329,6 +334,8 @@
 <footer class="reveal">
   <p>Aethra. Science, Technology &amp; Ideas.</p>
 </footer>
+
+</div><!-- /feed -->
 
 <script>
 // Scroll reveal
