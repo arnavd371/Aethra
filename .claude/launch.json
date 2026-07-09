@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "aethra",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-p", "9123", "/Users/arnavdhiman/Documents/aethra"],
+      "port": 9123
+    }
+  ]
+}
