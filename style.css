@@ -120,6 +120,11 @@ nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
   box-shadow: 6px 6px 0 0 var(--ink);
   padding: 24px 32px;
   margin-bottom: 8px;
+  transition: transform .2s cubic-bezier(.22,1,.36,1), box-shadow .2s cubic-bezier(.22,1,.36,1);
+}
+.item-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 0 var(--ink);
 }
 
 .item-plain { padding-bottom: 8px; }
@@ -164,6 +169,16 @@ nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
   color: var(--ink-soft); margin-bottom: 4px;
 }
 .status-val { font-size: .8rem; font-weight: 700; word-break: break-word; }
+
+/* masthead stats: 4-up with Fraunces numerals */
+.masthead .status-grid { grid-template-columns: repeat(4, 1fr); margin-top: 32px; }
+.masthead .status-val {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.6rem; letter-spacing: -.02em; line-height: 1.2;
+}
+@media (max-width: 640px) {
+  .masthead .status-grid { grid-template-columns: 1fr 1fr; }
+}
 
 /* ── SECTION HEADING ── */
 .section-head {
