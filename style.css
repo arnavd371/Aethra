@@ -20,8 +20,8 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Spectral', Georgia, serif;
-  font-size: 17px;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 19px;
   line-height: 1.7;
   overflow-x: hidden;
 }
