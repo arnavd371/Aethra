@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aethra — Science, Technology &amp; Ideas</title>
-  <meta name="description" content="Aethra builds an ecosystem for the next generation of researchers and builders: fellowships, tools, and community." />
+  <title>Aethra</title>
+  <meta name="description" content="Aethra is building the ecosystem for the next generation of researchers and builders." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@300;400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- ── Steve mascot ── -->
-<div id="steve-wrap" style="left:92vw;top:72vh">
+<!-- Steve mascot -->
+<div id="steve-wrap">
   <div class="steve-bubble">
     aethra time<br>
     <span class="drag-hint">drag me</span>
@@ -32,423 +32,342 @@
   <div class="steve-shadow"></div>
 </div>
 
-<!-- ── NAV ── -->
-<nav id="topnav">
-  <div class="nav-inner">
-    <a href="#hero" class="nav-brand">aethra</a>
-    <a href="#manifesto" class="nav-link">manifesto</a>
-    <a href="#research" class="nav-link">research</a>
-    <a href="#labs" class="nav-link">labs</a>
-    <a href="#community" class="nav-link">community</a>
-    <a href="#waitlist" class="nav-link cta">join</a>
-  </div>
-</nav>
+<!-- Header -->
+<header class="reveal">
+  <span class="brand">Aethra</span>
+  <nav>
+    <a href="#about">Home</a>
+    <a href="#research">Research</a>
+    <a href="#labs">Labs</a>
+    <a href="#community">Community</a>
+    <a href="#join">Join Us</a>
+  </nav>
+</header>
 
-<!-- ── HERO ── -->
-<section id="hero">
-  <canvas id="star-canvas"></canvas>
-  <div class="container">
-    <p class="hero-eyebrow reveal">Science &amp; Technology &amp; Ideas</p>
-    <h1 class="reveal">Aethra is building the ecosystem for the next generation of researchers and builders.</h1>
-    <p class="lead reveal">Fellowships, open-source tools, and a global community. Accelerating science across AI, climate, mathematics, and beyond.</p>
+<!-- Hero paragraph -->
+<p class="hero-p reveal" id="about">
+  Aethra is building the ecosystem for the next generation of researchers and builders.
+  We are a global network of students, researchers, and engineers working on the hardest
+  problems in AI, climate, mathematics, and beyond. Through fellowships, open-source tools,
+  hackathons, and community, we are creating the infrastructure that serious science needs.
+</p>
 
-    <div class="stat-row reveal">
-      <div class="stat-cell">
-        <span class="stat-num" id="counter-participants">2,340+</span>
-        <span class="stat-lbl">participants</span>
+<!-- Research section -->
+<h2 class="section-head reveal" id="research">Research</h2>
+
+<ul class="items">
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-card">
+      <div class="item-head">
+        <span class="item-title">Research Fellowships</span>
+        <span class="item-meta">Open</span>
       </div>
-      <div class="stat-cell">
-        <span class="stat-num">7</span>
-        <span class="stat-lbl">hackathons</span>
-      </div>
-      <div class="stat-cell">
-        <span class="stat-num">30</span>
-        <span class="stat-lbl">countries</span>
-      </div>
-      <div class="stat-cell">
-        <span class="stat-num">$45,752+</span>
-        <span class="stat-lbl">in prizes</span>
-      </div>
+      <p class="item-desc">Stipends and mentorship for independent researchers working on high-impact problems in AI, climate, and mathematics. Work on what you care about, with people who have cared about it longer.</p>
     </div>
+  </li>
 
-    <div class="cta-row reveal">
-      <a href="#waitlist" class="btn btn-dark">Join the waitlist</a>
-      <a href="#manifesto" class="btn btn-ghost">Read our manifesto</a>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <div class="item-head">
+        <span class="item-title">Mentorship Network</span>
+        <span class="item-meta">Open</span>
+      </div>
+      <p class="item-desc">One-on-one matching with researchers and practitioners across fields and institutions.</p>
     </div>
-  </div>
-</section>
+  </li>
 
-<!-- ── MANIFESTO ── -->
-<section id="manifesto" class="section">
-  <div class="container">
-    <p class="eyebrow reveal">Manifesto</p>
-    <h2 class="section-title reveal">What we believe</h2>
-
-    <div class="prog-list reveal">
-      <div class="prog-row">
-        <div>
-          <p class="prog-name">01 — Research is a team sport.</p>
-          <p class="prog-desc">The lone genius is a myth. The most important discoveries happen at the intersection of disciplines, across geographies, between people who share obsessions but not assumptions.</p>
-        </div>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <div class="item-head">
+        <span class="item-title">Publication Support</span>
+        <span class="item-meta">Open</span>
       </div>
-      <div class="prog-row">
-        <div>
-          <p class="prog-name">02 — Access is the bottleneck.</p>
-          <p class="prog-desc">Talent is uniformly distributed. Opportunity is not. The next great researcher might be sitting without a mentor, without funding, without a community that takes their questions seriously.</p>
-        </div>
-      </div>
-      <div class="prog-row">
-        <div>
-          <p class="prog-name">03 — Tools shape thought.</p>
-          <p class="prog-desc">The instruments we build determine the questions we can ask. Better software, better infrastructure, and open models make better science possible.</p>
-        </div>
-      </div>
-      <div class="prog-row">
-        <div>
-          <p class="prog-name">04 — The problems worth solving are hard.</p>
-          <p class="prog-desc">AI alignment, climate systems, the foundations of mathematics. These are not incremental improvements. They demand full intellectual commitment from the most serious people alive.</p>
-        </div>
-      </div>
-      <div class="prog-row">
-        <div>
-          <p class="prog-name">05 — Community is infrastructure.</p>
-          <p class="prog-desc">A research community is not a nice-to-have. It is load-bearing. Aethra exists to build that infrastructure: permanent, open, and growing.</p>
-        </div>
-      </div>
+      <p class="item-desc">Editing, preprint reviews, and writing workshops to help researchers communicate their work clearly.</p>
     </div>
-  </div>
-</section>
+  </li>
 
-<!-- ── RESEARCH ── -->
-<section id="research" class="section">
-  <div class="container">
-    <p class="eyebrow reveal">Pillar One</p>
-    <h2 class="section-title reveal">Aethra Research</h2>
-    <p class="section-body reveal">A fellowship and mentorship network for serious researchers. We support independent work, connect researchers across institutions, and publish open-access essays and preprint reviews.</p>
-
-    <div class="callout reveal">
-      <p>Applications open for the inaugural Aethra Research Fellowship. Work on problems you care about, with mentors who have worked on them longer than you have.</p>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <div class="item-head">
+        <span class="item-title">Research Essays</span>
+        <span class="item-meta">Ongoing</span>
+      </div>
+      <p class="item-desc">Longform essays on open problems written by researchers in the Aethra network. Published openly.</p>
     </div>
+  </li>
 
-    <div class="prog-list reveal">
-      <div class="prog-row">
-        <div>
-          <p class="prog-name">Research Fellowships</p>
-          <p class="prog-desc">Stipends and mentorship for independent researchers working on high-impact problems.</p>
-        </div>
-        <span class="prog-tag">Open</span>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <div class="item-head">
+        <span class="item-title">Open Problems Seminar</span>
+        <span class="item-meta">Monthly</span>
       </div>
-      <div class="prog-row">
-        <div>
-          <p class="prog-name">Mentorship Network</p>
-          <p class="prog-desc">One-on-one matching with researchers and practitioners across fields.</p>
-        </div>
-        <span class="prog-tag">Open</span>
-      </div>
-      <div class="prog-row">
-        <div>
-          <p class="prog-name">Publication Support</p>
-          <p class="prog-desc">Editing, preprint reviews, and writing workshops to help researchers communicate their work.</p>
-        </div>
-        <span class="prog-tag">Open</span>
-      </div>
-      <div class="prog-row">
-        <div>
-          <p class="prog-name">Research Essays</p>
-          <p class="prog-desc">Longform essays on open problems written by researchers in the network.</p>
-        </div>
-        <span class="prog-tag">Ongoing</span>
-      </div>
-      <div class="prog-row">
-        <div>
-          <p class="prog-name">Open Problems Seminar</p>
-          <p class="prog-desc">Monthly sessions where researchers present unsolved questions they think deserve more attention.</p>
-        </div>
-        <span class="prog-tag">Monthly</span>
-      </div>
-      <div class="prog-row">
-        <div>
-          <p class="prog-name">Preprint Review Program</p>
-          <p class="prog-desc">Community peer review for preprints across our focus areas.</p>
-        </div>
-        <span class="prog-tag">Open</span>
-      </div>
+      <p class="item-desc">Monthly sessions where researchers present unsolved questions they think deserve more attention.</p>
     </div>
+  </li>
 
-    <div class="chips reveal">
-      <span class="chip">AI Alignment</span>
-      <span class="chip">Optimization</span>
-      <span class="chip">Mathematics</span>
-      <span class="chip">Climate Systems</span>
-      <span class="chip">Computational Biology</span>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <div class="item-head">
+        <span class="item-title">Preprint Review Program</span>
+        <span class="item-meta">Open</span>
+      </div>
+      <p class="item-desc">Community peer review for preprints across AI alignment, optimization, climate systems, and computational biology.</p>
     </div>
-  </div>
-</section>
+  </li>
+</ul>
 
-<!-- ── LABS ── -->
-<section id="labs" class="section">
-  <div class="container">
-    <p class="eyebrow reveal">Pillar Two</p>
-    <h2 class="section-title reveal">Aethra Labs</h2>
-    <p class="section-body reveal">Open-source tools that remove friction from research and learning. We build for researchers, educators, and builders who want to move faster.</p>
+<!-- Labs section -->
+<h2 class="section-head reveal" id="labs">Labs</h2>
 
-    <div class="cards reveal">
-      <div class="card">
-        <p class="card-eyebrow">AI Tools</p>
-        <h3>Research Assistant Suite</h3>
-        <p>Literature review, citation mapping, and hypothesis generation tools built for working researchers.</p>
-        <span class="card-tag">In Development</span>
+<ul class="items">
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-card">
+      <div class="item-head">
+        <span class="item-title">Research Assistant Suite</span>
+        <span class="item-meta">AI Tools</span>
       </div>
-      <div class="card">
-        <p class="card-eyebrow">Climate Tools</p>
-        <h3>Climate Data Explorer</h3>
-        <p>Open dashboards and analysis tools for climate datasets used by researchers and educators.</p>
-        <span class="card-tag">In Development</span>
-      </div>
-      <div class="card">
-        <p class="card-eyebrow">Education Tools</p>
-        <h3>Learning Infrastructure</h3>
-        <p>Structured curricula and interactive environments for students getting into research for the first time.</p>
-        <span class="card-tag">In Development</span>
-      </div>
-      <div class="card">
-        <p class="card-eyebrow">Scientific Software</p>
-        <h3>Simulation Toolkit</h3>
-        <p>Lightweight scientific computing tools designed to be embedded in educational and research contexts.</p>
-        <span class="card-tag">In Development</span>
-      </div>
+      <p class="item-desc">Literature review, citation mapping, and hypothesis generation tools built for working researchers.</p>
     </div>
-  </div>
-</section>
+  </li>
 
-<!-- ── COMMUNITY ── -->
-<section id="community" class="section">
-  <div class="container">
-    <p class="eyebrow reveal">Pillar Three</p>
-    <h2 class="section-title reveal">Aethra Community</h2>
-    <p class="section-body reveal">Where the ecosystem comes alive. Hackathons, workshops, events, and a Discord where researchers and builders find each other.</p>
-
-    <div class="stat-row reveal" style="margin-bottom:1.6rem">
-      <div class="stat-cell">
-        <span class="stat-num" id="counter-community">2,340+</span>
-        <span class="stat-lbl">participants</span>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <div class="item-head">
+        <span class="item-title">Climate Data Explorer</span>
+        <span class="item-meta">Climate Tools</span>
       </div>
-      <div class="stat-cell">
-        <span class="stat-num">30</span>
-        <span class="stat-lbl">countries</span>
-      </div>
-      <div class="stat-cell">
-        <span class="stat-num">$45,752+</span>
-        <span class="stat-lbl">prizes awarded</span>
-      </div>
+      <p class="item-desc">Open dashboards and analysis tools for climate datasets used by researchers and educators.</p>
     </div>
+  </li>
 
-    <div class="prog-list reveal">
-      <div class="prog-row">
-        <div>
-          <p class="prog-name">Hackathons</p>
-          <p class="prog-desc">7 events across AI, climate, and education. Teams from 30 countries, $45,752+ in prizes. The hackathon is the starting point for everything else.</p>
-        </div>
-        <span class="prog-tag active">Active</span>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <div class="item-head">
+        <span class="item-title">Learning Infrastructure</span>
+        <span class="item-meta">Education</span>
       </div>
-      <div class="prog-row">
-        <div>
-          <p class="prog-name">Discord</p>
-          <p class="prog-desc">Ongoing discussion across research areas, tools, and events. Where most connections begin.</p>
-        </div>
-        <span class="prog-tag active">Active</span>
-      </div>
-      <div class="prog-row">
-        <div>
-          <p class="prog-name">Events &amp; Workshops</p>
-          <p class="prog-desc">In-person and online events on research methods, emerging fields, and open problems.</p>
-        </div>
-        <span class="prog-tag">Ongoing</span>
-      </div>
+      <p class="item-desc">Structured curricula and interactive environments for students entering research for the first time.</p>
     </div>
-  </div>
-</section>
+  </li>
 
-<!-- ── TEAM ── -->
-<section id="team" class="section">
-  <div class="container">
-    <p class="eyebrow reveal">Team</p>
-    <h2 class="section-title reveal">Who's building this</h2>
-
-    <div class="team-grid reveal">
-      <div class="team-card">
-        <p class="team-name">Arnav Dhiman</p>
-        <p class="team-role">Founder &amp; Executive Director</p>
-        <p>Building Aethra to create the research and builder ecosystem he wished existed when he started out. Focused on AI, community infrastructure, and long-term institution building.</p>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <div class="item-head">
+        <span class="item-title">Simulation Toolkit</span>
+        <span class="item-meta">Scientific Software</span>
       </div>
+      <p class="item-desc">Lightweight scientific computing tools designed for educational and research contexts.</p>
     </div>
-  </div>
-</section>
+  </li>
+</ul>
 
-<!-- ── ROADMAP ── -->
-<section id="roadmap" class="section">
-  <div class="container">
-    <p class="eyebrow reveal">Roadmap</p>
-    <h2 class="section-title reveal">Where we're going</h2>
+<!-- Community section -->
+<h2 class="section-head reveal" id="community">Community</h2>
 
-    <div class="prog-list reveal">
-      <div class="prog-row">
-        <div>
-          <p class="prog-name">Phase 1 — Hackathons</p>
-          <p class="prog-desc">Build the community through high-quality hackathons. Prove that serious, mission-driven events attract serious people. Establish the network.</p>
-        </div>
-        <span class="prog-tag active">Complete</span>
+<ul class="items">
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-card">
+      <div class="item-head">
+        <span class="item-title">Hackathons</span>
+        <span class="item-meta">Active</span>
       </div>
-      <div class="prog-row">
-        <div>
-          <p class="prog-name">Phase 2 — Ecosystem</p>
-          <p class="prog-desc">Launch Aethra Research, Aethra Labs, and full community infrastructure. Reach 10,000 students in the first wave. Grow to 100,000 in the second.</p>
-        </div>
-        <span class="prog-tag">In Progress</span>
+      <p class="item-desc">7 events. 2,340+ participants. $45,752+ in prizes. 30 countries. The hackathon is where the Aethra community began, and where most people still find each other first.</p>
+    </div>
+  </li>
+
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <div class="item-head">
+        <span class="item-title">Discord</span>
+        <span class="item-meta">Active</span>
       </div>
-      <div class="prog-row">
-        <div>
-          <p class="prog-name">Phase 3 — Undeclared</p>
-          <p class="prog-desc">Something revolutionary. The kind of thing that only becomes possible once the ecosystem exists and the network is real.</p>
-        </div>
-        <span class="prog-tag">Future</span>
+      <p class="item-desc">Ongoing discussion across research areas, tools, and events. Where most connections begin and continue.</p>
+    </div>
+  </li>
+
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <div class="item-head">
+        <span class="item-title">Events &amp; Workshops</span>
+        <span class="item-meta">Ongoing</span>
       </div>
+      <p class="item-desc">In-person and online events on research methods, emerging fields, and open problems worth caring about.</p>
     </div>
-  </div>
-</section>
+  </li>
+</ul>
 
-<!-- ── WAITLIST ── -->
-<section id="waitlist" class="section">
-  <div class="container">
-    <p class="eyebrow reveal">Join</p>
-    <h2 class="section-title reveal">Get involved</h2>
-    <p class="section-body reveal">Whether you're a researcher, builder, student, or just curious: there's a place for you in the Aethra ecosystem. Join the waitlist and we'll reach out when your track opens.</p>
+<!-- Manifesto -->
+<h2 class="section-head reveal">What we believe</h2>
 
-    <form id="wl-form" class="wl-form reveal" action="https://formspree.io/f/xeojgkdl" method="POST">
-      <input class="wl-input" type="text" name="name" placeholder="Your name" required />
-      <input class="wl-input" type="email" name="email" placeholder="your@email.com" required />
-      <button class="wl-submit" type="submit">Request access &rarr;</button>
-      <p class="wl-msg" id="wl-success">You're on the list. We'll be in touch.</p>
-      <p class="wl-msg wl-err" id="wl-err">Something went wrong. Try again or email us directly.</p>
-    </form>
-
-    <div class="social-row reveal">
-      <a href="https://discord.gg/aethra" class="social-btn" target="_blank" rel="noopener">Discord</a>
-      <a href="https://twitter.com/aethraHQ" class="social-btn" target="_blank" rel="noopener">Twitter / X</a>
-      <a href="https://www.linkedin.com/company/aethra-hq" class="social-btn" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:arnav@aethra.co.in" class="social-btn">Email</a>
+<ul class="items">
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <div class="item-head"><span class="item-title">Research is a team sport.</span></div>
+      <p class="item-desc">The most important discoveries happen at the intersection of disciplines, across geographies, between people who share obsessions but not assumptions.</p>
     </div>
-  </div>
-</section>
-
-<!-- ── FOOTER ── -->
-<footer>
-  <div class="container">
-    <p>Aethra. Science, Technology &amp; Ideas. Based globally.</p>
-    <div class="footer-links">
-      <a href="research.html">Research</a>
-      <a href="labs.html">Labs</a>
-      <a href="community.html">Community</a>
-      <a href="story.html">Story</a>
-      <a href="mailto:arnav@aethra.co.in">Contact</a>
+  </li>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <div class="item-head"><span class="item-title">Access is the bottleneck.</span></div>
+      <p class="item-desc">Talent is uniformly distributed. Opportunity is not. The next great researcher might be sitting without a mentor, without funding, without a community that takes their questions seriously.</p>
     </div>
-  </div>
+  </li>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <div class="item-head"><span class="item-title">Tools shape thought.</span></div>
+      <p class="item-desc">The instruments we build determine the questions we can ask. Better software, better infrastructure, and open models make better science possible.</p>
+    </div>
+  </li>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <div class="item-head"><span class="item-title">The problems worth solving are hard.</span></div>
+      <p class="item-desc">AI alignment, climate systems, the foundations of mathematics. These are not incremental improvements. They demand full intellectual commitment from the most serious people alive.</p>
+    </div>
+  </li>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <div class="item-head"><span class="item-title">Community is infrastructure.</span></div>
+      <p class="item-desc">A research community is not a nice-to-have. It is load-bearing. Aethra exists to build that infrastructure: permanent, open, and growing.</p>
+    </div>
+  </li>
+</ul>
+
+<!-- Roadmap -->
+<h2 class="section-head reveal">Roadmap</h2>
+
+<ul class="items">
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-card">
+      <div class="item-head">
+        <span class="item-title">Phase 1 — Hackathons</span>
+        <span class="item-meta">Complete</span>
+      </div>
+      <p class="item-desc">Build the community through high-quality hackathons. Prove that serious, mission-driven events attract serious people. Establish the network.</p>
+    </div>
+  </li>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <div class="item-head">
+        <span class="item-title">Phase 2 — Ecosystem</span>
+        <span class="item-meta">In Progress</span>
+      </div>
+      <p class="item-desc">Launch Aethra Research, Aethra Labs, and full community infrastructure. Reach 10,000 students in the first wave. Grow to 100,000 in the second.</p>
+    </div>
+  </li>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <div class="item-head">
+        <span class="item-title">Phase 3 — Undeclared</span>
+        <span class="item-meta">Future</span>
+      </div>
+      <p class="item-desc">Something revolutionary. The kind of thing that only becomes possible once the ecosystem exists and the network is real.</p>
+    </div>
+  </li>
+</ul>
+
+<!-- Team -->
+<h2 class="section-head reveal">Team</h2>
+
+<ul class="items">
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <div class="item-head">
+        <span class="item-title">Arnav Dhiman</span>
+        <span class="item-meta">Founder &amp; Executive Director</span>
+      </div>
+      <p class="item-desc">Building Aethra to create the research and builder ecosystem he wished existed when he started out. Focused on AI, community infrastructure, and long-term institution building.</p>
+    </div>
+  </li>
+</ul>
+
+<!-- Join Us -->
+<h2 class="section-head reveal" id="join">Join Us</h2>
+
+<p class="item-desc reveal" style="margin-bottom:4px">
+  Whether you are a researcher, builder, student, or just curious: there is a place for you
+  in the Aethra ecosystem. Join the waitlist and we will reach out when your track opens.
+</p>
+
+<form id="join-form" class="join-form reveal" action="https://formspree.io/f/xeojgkdl" method="POST">
+  <input class="join-input" type="text" name="name" placeholder="Your name" required />
+  <input class="join-input" type="email" name="email" placeholder="your@email.com" required />
+  <button class="join-btn" type="submit">Request access &rarr;</button>
+  <p class="join-msg" id="join-success">You are on the list. We will be in touch.</p>
+  <p class="join-msg join-err" id="join-err">Something went wrong. Email arnav@aethra.co.in directly.</p>
+</form>
+
+<div class="social-links reveal">
+  <a href="https://discord.gg/aethra" target="_blank" rel="noopener">Discord</a>
+  <a href="https://twitter.com/aethraHQ" target="_blank" rel="noopener">Twitter</a>
+  <a href="https://www.linkedin.com/company/aethra-hq" target="_blank" rel="noopener">LinkedIn</a>
+  <a href="mailto:arnav@aethra.co.in">Email</a>
+</div>
+
+<footer class="reveal">
+  <p>Aethra. Science, Technology &amp; Ideas.</p>
 </footer>
 
 <script>
-// ── Scroll reveal ──
+// Scroll reveal
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-}, { threshold: 0.12 });
+}, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-// ── Starfield ──
-(function() {
-  const c = document.getElementById('star-canvas');
-  const ctx = c.getContext('2d');
-  let dots = [];
-  function resize() {
-    c.width = c.offsetWidth; c.height = c.offsetHeight;
-    dots = Array.from({ length: 55 }, () => ({
-      x: Math.random() * c.width, y: Math.random() * c.height,
-      r: Math.random() * 1.3 + .3, vx: (Math.random() - .5) * .15, vy: (Math.random() - .5) * .15
-    }));
-  }
-  window.addEventListener('resize', resize);
-  resize();
-  function tick() {
-    ctx.clearRect(0, 0, c.width, c.height);
-    dots.forEach(d => {
-      d.x = (d.x + d.vx + c.width) % c.width;
-      d.y = (d.y + d.vy + c.height) % c.height;
-      ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(64,62,55,0.35)'; ctx.fill();
-    });
-    requestAnimationFrame(tick);
-  }
-  tick();
-})();
-
-// ── Counter ──
-function countUp(el, target, dur) {
-  let start = 0, step = target / (dur / 16);
-  const id = setInterval(() => {
-    start = Math.min(start + step, target);
-    el.textContent = Math.floor(start).toLocaleString() + '+';
-    if (start >= target) clearInterval(id);
-  }, 16);
-}
-const cio = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { countUp(e.target, 2340, 1400); cio.unobserve(e.target); }
-  });
-}, { threshold: .5 });
-document.querySelectorAll('#counter-participants, #counter-community').forEach(el => cio.observe(el));
-
-// ── Waitlist form ──
-document.getElementById('wl-form').addEventListener('submit', async e => {
+// Waitlist form
+document.getElementById('join-form').addEventListener('submit', async e => {
   e.preventDefault();
-  const form = e.target, btn = form.querySelector('.wl-submit');
-  btn.textContent = 'Sending…'; btn.disabled = true;
+  const form = e.target, btn = form.querySelector('.join-btn');
+  btn.textContent = 'Sending...'; btn.disabled = true;
   try {
-    const res = await fetch(form.action, {
-      method: 'POST', headers: { 'Accept': 'application/json' },
-      body: new FormData(form)
-    });
-    if (res.ok) { document.getElementById('wl-success').classList.add('visible'); form.reset(); }
+    const res = await fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) });
+    if (res.ok) { document.getElementById('join-success').classList.add('visible'); form.reset(); }
     else throw new Error();
-  } catch { document.getElementById('wl-err').classList.add('visible'); }
+  } catch { document.getElementById('join-err').classList.add('visible'); }
   btn.textContent = 'Request access →'; btn.disabled = false;
 });
 
-// ── Steve spring physics drag ──
+// Steve spring physics drag
 (function() {
   const wrap = document.getElementById('steve-wrap');
-  let x = window.innerWidth * .92, y = window.innerHeight * .72;
+  let x = window.innerWidth * .88, y = window.innerHeight * .7;
+  wrap.style.left = x + 'px'; wrap.style.top = y + 'px';
   let vx = 0, vy = 0, tx = x, ty = y, dragging = false, ox = 0, oy = 0;
-  const start = ev => {
-    dragging = true; wrap.classList.add('dragging');
-    const p = ev.touches ? ev.touches[0] : ev;
-    ox = p.clientX - x; oy = p.clientY - y; ev.preventDefault();
-  };
-  const move = ev => {
-    if (!dragging) return;
-    const p = ev.touches ? ev.touches[0] : ev;
-    tx = p.clientX - ox; ty = p.clientY - oy; ev.preventDefault();
-  };
+  const getP = ev => ev.touches ? ev.touches[0] : ev;
+  wrap.addEventListener('mousedown', ev => { dragging = true; wrap.classList.add('dragging'); ox = getP(ev).clientX - x; oy = getP(ev).clientY - y; ev.preventDefault(); });
+  wrap.addEventListener('touchstart', ev => { dragging = true; wrap.classList.add('dragging'); ox = getP(ev).clientX - x; oy = getP(ev).clientY - y; ev.preventDefault(); }, { passive: false });
+  window.addEventListener('mousemove', ev => { if (dragging) { tx = getP(ev).clientX - ox; ty = getP(ev).clientY - oy; } });
+  window.addEventListener('touchmove', ev => { if (dragging) { tx = getP(ev).clientX - ox; ty = getP(ev).clientY - oy; ev.preventDefault(); } }, { passive: false });
   const end = () => { dragging = false; wrap.classList.remove('dragging'); };
-  wrap.addEventListener('mousedown', start);
-  wrap.addEventListener('touchstart', start, { passive: false });
-  window.addEventListener('mousemove', move);
-  window.addEventListener('touchmove', move, { passive: false });
-  window.addEventListener('mouseup', end);
-  window.addEventListener('touchend', end);
-  const K = 0.12, D = 0.72;
+  window.addEventListener('mouseup', end); window.addEventListener('touchend', end);
   (function raf() {
     if (dragging) { x = tx; y = ty; vx = 0; vy = 0; }
-    else { vx = (vx + (tx - x) * K) * D; vy = (vy + (ty - y) * K) * D; x += vx; y += vy; }
+    else { vx = (vx + (tx - x) * 0.12) * 0.72; vy = (vy + (ty - y) * 0.12) * 0.72; x += vx; y += vy; }
     x = Math.max(4, Math.min(window.innerWidth - wrap.offsetWidth - 4, x));
-    y = Math.max(56, Math.min(window.innerHeight - wrap.offsetHeight - 4, y));
+    y = Math.max(4, Math.min(window.innerHeight - wrap.offsetHeight - 4, y));
     wrap.style.left = x + 'px'; wrap.style.top = y + 'px';
     requestAnimationFrame(raf);
   })();
