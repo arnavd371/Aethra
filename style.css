@@ -152,6 +152,12 @@ nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
   text-transform: uppercase; letter-spacing: .05em;
 }
 
+.event-thumb {
+  display: block; width: 100%; max-width: 220px;
+  aspect-ratio: 1 / 1; object-fit: cover;
+  border: 1px solid var(--ink); margin-bottom: 16px;
+}
+
 .item-desc {
   font-size: .875rem; color: var(--ink-soft); line-height: 1.7;
 }
