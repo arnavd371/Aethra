@@ -3,344 +3,241 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>our story: aethra</title>
-  <meta name="description" content="How Aethra started: a hackathon community that became a research ecosystem. The founder's story." />
-  <meta property="og:title" content="our story: aethra" />
-  <meta property="og:description" content="How Aethra started, what running seven events taught us, and why hackathons alone were not enough." />
-  <link rel="icon" href="aethralogo.png" type="image/png" />
+  <title>Our Story</title>
+  <meta name="description" content="How Aethra started: a hackathon community that became a convergence ecosystem." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600;700&family=Press+Start+2P&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .story-body {
-      max-width: 660px;
-    }
-    .story-body p {
-      font-size: 16px;
-      color: var(--text);
-      line-height: 1.95;
-      margin-bottom: 28px;
-    }
-    .story-body p.muted {
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .story-body h2 {
-      font-family: 'Press Start 2P', monospace;
-      font-size: clamp(9px, 1.4vw, 12px);
-      color: var(--muted);
-      letter-spacing: 2px;
-      margin: 52px 0 20px;
-      line-height: 1.8;
-    }
-    .story-body h2::before { content: '// '; color: var(--dim); }
-    .story-sig {
-      margin-top: 52px;
-      padding-top: 36px;
-      border-top: 1px solid var(--border);
-    }
-    .story-sig-name {
-      font-family: 'Press Start 2P', monospace;
-      font-size: 10px;
-      color: var(--text);
-      margin-bottom: 8px;
-      line-height: 1.8;
-    }
-    .story-sig-role {
-      font-family: 'DM Mono', monospace;
-      font-size: 11px;
-      color: var(--muted);
-      letter-spacing: 0.5px;
-    }
-
-    .timeline-strip {
-      display: flex;
-      flex-direction: column;
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-      margin: 48px 0;
-      max-width: 660px;
-    }
-    .tl-row {
-      background: var(--card);
-      padding: 18px 24px;
-      display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 20px;
-      align-items: center;
-    }
-    .tl-event {
-      font-family: 'DM Mono', monospace;
-      font-size: 9px;
-      color: var(--dim);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-    .tl-desc { font-size: 12px; color: var(--muted); }
-    .tl-desc b { color: var(--text); font-weight: 400; }
-  </style>
 </head>
 <body>
 
-<!-- STEVE -->
-<div id="steve-wrap">
-  <div class="steve-bubble">our story!<span class="drag-hint">drag me!</span></div>
-  <svg id="steve-svg" viewBox="0 0 16 32" width="26" height="52" xmlns="http://www.w3.org/2000/svg">
-    <rect x="4" y="0" width="8" height="2" fill="#593d1b"/>
-    <rect x="4" y="2" width="2" height="2" fill="#593d1b"/>
-    <rect x="10" y="2" width="2" height="2" fill="#593d1b"/>
-    <rect x="4" y="2" width="8" height="6" fill="#c68642"/>
-    <rect x="5" y="3" width="2" height="2" fill="#ffffff"/>
-    <rect x="6" y="4" width="1" height="1" fill="#3b6ab0"/>
-    <rect x="9" y="3" width="2" height="2" fill="#ffffff"/>
-    <rect x="9" y="4" width="1" height="1" fill="#3b6ab0"/>
-    <rect x="7" y="5" width="1" height="1" fill="#b56832"/>
-    <rect x="6" y="6" width="1" height="1" fill="#8b3200"/>
-    <rect x="7" y="7" width="2" height="1" fill="#8b3200"/>
-    <rect x="9" y="6" width="1" height="1" fill="#8b3200"/>
-    <rect x="4" y="8"  width="8" height="12" fill="#4d8ad4"/>
-    <rect x="5" y="9"  width="6" height="1"  fill="#3570ba"/>
-    <rect x="5" y="13" width="6" height="1"  fill="#3570ba"/>
-    <rect x="4" y="18" width="8" height="2"  fill="#aa8822"/>
-    <rect x="7" y="17" width="2" height="3"  fill="#d4aa00"/>
-    <rect x="7" y="18" width="2" height="1"  fill="#ffcc00"/>
-    <rect x="0" y="8"  width="4" height="12" fill="#c68642"/>
-    <rect x="0" y="8"  width="4" height="1"  fill="#a56828"/>
-    <rect x="3" y="8"  width="1" height="12" fill="#b57232"/>
-    <rect x="12" y="8"  width="4" height="12" fill="#c68642"/>
-    <rect x="12" y="8"  width="4" height="1"  fill="#a56828"/>
-    <rect x="12" y="8"  width="1" height="12" fill="#b57232"/>
-    <rect x="4" y="20" width="4" height="9"  fill="#283593"/>
-    <rect x="4" y="20" width="1" height="9"  fill="#1e2880"/>
-    <rect x="4" y="29" width="4" height="3"  fill="#3e1c00"/>
-    <rect x="4" y="31" width="4" height="1"  fill="#2a1200"/>
-    <rect x="8" y="20" width="4" height="9"  fill="#1a237e"/>
-    <rect x="11" y="20" width="1" height="9" fill="#131a5e"/>
-    <rect x="8" y="29" width="4" height="3"  fill="#2d1400"/>
-    <rect x="8" y="31" width="4" height="1"  fill="#1a0c00"/>
-    <rect x="7" y="20" width="2" height="9"  fill="#0d1357"/>
-  </svg>
-  <div class="steve-shadow"></div>
+<div class="topbar" aria-hidden="true"></div>
+
+<!-- Masthead -->
+<div class="masthead">
+  <header class="reveal">
+    <span class="brand">Aethra</span>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="research.html">Research</a>
+      <a href="community.html">Community</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="team.html">Team</a>
+      <a href="story.html">Story</a>
+      <a href="index.html#join">Join Us</a>
+    </nav>
+  </header>
+
+  <h1 class="section-head reveal" style="margin-top:32px">The institution we wish had existed.</h1>
+
+  <p class="hero-p reveal">
+    I found out about a research fellowship two weeks after its deadline closed. Not from a
+    teacher, not from anyone at school. From a friend who had seen it mentioned in a Discord
+    server. The program was legitimate, fully funded, and genuinely competitive. It was also
+    completely invisible to me until it no longer mattered.
+  </p>
 </div>
 
-<!-- TOP BAR -->
-<div id="topbar"></div>
+<div class="feed">
 
-<!-- TOP NAV -->
-<header id="topnav">
-  <a href="index.html" class="topnav-brand">
-    <img src="aethralogo.png" alt="Aethra" style="width:36px;height:36px;" />
-  </a>
-  <nav class="topnav-links">
-    <a href="community.html">community</a>
-    <a href="story.html" class="active">our story</a>
-    <a href="index.html#waitlist" class="topnav-cta">get involved</a>
-  </nav>
-</header>
+<h2 class="section-head reveal">The gap became personal</h2>
 
-<!-- PAGE HERO -->
-<div class="page-hero">
-  <div class="page-eyebrow">our story</div>
-  <div class="page-title">the institution<br>we wish had existed.</div>
-</div>
-
-<!-- STORY BODY -->
-<div>
-  <div class="sec" style="padding-top:0;border-top:none;">
-    <div class="story-body">
-
-      <h2>the gap became personal</h2>
-
-      <p>
-        i found out about a research fellowship two weeks after its deadline closed. not from a teacher,
-        not from anyone at school. from a friend who had seen it mentioned in a Discord server.
-        the program was legitimate, fully funded, and genuinely competitive. it was also completely invisible
-        to me until it no longer mattered.
-      </p>
-
-      <p>
-        that bothered me more than missing the deadline. if a program that good was circulating in niche
-        online communities rather than school bulletins, what else was out there that most students never
-        heard about? especially students without access to paid consultants or parents who had navigated
-        these systems before them?
-      </p>
-
-      <p>
-        the honest answer was: a lot. and the problem was not just information. it was infrastructure.
-        there was no community organized around finding these things, evaluating them, or helping students
-        act on them in time.
-      </p>
-
-      <h2>what we built first</h2>
-
-      <p>
-        i started aethra in 2025 with a simple idea: run events that give students a real shot at creating
-        something, with no cost to enter and no credential required. the first event was an ideathon.
-        558 participants, $5,785 in prizes, students from ten countries who had never been in the same room
-        or the same Discord server before.
-      </p>
-
-      <p>
-        we ran six more events in the year that followed. hackathon, gamethon, vibeathon, brandathon,
-        pitchathon. 1,704 confirmed participants across those six. the format worked. it lowered the barrier
-        enough that students who would never apply to a selective program were building things, getting
-        feedback, and finding peers who cared about the same problems.
-      </p>
-
-      <div class="timeline-strip">
-        <div class="tl-row">
-          <div class="tl-event">event 01</div>
-          <div class="tl-desc"><b>ideathon</b>: 558 participants, $5,785 in prizes</div>
-        </div>
-        <div class="tl-row">
-          <div class="tl-event">event 02</div>
-          <div class="tl-desc"><b>hackathon</b>: 297 participants, $1,347 in prizes</div>
-        </div>
-        <div class="tl-row">
-          <div class="tl-event">event 03</div>
-          <div class="tl-desc"><b>gamethon</b>: 225 participants, $1,347 in prizes</div>
-        </div>
-        <div class="tl-row">
-          <div class="tl-event">event 04</div>
-          <div class="tl-desc"><b>vibeathon</b>: 260 participants, $1,347 in prizes</div>
-        </div>
-        <div class="tl-row">
-          <div class="tl-event">event 05</div>
-          <div class="tl-desc"><b>brandathon</b>: 167 participants, $1,347 in prizes</div>
-        </div>
-        <div class="tl-row">
-          <div class="tl-event">event 06</div>
-          <div class="tl-desc"><b>pitchathon</b>: 197 participants, $1,347 in prizes</div>
-        </div>
-        <div class="tl-row">
-          <div class="tl-event">event 07</div>
-          <div class="tl-desc"><b>moonshot</b>: 636 participants, $33,232+ in prizes. ended.</div>
-        </div>
-      </div>
-
-      <h2>what running them taught us</h2>
-
-      <p>
-        the most motivated students, the ones with genuinely interesting ideas who wanted to push them further,
-        hit the same wall every time. the hackathon ended. they had a project and maybe a Devpost link.
-        and then nothing. no mentors who could help them think rigorously about it. no peers working on
-        adjacent problems. no path from a good weekend project to something that would actually last.
-      </p>
-
-      <p>
-        we also noticed something more uncomfortable: most ambitious students had never been asked to sit with
-        a genuinely open question. not because they lacked the ability. because their entire academic
-        experience had been built around problems with known answers. the curriculum is a map of
-        already-explored territory. the skill of engaging with an unsolved problem, not knowing where to start
-        or whether you will make progress, is almost never taught.
-      </p>
-
-      <h2>the gap we are trying to close</h2>
-
-      <p>
-        what we noticed is not just that students lacked opportunities. it is that most of them had never been
-        asked to engage with a genuinely open problem at all. their entire academic experience had been built
-        around questions with known answers. the skill of sitting with an unsolved problem, not knowing
-        where to start or whether you will make progress, is almost never taught before university.
-      </p>
-
-      <p>
-        this is sharpest in mathematical reasoning. a narrow pipeline of olympiad students encounters proofs
-        and formal argument before university. everyone else encounters it for the first time in a first-year
-        lecture hall, usually without the foundations to make sense of it. that is not a talent gap.
-        it is an infrastructure gap.
-      </p>
-
-      <h2>what we are doing next</h2>
-
-      <p>
-        the first thing we are doing outside of hackathons is the proof writing initiative: a structured
-        curriculum bringing mathematical proof writing and formal reasoning to students in grades 3 through 12
-        at a partner school. confirmed and scheduled. completely free. designed to reach 4,000 students.
-        if you want to volunteer as an instructor, reach out.
-      </p>
-
-      <p>
-        beyond that, we are building research fellowships that pair students with mentors for semester-length
-        projects, open problem tracks across mathematics and AI, and publication support for serious work.
-        none of those programs are open yet. we are building them carefully, and applications will open
-        when the structure is sound.
-      </p>
-
-      <h2>what this is for</h2>
-
-      <p>
-        the goal is an institution. not an extracurricular, not something that dissolves when the founders
-        leave. something that outlasts any particular team, any event season, any individual student.
-      </p>
-
-      <p class="muted">
-        the students asking the hardest questions deserve more than a weekend and a Devpost link.
-        if you are one of those students, or you want to help build what they need, the links below
-        are the right place to start.
-      </p>
-
-      <div class="story-sig">
-        <div class="story-sig-name">arnav dhiman</div>
-        <div class="story-sig-role">founder & executive director, aethra</div>
-      </div>
-
+<ul class="items">
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <p class="item-desc">That bothered me more than missing the deadline. If a program that good was circulating in niche online communities rather than school bulletins, what else was out there that most students never heard about? Especially students without access to paid consultants or parents who had navigated these systems before them.</p>
     </div>
-  </div>
-</div>
+  </li>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <p class="item-desc">The honest answer was: a lot. And the problem was not just information. It was infrastructure. There was no community organized around finding these things, evaluating them, or helping students act on them in time.</p>
+    </div>
+  </li>
+</ul>
 
-<!-- CTA -->
-<div>
-  <div class="sec">
-    <div class="about-grid">
-      <div>
-        <div class="about-big">the questions<br>are already<br><span class="ac">there.</span></div>
+<h2 class="section-head reveal">What we built first</h2>
+
+<ul class="items">
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <p class="item-desc">We started Aethra in 2025 with a simple idea: run events that give students a real shot at creating something, with no cost to enter and no credential required. The first event was an Ideathon. 558 participants, $5,785 in prizes, students from ten countries who had never been in the same room or the same Discord server before.</p>
+    </div>
+  </li>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <p class="item-desc">We ran six more events in the year that followed. Hackathon, Gamethon, Vibeathon, Brandathon, Pitchathon, Moonshot. The format worked. It lowered the barrier enough that students who would never apply to a selective program were building things, getting feedback, and finding peers who cared about the same problems.</p>
+    </div>
+  </li>
+</ul>
+
+<ul class="items">
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-card">
+      <div class="item-head">
+        <span class="item-title">01 &middot; Ideathon</span>
+        <span class="item-meta">$5,785</span>
       </div>
-      <div class="about-right">
-        <p>join the waitlist to hear when fellowship applications open. join the discord to find the community now.</p>
-        <div class="about-cta">
-          <a href="index.html#waitlist" class="abtn abtn-solid">join waitlist</a>
-          <a href="https://discord.gg/89RvqhYPez" target="_blank" rel="noopener" class="abtn abtn-ghost">discord</a>
-          <a href="mailto:aethra.club@gmail.com" class="abtn abtn-ghost">volunteer as instructor</a>
-        </div>
+      <p class="item-desc">558 participants</p>
+    </div>
+  </li>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-card">
+      <div class="item-head">
+        <span class="item-title">02 &middot; Hackathon</span>
+        <span class="item-meta">$1,347</span>
+      </div>
+      <p class="item-desc">297 participants</p>
+    </div>
+  </li>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-card">
+      <div class="item-head">
+        <span class="item-title">03 &middot; Gamethon</span>
+        <span class="item-meta">$1,347</span>
+      </div>
+      <p class="item-desc">225 participants</p>
+    </div>
+  </li>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-card">
+      <div class="item-head">
+        <span class="item-title">04 &middot; Vibeathon</span>
+        <span class="item-meta">$1,347</span>
+      </div>
+      <p class="item-desc">260 participants</p>
+    </div>
+  </li>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-card">
+      <div class="item-head">
+        <span class="item-title">05 &middot; Brandathon</span>
+        <span class="item-meta">$1,347</span>
+      </div>
+      <p class="item-desc">167 participants</p>
+    </div>
+  </li>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-card">
+      <div class="item-head">
+        <span class="item-title">06 &middot; Pitchathon</span>
+        <span class="item-meta">$1,347</span>
+      </div>
+      <p class="item-desc">197 participants</p>
+    </div>
+  </li>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-card">
+      <div class="item-head">
+        <span class="item-title">07 &middot; Moonshot</span>
+        <span class="item-meta">$33,232+</span>
+      </div>
+      <p class="item-desc">636 participants. Our largest event to date.</p>
+    </div>
+  </li>
+</ul>
+
+<h2 class="section-head reveal">What running them taught us</h2>
+
+<ul class="items">
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <p class="item-desc">The most motivated students, the ones with genuinely interesting ideas who wanted to push them further, hit the same wall every time. The hackathon ended. They had a project and maybe a Devpost link. And then nothing. No mentors who could help them think rigorously about it. No peers working on adjacent problems. No path from a good weekend project to something that would actually last.</p>
+    </div>
+  </li>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <p class="item-desc">We also noticed something more uncomfortable: most ambitious students had never been asked to sit with a genuinely open question, not because they lacked the ability, but because their entire academic experience had been built around problems with known answers. The curriculum is a map of already-explored territory. The skill of engaging with an unsolved problem, not knowing where to start or whether you will make progress, is almost never taught.</p>
+    </div>
+  </li>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <p class="item-desc">This is sharpest in mathematical reasoning. A narrow pipeline of olympiad students encounters proofs and formal argument before university. Everyone else encounters it for the first time in a first-year lecture hall, usually without the foundations to make sense of it. That is not a talent gap. It is an infrastructure gap, and it is the same shape as the one that started all of this: fields and people that never got the chance to meet each other.</p>
+    </div>
+  </li>
+</ul>
+
+<h2 class="section-head reveal">What we are doing next</h2>
+
+<ul class="items">
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-card">
+      <div class="item-head">
+        <span class="item-title">Proof Writing Initiative</span>
+        <span class="item-meta">Confirmed</span>
+      </div>
+      <p class="item-desc">A structured curriculum bringing mathematical proof writing and formal reasoning to students in grades 3 through 12 at a partner school. Scheduled, completely free, designed to reach 4,000 students. If you want to volunteer as an instructor, reach out.</p>
+    </div>
+  </li>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <p class="item-desc">Beyond that, we are building research fellowships that pair students with mentors for semester-length projects, open problem tracks across mathematics and AI, and publication support for serious work. None of those programs are open yet. We are building them carefully, and applications will open when the structure is sound.</p>
+    </div>
+  </li>
+</ul>
+
+<h2 class="section-head reveal">What this is for</h2>
+
+<ul class="items">
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <p class="item-desc">The goal is an institution, not an extracurricular, not something that dissolves when the founders leave. Something that outlasts any particular team, any event season, any individual student.</p>
+    </div>
+  </li>
+  <li class="item reveal">
+    <span class="item-dot"></span>
+    <div class="item-body item-plain">
+      <p class="item-desc">The students asking the hardest questions deserve more than a weekend and a Devpost link. If you are one of those students, or you want to help build what they need, the links below are the right place to start.</p>
+      <div class="chips" style="margin-top:20px">
+        <span class="chip">Arnav Dhiman, Co-Founder &amp; Executive Director</span>
       </div>
     </div>
-  </div>
+  </li>
+</ul>
+
+<!-- Join Us -->
+<h2 class="section-head reveal" id="join">Join Us</h2>
+
+<p class="item-desc reveal" style="margin-bottom:4px">
+  Join the waitlist to hear when fellowship applications open. Join the Discord to find the
+  community now.
+</p>
+
+<div class="social-links reveal">
+  <a href="index.html#join">Join the waitlist</a>
+  <a href="https://discord.gg/89RvqhYPez" target="_blank" rel="noopener">Discord</a>
+  <a href="mailto:aethra.club@gmail.com">Volunteer as an instructor</a>
 </div>
 
-<footer>
-  <img src="aethralogo.png" alt="Aethra" style="height:22px;object-fit:contain;opacity:.7;" />
-  <span>
-    <a href="index.html">home</a> ·
-    <a href="community.html">community</a> ·
-    student-run · 30 countries
-  </span>
+<footer class="reveal">
+  <p>Aethra. Where fields converge.</p>
 </footer>
 
+</div><!-- /feed -->
+
 <script>
-(function () {
-  const s = document.getElementById('steve-wrap');
-  const W = () => window.innerWidth - 60, H = () => window.innerHeight - 100;
-  let cx = Math.random()*W(), cy = Math.random()*H(), tx = cx, ty = cy, vx = 0, vy = 0;
-  let dragging = false, ox = 0, oy = 0, bobT = 0;
-  function newTarget() { tx = 40+Math.random()*(W()-40); ty = 40+Math.random()*(H()-40); setTimeout(newTarget, 3000+Math.random()*3000); }
-  newTarget();
-  function loop() {
-    if (!dragging) { vx += (tx-cx)*0.012; vy += (ty-cy)*0.012; vx *= 0.88; vy *= 0.88; cx += vx; cy += vy; bobT += 0.04; s.style.left = cx+'px'; s.style.top = (cy+Math.sin(bobT)*4)+'px'; }
-    requestAnimationFrame(loop);
-  }
-  requestAnimationFrame(loop);
-  s.addEventListener('mousedown', e => { dragging=true; s.classList.add('dragging'); const r=s.getBoundingClientRect(); ox=e.clientX-r.left; oy=e.clientY-r.top; e.preventDefault(); });
-  window.addEventListener('mousemove', e => { if(!dragging)return; cx=e.clientX-ox; cy=e.clientY-oy; s.style.left=cx+'px'; s.style.top=cy+'px'; vx=0; vy=0; });
-  window.addEventListener('mouseup', () => { if(!dragging)return; dragging=false; s.classList.remove('dragging'); tx=cx; ty=cy; setTimeout(newTarget,800); });
-  s.addEventListener('touchstart', e => { const t=e.touches[0]; dragging=true; s.classList.add('dragging'); const r=s.getBoundingClientRect(); ox=t.clientX-r.left; oy=t.clientY-r.top; }, {passive:true});
-  window.addEventListener('touchmove', e => { if(!dragging)return; const t=e.touches[0]; cx=t.clientX-ox; cy=t.clientY-oy; s.style.left=cx+'px'; s.style.top=cy+'px'; vx=0; vy=0; }, {passive:true});
-  window.addEventListener('touchend', () => { dragging=false; s.classList.remove('dragging'); tx=cx; ty=cy; setTimeout(newTarget,800); });
-})();
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
