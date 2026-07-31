@@ -22,8 +22,6 @@
       <a href="index.html">Home</a>
       <a href="events.html">Events</a>
       <a href="research.html">Research</a>
-      <a href="roadmap.html">Roadmap</a>
-      <a href="#join">Join Us</a>
     </nav>
   </header>
 
@@ -128,16 +126,6 @@
       <a href="community.html" style="display:inline-block;margin-top:16px;text-decoration:underline;text-underline-offset:3px;font-weight:700;font-size:.85rem">View community &rarr;</a>
     </div>
   </li>
-  <li class="item reveal">
-    <span class="item-dot"></span>
-    <div class="item-body item-card">
-      <div class="item-head">
-        <span class="item-title">Roadmap</span>
-      </div>
-      <p class="item-desc">Where Aethra is going next.</p>
-      <a href="roadmap.html" style="display:inline-block;margin-top:16px;text-decoration:underline;text-underline-offset:3px;font-weight:700;font-size:.85rem">View roadmap &rarr;</a>
-    </div>
-  </li>
 </ul>
 
 <!-- What we believe -->
@@ -181,29 +169,6 @@
   </li>
 </ul>
 
-<!-- Join Us -->
-<h2 class="section-head reveal" id="join">Join Us</h2>
-
-<p class="item-desc reveal" style="margin-bottom:4px">
-  Whether you are a researcher, builder, student, or just curious: there is a place for you
-  in the Aethra ecosystem. Join the waitlist and we will reach out when your track opens.
-</p>
-
-<form id="join-form" class="join-form reveal" action="https://formspree.io/f/xeojgkdl" method="POST">
-  <input class="join-input" type="text" name="name" placeholder="Your name" required />
-  <input class="join-input" type="email" name="email" placeholder="your@email.com" required />
-  <button class="join-btn" type="submit">Request access &rarr;</button>
-  <p class="join-msg" id="join-success">You are on the list. We will be in touch.</p>
-  <p class="join-msg join-err" id="join-err">Something went wrong. Email aethra.club@gmail.com directly.</p>
-</form>
-
-<div class="social-links reveal">
-  <a href="https://discord.gg/aethra" target="_blank" rel="noopener">Discord</a>
-  <a href="https://twitter.com/aethraHQ" target="_blank" rel="noopener">Twitter</a>
-  <a href="https://www.linkedin.com/company/aethra-hq" target="_blank" rel="noopener">LinkedIn</a>
-  <a href="mailto:aethra.club@gmail.com">Email</a>
-</div>
-
 <footer class="reveal">
   <p>Aethra. Where fields converge.</p>
 </footer>
@@ -216,19 +181,6 @@ const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-// Waitlist form
-document.getElementById('join-form').addEventListener('submit', async e => {
-  e.preventDefault();
-  const form = e.target, btn = form.querySelector('.join-btn');
-  btn.textContent = 'Sending...'; btn.disabled = true;
-  try {
-    const res = await fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) });
-    if (res.ok) { document.getElementById('join-success').classList.add('visible'); form.reset(); }
-    else throw new Error();
-  } catch { document.getElementById('join-err').classList.add('visible'); }
-  btn.textContent = 'Request access →'; btn.disabled = false;
-});
 </script>
 </body>
 </html>
