@@ -15,8 +15,8 @@ body {
   font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
   background: var(--paper);
   color: var(--ink);
-  font-size: 15px;
-  line-height: 1.65;
+  font-size: 16px;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -98,11 +98,6 @@ nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
   list-style: none; position: relative;
   display: flex; flex-direction: column; gap: 40px;
 }
-/* timeline vertical line */
-.items::before {
-  content: ''; position: absolute; left: 5px; top: 8px; bottom: 8px;
-  width: 1px; background: rgba(21,19,15,.15);
-}
 
 .item { position: relative; padding-left: 40px; }
 
@@ -142,7 +137,7 @@ nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
 }
 
 .item-title {
-  font-weight: 700; font-size: 1.05rem; color: var(--ink);
+  font-weight: 700; font-size: 1.15rem; color: var(--ink);
   min-width: 0;
 }
 
@@ -159,7 +154,7 @@ nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
 }
 
 .item-desc {
-  font-size: .875rem; color: var(--ink-soft); line-height: 1.7;
+  font-size: .95rem; color: var(--ink-soft); line-height: 1.75;
 }
 
 /* chips (field tags) */
@@ -196,8 +191,8 @@ nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
 /* ── SECTION HEADING ── */
 .section-head {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 1.6rem; font-weight: 600; color: var(--ink);
-  letter-spacing: -.01em; margin: 56px 0 28px;
+  font-size: 1.75rem; font-weight: 600; color: var(--ink);
+  letter-spacing: -.01em; margin: 64px 0 28px;
 }
 .section-head:first-child { margin-top: 0; }
 
