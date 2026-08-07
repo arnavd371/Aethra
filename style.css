@@ -81,6 +81,12 @@ nav a {
 }
 nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
 
+.eyebrow-lab {
+  font-size: .78rem; font-weight: 700; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--ink-soft);
+  margin-top: 32px;
+}
+
 .hero-p {
   font-size: 1.05rem; line-height: 1.7; color: var(--ink-soft);
   margin-top: 32px; max-width: 42rem;
