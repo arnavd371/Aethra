@@ -423,7 +423,7 @@ nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 2654 / 758;
+  aspect-ratio: 16 / 10;
   object-fit: contain;
   object-position: center;
   background: transparent;
