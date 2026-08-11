@@ -105,8 +105,19 @@ header {
   gap: 16px; flex-wrap: wrap;
 }
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-size: var(--text-xl); font-weight: 400; line-height: 1.1;
   color: var(--ink); letter-spacing: -.02em; text-transform: uppercase;
+  text-decoration: none;
+}
+.brand:hover { color: var(--ink); }
+.brand-mark {
+  width: 1.15em;
+  height: 1.15em;
+  display: block;
+  flex-shrink: 0;
 }
 nav { display: flex; align-items: center; justify-content: flex-end; gap: 20px; flex-wrap: wrap; }
 nav a {
