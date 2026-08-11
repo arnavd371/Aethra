@@ -100,6 +100,19 @@ a { color: inherit; text-decoration: none; }
 
 /* ── MASTHEAD ── */
 .masthead { max-width: var(--max-w); margin: 0 auto; padding: 64px 24px 40px; text-align: left; }
+.masthead-home {
+  max-width: var(--max-w-wide);
+  padding-bottom: 28px;
+}
+.home-impact {
+  margin-top: 88px;
+}
+.home-impact .row-label {
+  margin-bottom: 28px;
+}
+.home-impact .masthead-stats {
+  gap: 28px 24px;
+}
 
 header {
   display: flex; align-items: center; justify-content: space-between;
@@ -356,27 +369,41 @@ nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
   .masthead-stats { grid-template-columns: 1fr 1fr; }
 }
 
-/* ── HOME: event impact grid ── */
+/* ── HOME: event impact grid (no cards) ── */
 .event-box-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 40px 32px;
-  margin-top: 4px;
+  gap: 56px 40px;
+  margin-top: 48px;
+  margin-bottom: 24px;
   align-items: start;
+  background: transparent;
 }
 @media (max-width: 700px) {
-  .event-box-grid { grid-template-columns: 1fr; gap: 36px; }
+  .event-box-grid { grid-template-columns: 1fr; gap: 48px; margin-top: 40px; }
 }
 .event-box {
   display: flex;
   flex-direction: column;
   gap: 6px;
   padding: 0;
-  border: none;
-  background: transparent;
+  margin: 0;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+  background: transparent !important;
   color: inherit;
   text-decoration: none;
   min-width: 0;
+}
+.event-box:hover,
+.event-box:focus,
+.event-box:focus-visible {
+  background: transparent;
+  border: 0;
+  outline: none;
+  box-shadow: none;
 }
 .event-box:hover .event-box-name {
   text-decoration: underline;
@@ -387,10 +414,14 @@ nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
   width: 100%;
   height: auto;
   max-height: 180px;
-  margin: 0 0 10px;
+  margin: 0 0 14px;
+  padding: 0;
   object-fit: contain;
   object-position: center;
   background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 .event-box-name {
   font-size: var(--text-lg);
@@ -408,8 +439,10 @@ nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-  margin-top: auto;
-  padding-top: 12px;
+  margin-top: 4px;
+  padding-top: 0;
+  text-align: center;
+  background: transparent;
 }
 .event-box-num {
   display: block;
