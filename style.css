@@ -405,7 +405,15 @@ nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
   .masthead-stats { grid-template-columns: 1fr 1fr; }
 }
 
-/* ── HOME: events (plain, featured + grid) ── */
+.work-label {
+  font-size: var(--text-xs);
+  font-weight: 400;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  opacity: .7;
+  margin: 8px 0 28px;
+}
 .event-feature {
   display: grid;
   grid-template-columns: 1.35fr 1fr;
