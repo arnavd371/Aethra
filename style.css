@@ -6,17 +6,17 @@
   --paper-raised: #F1F7FD;
   --ink:          #101B2D;
   --ink-soft:     #3F5170;
-  --max-w:        896px;
+  --max-w:        640px;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
   background: var(--paper);
   color: var(--ink);
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 13px;
+  line-height: 1.8;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -59,21 +59,21 @@ a { color: inherit; text-decoration: none; }
   border-radius: 50%;
 }
 
-/* ── MASTHEAD ── */
-.masthead { max-width: var(--max-w); margin: 0 auto; padding: 40px 24px 32px; text-align: center; }
+/* ── MASTHEAD (InkVell-style: small mono meta row) ── */
+.masthead { max-width: var(--max-w); margin: 0 auto; padding: 64px 24px 40px; text-align: left; }
 
 header {
-  display: flex; flex-direction: column; align-items: center;
-  justify-content: center; gap: 16px;
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap;
 }
 .brand {
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 2.75rem; font-weight: 600; line-height: 1.1;
-  color: var(--ink); letter-spacing: -.02em;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 1rem; font-weight: 700; line-height: 1.1;
+  color: var(--ink); letter-spacing: -.02em; text-transform: uppercase;
 }
-nav { display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
+nav { display: flex; align-items: center; justify-content: flex-end; gap: 18px; flex-wrap: wrap; }
 nav a {
-  font-size: .875rem; color: var(--ink-soft);
+  font-size: .78rem; color: var(--ink-soft);
   text-decoration: underline; text-decoration-thickness: 1px;
   text-underline-offset: 4px; text-decoration-color: rgba(16,27,45,.3);
   transition: color .2s, text-decoration-color .2s;
@@ -82,18 +82,34 @@ nav a {
 nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
 
 .eyebrow-lab {
-  font-size: .78rem; font-weight: 700; letter-spacing: .18em;
-  text-transform: uppercase; color: var(--ink-soft);
-  margin-top: 32px;
+  font-size: 10px; font-weight: 600; letter-spacing: .05em;
+  text-transform: uppercase; color: var(--ink-soft); opacity: .5;
+  margin-top: 40px;
 }
 
 .hero-p {
-  font-size: 1.05rem; line-height: 1.7; color: var(--ink-soft);
-  margin: 32px auto 0; max-width: 42rem;
+  font-size: 13px; line-height: 1.8; color: var(--ink);
+  margin: 16px 0 0; max-width: none;
 }
 
 /* ── FEED ── */
-.feed { max-width: var(--max-w); margin: 0 auto; padding: 40px 24px 96px; text-align: center; }
+.feed { max-width: var(--max-w); margin: 0 auto; padding: 0 24px 96px; text-align: left; }
+
+/* label | content row, matching inkvell.ai's 100px-label / 1fr-content grid */
+.row {
+  display: grid; grid-template-columns: 100px 1fr;
+  gap: 8px 32px; margin-bottom: 48px;
+}
+@media (max-width: 480px) {
+  .row { grid-template-columns: 1fr; gap: 8px; }
+}
+.row-label {
+  font-size: 10px; font-weight: 600; letter-spacing: .05em;
+  text-transform: uppercase; color: var(--ink-soft); opacity: .5;
+  padding-top: 2px;
+}
+.row-content { font-size: 13px; line-height: 1.8; color: var(--ink); min-width: 0; }
+.row-content p + p { margin-top: 16px; }
 
 .feed-label {
   font-size: .75rem; letter-spacing: .3em; text-transform: uppercase;
@@ -118,132 +134,115 @@ nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
 
 .item-body { min-width: 0; }
 
-/* elevated hard card */
-.item-card {
-  background: var(--paper-raised);
-  border: 1px solid var(--ink);
-  box-shadow: 6px 6px 0 0 var(--ink);
-  padding: 24px 32px;
-  margin-bottom: 8px;
-  transition: transform .2s cubic-bezier(.22,1,.36,1), box-shadow .2s cubic-bezier(.22,1,.36,1);
-}
-.item-card:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 9px 9px 0 0 var(--ink);
-}
+/* plain card, no shadow/box, InkVell-style */
+.item-card { padding-bottom: 8px; margin-bottom: 8px; }
 
 .item-plain { padding-bottom: 8px; }
 
 .item-head {
   display: flex; flex-wrap: wrap; align-items: baseline;
-  justify-content: space-between; gap: 4px 16px; margin-bottom: 12px;
+  justify-content: space-between; gap: 4px 16px; margin-bottom: 8px;
 }
 
 .item-title {
-  font-weight: 700; font-size: 1.15rem; color: var(--ink);
+  font-weight: 700; font-size: 13px; color: var(--ink);
   min-width: 0;
 }
 
 .item-meta {
-  font-size: .8rem; color: var(--ink-soft);
+  font-size: 11px; color: var(--ink-soft); opacity: .6;
   white-space: nowrap; flex-shrink: 0;
   text-transform: uppercase; letter-spacing: .05em;
 }
 
 .item-desc {
-  font-size: .95rem; color: var(--ink-soft); line-height: 1.75;
+  font-size: 13px; color: var(--ink); line-height: 1.8;
 }
 
-/* ── EVENT CARDS: large, magazine-style, not cramped boxes ── */
-.items.event-list { gap: 64px; }
+/* ── EVENTS: plain text rows, InkVell-style, no boxes ── */
+.items.event-list { gap: 48px; }
 .items.event-list > .item { padding-left: 0; }
 .event-card {
-  padding: 0 0 48px;
+  padding: 0 0 40px;
   border-bottom: 1px solid rgba(16,27,45,.15);
 }
 .items.event-list > .item:last-child .event-card { border-bottom: none; padding-bottom: 0; }
 
 .event-num {
-  display: block; font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: .95rem; font-weight: 700; letter-spacing: .1em;
-  color: var(--ink-soft); margin-bottom: 12px;
+  display: inline; font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 10px; font-weight: 600; letter-spacing: .05em;
+  color: var(--ink-soft); opacity: .5; margin-right: 10px;
 }
 .event-badge {
-  display: inline-block; font-size: .75rem; font-weight: 700;
-  text-transform: uppercase; letter-spacing: .08em;
-  color: var(--ink); background: var(--paper-raised);
-  border: 1.5px solid var(--ink); padding: 5px 14px;
-  margin-bottom: 20px;
+  display: inline-block; font-size: 10px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .05em;
+  color: var(--ink-soft); opacity: .5;
 }
 
 .event-thumb {
   display: block; width: 100%; height: auto;
-  max-width: 480px; margin: 0 auto 28px;
+  max-width: 420px; margin: 16px 0 20px;
   border: 1px solid var(--ink);
 }
 
 .event-title {
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: clamp(1.7rem, 4vw, 2.5rem); font-weight: 700;
-  line-height: 1.1; letter-spacing: -.01em; color: var(--ink);
-  margin: 0 auto 20px; max-width: 22ch;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 15px; font-weight: 700;
+  line-height: 1.4; letter-spacing: 0; color: var(--ink);
+  margin: 6px 0 12px; max-width: none;
 }
 
 .event-desc {
-  font-size: 1.05rem; color: var(--ink-soft); line-height: 1.75;
-  max-width: 62ch; margin: 0 auto 24px;
+  font-size: 13px; color: var(--ink); line-height: 1.8;
+  max-width: none; margin: 0 0 16px;
 }
 
-/* chips (field tags) */
-.chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
+/* chips (field tags), plain inline text */
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
 .chip {
-  font-size: .8rem; font-weight: 600; letter-spacing: .02em;
-  border: 1px solid rgba(16,27,45,.3); padding: 7px 14px;
-  color: var(--ink);
+  font-size: 11px; font-weight: 500; letter-spacing: 0;
+  border: none; padding: 0; color: var(--ink-soft);
 }
+.chip::after { content: '\00b7'; margin-left: 6px; color: var(--ink-soft); }
+.chip:last-child::after { content: ''; }
 
-/* status grid ([KEY] VALUE cells) */
+/* status grid: plain key/value pairs, no boxes */
 .status-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
-  background: rgba(16,27,45,.15); border: 1px solid rgba(16,27,45,.15);
-  margin: 20px auto 0; text-align: center;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px;
+  margin: 16px 0 0; text-align: left;
 }
-.status-cell { background: var(--paper-raised); padding: 16px; }
+.status-cell { background: none; padding: 0; }
 .status-key {
-  display: block; font-size: 10px; letter-spacing: .15em;
-  color: var(--ink-soft); margin-bottom: 4px;
+  display: block; font-size: 10px; letter-spacing: .05em;
+  color: var(--ink-soft); opacity: .5; margin-bottom: 4px;
 }
-.status-val { font-size: .8rem; font-weight: 700; word-break: break-word; }
+.status-val { display: block; font-size: 13px; font-weight: 600; word-break: break-word; }
 
-/* event stat cells: bigger, standalone numbers */
-.event-card .status-cell { padding: 20px 22px; }
-.event-card .status-key { font-size: .68rem; letter-spacing: .12em; margin-bottom: 8px; }
+.event-card .status-cell { padding: 0; }
+.event-card .status-key { font-size: 10px; }
 .event-card .status-val {
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 1.5rem; font-weight: 700; letter-spacing: -.01em;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 13px; font-weight: 700; letter-spacing: 0;
 }
 
-/* masthead stats: 4-up with Fraunces numerals */
-.masthead .status-grid { grid-template-columns: repeat(4, 1fr); margin-top: 32px; }
+/* masthead stats */
+.masthead .status-grid { grid-template-columns: repeat(4, 1fr); margin-top: 24px; gap: 12px 24px; }
 .masthead .status-val {
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 1.6rem; letter-spacing: -.02em; line-height: 1.2;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 13px; letter-spacing: 0; line-height: 1.2;
 }
 @media (max-width: 640px) {
   .masthead .status-grid { grid-template-columns: 1fr 1fr; }
 }
 
-/* ── SECTION HEADING ── */
+/* ── SECTION HEADING: small uppercase label, InkVell-style ── */
 .section-head {
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 1.75rem; font-weight: 600; color: var(--ink);
-  letter-spacing: -.01em; margin: 64px 0 28px;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 10px; font-weight: 600; color: var(--ink-soft);
+  letter-spacing: .05em; text-transform: uppercase; opacity: .5;
+  margin: 48px 0 20px;
 }
 .section-head:first-child { margin-top: 0; }
-
-.feed > .item-desc,
-.feed > .join-form { margin-left: auto; margin-right: auto; }
-.feed > .social-links { justify-content: center; }
 
 /* ── JOIN FORM ── */
 .join-form {
@@ -290,10 +289,7 @@ footer {
 .reveal.in { opacity: 1; transform: none; }
 
 @media (max-width: 540px) {
-  body { font-size: 14px; }
-  .brand { font-size: 2rem; }
-  .masthead { padding: 28px 16px 24px; }
-  .feed { padding: 24px 16px 72px; }
-  .item-card { padding: 18px 20px; }
+  .masthead { padding: 40px 16px 24px; }
+  .feed { padding: 0 16px 72px; }
   .status-grid { grid-template-columns: 1fr; }
 }
