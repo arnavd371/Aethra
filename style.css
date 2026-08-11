@@ -423,11 +423,12 @@ nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  aspect-ratio: 2654 / 758;
+  object-fit: contain;
   object-position: center;
   background: transparent;
   transition: transform .45s cubic-bezier(.22,1,.36,1);
+  image-rendering: auto;
 }
 .event-feature-copy {
   display: flex;
@@ -524,13 +525,14 @@ nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
   max-height: none;
   margin: 0;
   padding: 0;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   background: transparent;
   border: 0;
   border-radius: 0;
   box-shadow: none;
   transition: transform .45s cubic-bezier(.22,1,.36,1);
+  image-rendering: auto;
 }
 .event-box-name {
   font-size: clamp(20px, 2.4vw, 24px);
