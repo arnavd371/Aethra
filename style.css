@@ -107,10 +107,14 @@ a { color: inherit; text-decoration: none; }
 .home-impact {
   margin-top: 96px;
 }
-.home-impact .row-label {
-  margin-bottom: 32px;
+.home-lead {
+  max-width: 34em;
+  margin: 0 0 40px;
+  font-size: clamp(18px, 2.4vw, 22px);
+  line-height: 1.5;
+  letter-spacing: -.01em;
+  color: var(--ink);
 }
-
 .impact-strip {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
