@@ -294,13 +294,14 @@ nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
 .status-cell { background: none; padding: 0; }
 .status-key {
   display: block;
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   font-weight: 400;
-  letter-spacing: .04em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--ink-soft);
-  opacity: .75;
-  margin-bottom: 4px;
+  opacity: .85;
+  margin-top: 6px;
+  margin-bottom: 0;
 }
 .status-val {
   display: block;
@@ -311,21 +312,45 @@ nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
 }
 
 .event-card .status-cell { padding: 0; }
+.event-card .status-key {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: var(--text-xs);
+  text-transform: none;
+  letter-spacing: 0;
+}
 .event-card .status-val {
   font-size: var(--text);
   font-weight: 400;
 }
 
-.masthead .status-grid { grid-template-columns: repeat(4, 1fr); margin-top: 8px; gap: 16px 24px; }
-.masthead .status-val {
-  font-size: var(--text-lg);
-  font-weight: 400;
-  letter-spacing: -.01em;
-  line-height: 1.2;
+.stat-lead {
+  margin: 0 0 20px;
   color: var(--ink);
 }
+
+.masthead .status-grid,
+.masthead-stats {
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 8px;
+  gap: 20px 28px;
+}
+.masthead .status-val,
+.masthead-stats .status-val {
+  font-size: clamp(28px, 4.2vw, 36px);
+  font-weight: 400;
+  letter-spacing: -.03em;
+  line-height: 1.1;
+  color: var(--ink);
+}
+.masthead .status-key,
+.masthead-stats .status-key {
+  font-size: var(--text-sm);
+  margin-top: 8px;
+}
 @media (max-width: 640px) {
-  .masthead .status-grid { grid-template-columns: 1fr 1fr; }
+  .masthead .status-grid,
+  .masthead-stats { grid-template-columns: 1fr 1fr; }
 }
 
 /* ── SECTION HEADING ── */
