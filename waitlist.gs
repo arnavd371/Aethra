@@ -80,7 +80,7 @@ function confirmationEmail(name) {
     '<p>you are on the aethra waitlist. we will reach out when research fellowships,',
     'mentorship programs, and applications open.</p>',
     '<p>in the meantime, join the community on Discord:</p>',
-    '<p><a href="https://discord.gg/89RvqhYPez" style="color:#0077cc;">discord.gg/89RvqhYPez</a></p>',
+    '<p><a href="https://discord.gg/R8uHEQsDM5" style="color:#0077cc;">discord.gg/89RvqhYPez</a></p>',
     '<p style="margin-top:32px;">— aethra</p>',
     '</div>'
   ].join('');

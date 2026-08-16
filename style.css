@@ -414,6 +414,33 @@ nav a:hover { color: var(--ink); text-decoration-color: var(--ink); }
   opacity: .7;
   margin: 8px 0 28px;
 }
+
+.home-discord {
+  margin: 72px 0 24px;
+  max-width: 38em;
+}
+.home-discord .work-label {
+  margin-bottom: 16px;
+}
+.home-discord-text {
+  margin: 0 0 18px;
+  font-size: var(--text);
+  line-height: 1.55;
+  color: var(--ink);
+}
+.home-discord-link {
+  display: inline-block;
+  font-size: var(--text);
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(16,27,45,.35);
+  transition: text-decoration-color .2s;
+}
+.home-discord-link:hover {
+  text-decoration-color: var(--ink);
+}
 .event-feature {
   display: grid;
   grid-template-columns: 1.35fr 1fr;
