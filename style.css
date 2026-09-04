@@ -122,8 +122,8 @@ a { color: inherit; text-decoration: none; }
 }
 .impact-strip {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 28px 32px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 28px 20px;
 }
 .impact-stat {
   padding: 0;
@@ -132,7 +132,7 @@ a { color: inherit; text-decoration: none; }
 }
 .impact-num {
   display: block;
-  font-size: clamp(28px, 4vw, 40px);
+  font-size: clamp(22px, 3.2vw, 34px);
   font-weight: 400;
   letter-spacing: -.04em;
   line-height: 1.05;
@@ -146,8 +146,11 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink-soft);
   letter-spacing: .02em;
 }
-@media (max-width: 700px) {
-  .impact-strip { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+@media (max-width: 860px) {
+  .impact-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 16px; }
+}
+@media (max-width: 520px) {
+  .impact-strip { grid-template-columns: 1fr 1fr; gap: 28px 16px; }
 }
 
 header {
