@@ -146,6 +146,13 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink-soft);
   letter-spacing: .02em;
 }
+.impact-summary {
+  max-width: 44em;
+  margin: 44px 0 0;
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
 @media (max-width: 860px) {
   .impact-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 16px; }
 }
