@@ -118,6 +118,7 @@ a { color: inherit; text-decoration: none; }
   gap: 48px;
   margin: 0 0 44px;
 }
+.home-top { align-items: center; }
 .home-top .home-intro { margin: 0; flex: 1 1 auto; }
 .home-logo {
   display: block;
@@ -129,7 +130,7 @@ a { color: inherit; text-decoration: none; }
   mix-blend-mode: multiply;
 }
 @media (max-width: 640px) {
-  .home-top { flex-direction: column; gap: 28px; }
+  .home-top { flex-direction: column; align-items: stretch; gap: 28px; }
   .home-logo { width: 96px; }
 }
 .home-intro p {
@@ -702,3 +703,11 @@ footer {
   .feed { padding: 0 16px 72px; }
   .status-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Justified body copy site-wide ── */
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: manual;
+}
+.event-box-desc { text-align: justify; }
