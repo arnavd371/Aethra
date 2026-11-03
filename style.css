@@ -111,14 +111,26 @@ a { color: inherit; text-decoration: none; }
   max-width: 38em;
   margin: 0 0 44px;
 }
+.home-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 48px;
+  margin: 0 0 44px;
+}
+.home-top .home-intro { margin: 0; flex: 1 1 auto; }
 .home-logo {
   display: block;
-  width: 96px;
-  height: 96px;
-  margin: 0 0 32px;
+  flex: 0 0 auto;
+  width: clamp(120px, 18vw, 220px);
+  height: auto;
   /* source art is a light star on black: invert so the black drops out on multiply */
   filter: invert(1) grayscale(1) contrast(1.15);
   mix-blend-mode: multiply;
+}
+@media (max-width: 640px) {
+  .home-top { flex-direction: column; gap: 28px; }
+  .home-logo { width: 96px; }
 }
 .home-intro p {
   font-size: clamp(17px, 2.1vw, 20px);
