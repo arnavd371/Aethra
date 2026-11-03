@@ -29,7 +29,6 @@
 <body>
 
 <div id="ink-bg" aria-hidden="true"></div>
-<div class="ink-noise" aria-hidden="true"></div>
 
 <div class="topbar" aria-hidden="true"></div>
 
@@ -70,6 +69,6 @@ const io = new IntersectionObserver(entries => {
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
-<script type="module" src="bg.js"></script>
+<script type="module" src="bg.js?v=20261103f"></script>
 </body>
 </html>

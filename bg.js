@@ -2,8 +2,9 @@
  * InkVell-style moving dithered wave background (Three.js),
  * tinted for Aethra: light blue paper #DCEAF9, navy-ink waves.
  */
-import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js";
 
+const boot = async () => {
+const THREE = await import("https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js");
 const mount = document.getElementById("ink-bg");
 if (!mount) {
   /* no mount */
@@ -22,12 +23,12 @@ if (!mount) {
   );
   camera.position.set(0, 0, 1);
 
-  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  const renderer = new THREE.WebGLRenderer({ antialias: false, alpha: true, powerPreference: "low-power" });
   renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setPixelRatio(1);
   mount.appendChild(renderer.domElement);
 
-  const geometry = new THREE.PlaneGeometry(4, 4, 128, 128);
+  const geometry = new THREE.PlaneGeometry(4, 4, 64, 64);
 
   const material = new THREE.ShaderMaterial({
     uniforms: {
@@ -150,13 +151,35 @@ if (!mount) {
 
   const clock = new THREE.Clock();
   let raf = 0;
+  let last = 0;
+  const FRAME_MS = 1000 / 30; /* 30fps is plenty for a slow background wave */
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  function animate() {
+  function animate(now) {
+    raf = requestAnimationFrame(animate);
+    if (now - last < FRAME_MS) return;
+    last = now;
     material.uniforms.uTime.value = clock.getElapsedTime();
     renderer.render(scene, camera);
-    raf = requestAnimationFrame(animate);
   }
-  animate();
+
+  function start() {
+    if (!raf) raf = requestAnimationFrame(animate);
+  }
+  function stop() {
+    cancelAnimationFrame(raf);
+    raf = 0;
+  }
+
+  if (reduceMotion) {
+    renderer.render(scene, camera); /* one still frame */
+  } else {
+    start();
+    /* stop drawing when the tab is hidden */
+    document.addEventListener("visibilitychange", () => {
+      document.hidden ? stop() : start();
+    });
+  }
 
   function onResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
@@ -170,7 +193,7 @@ if (!mount) {
   window.addEventListener("resize", onResize);
 
   window.addEventListener("pagehide", () => {
-    cancelAnimationFrame(raf);
+    stop();
     window.removeEventListener("resize", onResize);
     geometry.dispose();
     material.dispose();
@@ -180,3 +203,7 @@ if (!mount) {
     }
   });
 }
+};
+/* let content and images load first, then start the background */
+if (window.requestIdleCallback) requestIdleCallback(boot, { timeout: 1500 });
+else setTimeout(boot, 300);
