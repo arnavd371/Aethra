@@ -2,8 +2,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --paper:        #DCEAF9;
-  --paper-raised: #F1F7FD;
+  --paper:        #C9E3FF;
+  --paper-raised: #EAF4FF;
   --ink:          #0A1220;
   --ink-soft:     #2E4160;
   --max-w:        680px;

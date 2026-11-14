@@ -1,6 +1,6 @@
 /**
  * InkVell-style moving dithered wave background (Three.js),
- * tinted for Aethra: light blue paper #DCEAF9, navy-ink waves.
+ * tinted for Aethra: light blue paper #C9E3FF, navy-ink waves.
  */
 
 const boot = async () => {
@@ -9,7 +9,7 @@ const mount = document.getElementById("ink-bg");
 if (!mount) {
   /* no mount */
 } else {
-  const PAPER = 0xdceaf9;
+  const PAPER = 0xc9e3ff;
   const INK = 0x3f5170;
 
   const scene = new THREE.Scene();
