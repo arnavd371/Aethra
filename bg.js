@@ -205,5 +205,10 @@ if (!mount) {
 }
 };
 /* let content and images load first, then start the background */
-if (window.requestIdleCallback) requestIdleCallback(boot, { timeout: 1500 });
+const conn = navigator.connection || {};
+const lite = conn.saveData || /(^|-)2g$/.test(conn.effectiveType || "") ||
+  window.innerWidth < 700 || (navigator.hardwareConcurrency || 8) <= 2;
+/* skip the animated background on phones, slow links and weak devices */
+if (lite) { /* plain paper colour only */ }
+else if (window.requestIdleCallback) requestIdleCallback(boot, { timeout: 1500 });
 else setTimeout(boot, 300);
