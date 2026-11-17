@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" /></noscript>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=20261117c" />
 </head>
 <body>
 
@@ -51,7 +51,7 @@
 
   <p class="hero-p reveal">
     Aethra began with open, varied events. Our first six followed that pattern.
-    In 2026 we launched Moonshot, our first interdisciplinary event and our biggest yet.
+    In 2026 we launched Moonshot, our first officially announced interdisciplinary event and our biggest yet. Our earlier events already followed that thinking.
     2,340+ participants. 699 projects. 84 countries. $45,752 in prizes.
   </p>
 </div>
@@ -65,7 +65,7 @@
       <span class="event-badge">Flagship</span>
       <h3 class="event-title">Moonshot: a 0 to 1 hackathon</h3>
       <img width="1600" height="1000" decoding="async" class="event-thumb" src="images/events/moonshot.webp?v=20261103a" alt="The Moonshot" loading="lazy" />
-      <p class="event-desc">Our first interdisciplinary event, and our biggest yet. A 0-to-1 build where different fields meet on purpose, and teams ship something new instead of refining what already exists. 636 people took part, with support from MongoDB Atlas, CodeCrafters, and Iteration Machine.</p>
+      <p class="event-desc">Our first officially announced interdisciplinary event, and our biggest yet. Earlier events followed that thinking too. A 0-to-1 build where different fields meet on purpose, and teams ship something new instead of refining what already exists. 636 people took part, with support from MongoDB Atlas, CodeCrafters, and Iteration Machine.</p>
       <div class="chips">
         <span class="chip">Engineering</span>
         <span class="chip">Research</span>
@@ -256,6 +256,6 @@ const io = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 setTimeout(() => document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in')), 2500);
 </script>
-<script type="module" src="bg.js?v=20261117b"></script>
+<script type="module" src="bg.js?v=20261117c"></script>
 </body>
 </html>
